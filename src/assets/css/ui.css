@@ -2,6 +2,8 @@
 @import '@nuxt/ui';
 
 @theme static {
+  --font-sans: 'Quicksand', sans-serif;
+
   /* Custom Colors */
   --color-pink-red-500: #ff3333;
   --color-green-light-500: #34c759;
