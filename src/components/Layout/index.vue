@@ -1,7 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+    // This component might not be strictly necessary if default.vue handles layout directly
+    // Keeping it for potential future structure needs, but it's currently redundant
+    </script>
 
-<template>
-  <div class="flex flex-col min-h-screen">
-    <slot />
-  </div>
-</template>
+    <template>
+      <div>
+        <!-- Content is now handled by src/layouts/default.vue -->
+        <slot />
+      </div>
+    </template>

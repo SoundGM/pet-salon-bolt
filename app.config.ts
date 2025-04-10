@@ -9,5 +9,9 @@ export default defineAppConfig({
       'orange-shine': 'orange-shine',
       'blue-sea': 'blue-sea',
     },
+    // Add button configuration to increase roundness
+    button: {
+      rounded: 'rounded-lg', // Increased roundness
+    },
   },
 })

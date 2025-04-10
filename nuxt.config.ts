@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     defaultLocale: 'sl',
     locales: [{ code: 'sl', name: 'Slovenian', file: 'sl.ts' }],
   },
+
   ui: {
     theme: {
       colors: [
