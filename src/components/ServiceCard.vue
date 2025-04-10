@@ -22,13 +22,11 @@
 
     <!-- Overlay -->
     <div
-      class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+      class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"
     ></div>
 
     <!-- Text Content -->
-    <div
-      class="right-0 bottom-0 left-0 absolute opacity-0 group-hover:opacity-100 p-4 sm:p-6 text-white transition-all translate-y-4 group-hover:translate-y-0 duration-300 ease-in-out transform"
-    >
+    <div class="right-0 bottom-0 left-0 absolute p-4 sm:p-6 text-white">
       <h3 class="mb-1 font-semibold text-xl lg:text-2xl">{{ title }}</h3>
       <p class="opacity-90 text-sm lg:text-base">{{ description }}</p>
     </div>

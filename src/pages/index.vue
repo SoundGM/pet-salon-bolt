@@ -120,7 +120,6 @@
             class="absolute inset-0 bg-white opacity-50 blur-xl rounded-full scale-110 transform"
           ></div>
           <NuxtImg
-            src="https://picsum.photos/600/600"
             alt="Happy dog after grooming"
             class="z-10 relative w-full max-w-md object-contain aspect-square"
             width="500"
