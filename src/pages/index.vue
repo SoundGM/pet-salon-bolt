@@ -8,23 +8,23 @@
       title: 'Full Grooming',
       description:
         'Complete pampering including bath, haircut, nail trim, and ear cleaning.',
-      icon: 'i-heroicons-sparkles',
+      imageUrl: 'https://picsum.photos/seed/grooming/400/533', // Adjusted image size
     },
     {
       title: 'Bath & Brush',
       description:
         'A refreshing bath and thorough brushing to keep the coat healthy.',
-      icon: 'i-heroicons-swatch', // Example icon, choose appropriate ones
+      imageUrl: 'https://picsum.photos/seed/bathbrush/400/533', // Adjusted image size
     },
     {
       title: 'Nail Trimming',
       description: 'Safe and gentle nail clipping for comfort and health.',
-      icon: 'i-heroicons-scissors', // Example icon
+      imageUrl: 'https://picsum.photos/seed/nailtrim/400/533', // Adjusted image size
     },
     {
       title: 'Puppy Intro',
       description: 'Gentle introduction to grooming for young pups.',
-      icon: 'i-heroicons-heart', // Example icon
+      imageUrl: 'https://picsum.photos/seed/puppyintro/400/533', // Adjusted image size
     },
   ]
 
@@ -57,11 +57,12 @@
       id="home"
       class="relative flex items-center bg-secondary-400 px-4 py-20 pt-24 md:pt-32 min-h-screen overflow-hidden"
     >
+      <!-- Decorative Shapes -->
       <div
-        class="top-7 left-[40%] z-0 absolute bg-primary-500 opacity-90 rounded-2xl size-12 rotate-12 transform"
+        class="top-[7%] left-[40%] z-0 absolute bg-primary-500 opacity-90 rounded-2xl size-12 rotate-12 transform"
       ></div>
       <div
-        class="top-12 left-[44%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-16 rotate-45 transform"
+        class="top-[12%] left-[44%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-16 rotate-45 transform"
       ></div>
       <div
         class="top-[10%] left-[5%] z-0 absolute bg-primary-500 opacity-90 rounded-4xl size-[100px] rotate-40 transform"
@@ -78,17 +79,17 @@
       <div
         class="right-[5%] bottom-[10%] z-0 absolute bg-primary-500 rounded-2xl size-[40px] -rotate-40 transform"
       ></div>
+      <div
+        class="top-[38%] left-[22%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-24 -rotate-60 transform"
+      ></div>
+      <div
+        class="right-[-40%] bottom-[-40%] z-0 absolute bg-primary-500 opacity-90 rounded-2xl size-44 rotate-12 transform"
+      ></div>
 
       <UContainer class="z-10 relative items-center gap-12 grid md:grid-cols-2">
         <!-- Left Column: Text & Button -->
         <div class="relative text-left">
           <!-- Decorative Shapes - Updated -->
-          <div
-            class="-top-[100px] -left-12 z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-40 rotate-45 transform"
-          ></div>
-          <div
-            class="-right-64 -bottom-64 z-0 absolute bg-primary-500 opacity-90 rounded-2xl size-44 rotate-12 transform"
-          ></div>
 
           <!-- Content -->
           <div class="z-10 relative">
@@ -119,9 +120,12 @@
             class="absolute inset-0 bg-white opacity-50 blur-xl rounded-full scale-110 transform"
           ></div>
           <NuxtImg
-            src="/public/images/hero-dog.png"
-            alt="Happy dog after 1"
+            src="/images/hero-dog.png"
+            alt="Happy dog after grooming"
             class="z-10 relative w-full max-w-md object-contain aspect-square"
+            width="500"
+            height="500"
+            preload
           />
         </div>
       </UContainer>
@@ -130,9 +134,17 @@
     <!-- About Us Section - White Background -->
     <section
       id="about"
-      class="bg-white py-16 md:py-24 transition-opacity duration-500 ease-in"
+      class="relative bg-white py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
     >
-      <UContainer>
+      <!-- Decorative Shapes -->
+      <div
+        class="top-[15%] left-[10%] z-0 absolute bg-primary-500/10 rounded-full size-24 -rotate-12 transform"
+      ></div>
+      <div
+        class="right-[5%] bottom-[10%] z-0 absolute bg-secondary-500/15 rounded-full size-32 rotate-45 transform"
+      ></div>
+
+      <UContainer class="z-10 relative">
         <div class="items-center gap-12 grid md:grid-cols-2">
           <div>
             <NuxtImg
@@ -174,9 +186,17 @@
     <!-- Services Section - Neutral Background -->
     <section
       id="services"
-      class="bg-neutral-50 py-16 md:py-24 transition-opacity duration-500 ease-in"
+      class="relative bg-neutral-50 py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
     >
-      <UContainer>
+      <!-- Decorative Shapes -->
+      <div
+        class="top-[5%] right-[10%] z-0 absolute bg-primary-500/10 rounded-full size-20 rotate-12 transform"
+      ></div>
+      <div
+        class="bottom-[15%] left-[5%] z-0 absolute bg-secondary-500/15 rounded-full size-28 -rotate-45 transform"
+      ></div>
+
+      <UContainer class="z-10 relative">
         <div class="mx-auto mb-12 max-w-2xl text-center">
           <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
             Our Grooming Services
@@ -186,14 +206,14 @@
             your pet. From basic baths to full haircuts, we do it all with care.
           </p>
         </div>
-        <div class="gap-8 grid sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Grid layout with 2 columns -->
+        <div class="gap-6 grid grid-cols-2">
           <ServiceCard
-            v-for="service in services"
+            v-for="(service, index) in services"
             :key="service.title"
             :title="service.title"
             :description="service.description"
-            :icon="service.icon"
-            class="transition-transform hover:-translate-y-2 duration-300 transform"
+            :image-url="service.imageUrl"
           />
         </div>
       </UContainer>
@@ -202,9 +222,17 @@
     <!-- Why Choose Us Section - White Background -->
     <section
       id="why-us"
-      class="bg-white py-16 md:py-24 transition-opacity duration-500 ease-in"
+      class="relative bg-white py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
     >
-      <UContainer>
+      <!-- Decorative Shapes -->
+      <div
+        class="top-[20%] right-[8%] z-0 absolute bg-secondary-500/10 rounded-2xl size-16 rotate-30 transform"
+      ></div>
+      <div
+        class="bottom-[25%] left-[12%] z-0 absolute bg-primary-500/15 rounded-3xl size-24 -rotate-20 transform"
+      ></div>
+
+      <UContainer class="z-10 relative">
         <div class="mx-auto mb-12 max-w-2xl text-center">
           <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
             Why Choose PetSalon?
@@ -236,9 +264,17 @@
     <!-- Contact Section - Neutral Background -->
     <section
       id="contact"
-      class="bg-neutral-50 py-16 md:py-24 transition-opacity duration-500 ease-in"
+      class="relative bg-neutral-50 py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
     >
-      <UContainer>
+      <!-- Decorative Shapes -->
+      <div
+        class="top-[10%] left-[15%] z-0 absolute bg-primary-500/5 rounded-full size-28 rotate-60 transform"
+      ></div>
+      <div
+        class="right-[20%] bottom-[5%] z-0 absolute bg-secondary-500/10 rounded-lg size-16 -rotate-30 transform"
+      ></div>
+
+      <UContainer class="z-10 relative">
         <div class="items-center gap-12 grid md:grid-cols-2">
           <div>
             <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
@@ -296,9 +332,17 @@
     <!-- Booking/Inquiry Form Section - White Background -->
     <section
       id="booking"
-      class="bg-white py-16 md:py-24 transition-opacity duration-500 ease-in"
+      class="relative bg-white py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
     >
-      <UContainer>
+      <!-- Decorative Shapes -->
+      <div
+        class="top-[5%] left-[5%] z-0 absolute bg-secondary-500/10 rounded-xl size-12 rotate-10 transform"
+      ></div>
+      <div
+        class="right-[10%] bottom-[10%] z-0 absolute bg-primary-500/5 rounded-full size-36 rotate-50 transform"
+      ></div>
+
+      <UContainer class="z-10 relative">
         <!-- Updated inner div background -->
         <div class="bg-neutral-50 shadow-lg mx-auto p-8 rounded-lg max-w-2xl">
           <h2

@@ -1,21 +1,36 @@
 <script setup lang="ts">
-defineProps<{
-  title: string
-  description: string
-  icon: string // Heroicon name (e.g., 'i-heroicons-sparkles')
-}>()
+  defineProps<{
+    title: string
+    description: string
+    imageUrl: string
+  }>()
 </script>
 
 <template>
-  <UCard class="text-center h-full flex flex-col"> <!-- Added h-full and flex flex-col for consistent height -->
-    <template #header>
-      <div class="flex justify-center mb-4">
-        <UIcon :name="icon" class="text-4xl text-primary-500" />
-      </div>
-      <h3 class="text-xl font-semibold text-neutral-800">{{ title }}</h3>
-    </template>
-    <p class="text-neutral-600 flex-grow">{{ description }}</p> <!-- Added flex-grow to push button down -->
-    <!-- Optional: Add a button/link for more details -->
-    <!-- <UButton label="Learn More" variant="link" class="mt-4" /> -->
-  </UCard>
+  <div
+    class="group relative shadow-md hover:shadow-xl rounded-[calc(var(--ui-radius)*2)] aspect-[4/3] overflow-hidden transition-all duration-300 ease-in-out cursor-pointer"
+  >
+    <!-- Image Background -->
+    <NuxtImg
+      :src="imageUrl"
+      :alt="title"
+      class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 ease-in-out"
+      width="400"
+      height="200"
+      loading="lazy"
+    />
+
+    <!-- Overlay -->
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+    ></div>
+
+    <!-- Text Content -->
+    <div
+      class="right-0 bottom-0 left-0 absolute opacity-0 group-hover:opacity-100 p-4 sm:p-6 text-white transition-all translate-y-4 group-hover:translate-y-0 duration-300 ease-in-out transform"
+    >
+      <h3 class="mb-1 font-semibold text-xl lg:text-2xl">{{ title }}</h3>
+      <p class="opacity-90 text-sm lg:text-base">{{ description }}</p>
+    </div>
+  </div>
 </template>

@@ -1,5 +1,10 @@
 export default defineAppConfig({
   ui: {
+    button: {
+      slots: {
+        base: 'font-light',
+      },
+    },
     colors: {
       primary: 'dark-blue',
       secondary: 'mon-yellow',
@@ -8,10 +13,6 @@ export default defineAppConfig({
       'green-light': 'green-light',
       'orange-shine': 'orange-shine',
       'blue-sea': 'blue-sea',
-    },
-    // Add button configuration to increase roundness
-    button: {
-      rounded: 'rounded-lg', // Increased roundness
     },
   },
 })
