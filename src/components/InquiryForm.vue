@@ -40,9 +40,14 @@
 
 <template>
   <!-- Removed :schema="schema" prop as Zod is commented out -->
-  <UForm :state="state" class="space-y-4" @submit="handleSubmit">
+  <UForm :state="state" class="flex flex-col space-y-4" @submit="handleSubmit">
     <UFormField label="Your Name" name="name" required>
-      <UInput v-model="state.name" placeholder="Jane Doe" />
+      <UInput
+        v-model="state.name"
+        placeholder="Jane Doe"
+        class="w-full"
+        size="xl"
+      />
     </UFormField>
 
     <UFormField label="Email" name="email" required>
@@ -50,15 +55,28 @@
         v-model="state.email"
         type="email"
         placeholder="you@example.com"
+        class="w-full"
+        size="xl"
       />
     </UFormField>
 
     <UFormField label="Phone (Optional)" name="phone">
-      <UInput v-model="state.phone" type="tel" placeholder="(555) 123-4567" />
+      <UInput
+        v-model="state.phone"
+        type="tel"
+        placeholder="(555) 123-4567"
+        class="w-full"
+        size="xl"
+      />
     </UFormField>
 
     <UFormField label="Pet's Name (Optional)" name="petName">
-      <UInput v-model="state.petName" placeholder="Buddy" />
+      <UInput
+        v-model="state.petName"
+        placeholder="Buddy"
+        class="w-full"
+        size="xl"
+      />
     </UFormField>
 
     <UFormField label="Service Needed" name="service" required>
@@ -66,6 +84,8 @@
         v-model="state.service"
         :options="services"
         placeholder="Select a service"
+        class="w-full"
+        size="xl"
       />
     </UFormField>
 
@@ -77,6 +97,8 @@
       <UTextarea
         v-model="state.message"
         placeholder="Tell us about your pet's needs or preferred appointment time..."
+        class="w-full"
+        size="xl"
       />
     </UFormField>
 
@@ -84,9 +106,9 @@
       type="submit"
       label="Send Inquiry"
       color="primary"
-      size="lg"
+      size="xl"
       block
-      class="hover:scale-105 transition-transform duration-300 transform"
+      class="flex-1 hover:scale-105 transition-transform duration-300 transform"
     />
   </UForm>
 </template>

@@ -120,7 +120,7 @@
             class="absolute inset-0 bg-white opacity-50 blur-xl rounded-full scale-110 transform"
           ></div>
           <NuxtImg
-            src="/images/hero-dog.png"
+            src="https://picsum.photos/600/600"
             alt="Happy dog after grooming"
             class="z-10 relative w-full max-w-md object-contain aspect-square"
             width="500"
@@ -255,7 +255,9 @@
             <h3 class="mb-2 font-semibold text-neutral-800 text-xl">
               {{ point.title }}
             </h3>
-            <p class="text-neutral-600 text-sm">{{ point.description }}</p>
+            <p class="text-neutral-600 text-sm">
+              {{ point.description }}
+            </p>
           </div>
         </div>
       </UContainer>
@@ -342,16 +344,14 @@
         class="right-[10%] bottom-[10%] z-0 absolute bg-primary-500/5 rounded-full size-36 rotate-50 transform"
       ></div>
 
-      <UContainer class="z-10 relative">
-        <!-- Updated inner div background -->
-        <div class="bg-neutral-50 shadow-lg mx-auto p-8 rounded-lg max-w-2xl">
-          <h2
-            class="mb-8 font-bold text-primary-800 text-3xl md:text-4xl text-center"
-          >
-            Book an Appointment or Send an Inquiry
-          </h2>
-          <InquiryForm />
-        </div>
+      <UContainer class="z-10 relative max-w-2xl">
+        <!-- Removed the inner wrapping div -->
+        <h2
+          class="mb-8 font-bold text-primary-800 text-3xl md:text-4xl text-center"
+        >
+          Book an Appointment or Send an Inquiry
+        </h2>
+        <InquiryForm />
       </UContainer>
     </section>
   </div>

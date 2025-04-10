@@ -1,80 +1,121 @@
 <script setup lang="ts">
-const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear()
 
-const links = [
-  { label: 'Home', to: '#home' },
-  { label: 'About Us', to: '#about' },
-  { label: 'Services', to: '#services' },
-  { label: 'Contact', to: '#contact' },
-  { label: 'Book Now', to: '#booking' },
-]
+  const links = [
+    { label: 'Home', to: '#home' },
+    { label: 'About Us', to: '#about' },
+    { label: 'Services', to: '#services' },
+    { label: 'Contact', to: '#contact' },
+    { label: 'Book Now', to: '#booking' },
+  ]
+
+  const newsletterEmail = ref('')
+
+  function subscribeNewsletter() {
+    console.log('Subscribing:', newsletterEmail.value)
+    // TODO: Implement newsletter subscription logic
+    // Example:
+    // const toast = useToast()
+    // toast.add({ title: 'Subscribed!', description: 'Thank you for subscribing.' })
+    // newsletterEmail.value = ''
+  }
 </script>
 
 <template>
-  <footer class="bg-neutral-800 text-neutral-300 py-8">
-    <UContainer>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- About/Brand -->
-        <div>
-          <h4 class="text-lg font-semibold text-white mb-3">PetSalon</h4>
-          <p class="text-sm">
-            Providing top-notch grooming services with love and care for your
-            furry friends.
+  <footer class="bg-mon-yellow-400 pt-20 pb-10 text-neutral-700">
+    <UContainer class="flex flex-col">
+      <!-- Part 1: Newsletter Card -->
+      <UCard class="bg-primary-500 mb-10 rounded-2xl">
+        <div class="flex md:flex-row flex-col justify-between items-center">
+          <p
+            class="md:mr-6 mb-6 md:mb-0 font-semibold text-white text-xl md:text-2xl md:text-left text-center"
+          >
+            Register now so you don't miss our programs
           </p>
-          <!-- Optional: Add Logo here -->
-          <!-- <NuxtLink to="/" class="inline-block mt-2">
-            <img src="/logo-white.svg" alt="PetSalon Logo" class="h-8">
-          </NuxtLink> -->
+          <UCard class="w-full max-w-md">
+            <form
+              class="flex items-center gap-2"
+              @submit.prevent="subscribeNewsletter"
+            >
+              <UInput
+                v-model="newsletterEmail"
+                type="email"
+                placeholder="Enter your email"
+                required
+                class="flex-1"
+                size="xl"
+              />
+              <UButton
+                type="submit"
+                label="Subscribe"
+                color="primary"
+                size="xl"
+              />
+            </form>
+          </UCard>
         </div>
+      </UCard>
 
-        <!-- Quick Links -->
-        <div>
-          <h4 class="text-lg font-semibold text-white mb-3">Quick Links</h4>
-          <ul class="space-y-2 text-sm">
-            <li v-for="link in links" :key="link.to">
-              <NuxtLink :to="link.to" class="hover:text-primary-300 transition-colors duration-200">
-                {{ link.label }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Contact Info -->
-        <div>
-          <h4 class="text-lg font-semibold text-white mb-3">Contact Us</h4>
-          <ul class="space-y-2 text-sm">
-            <li class="flex items-center">
-              <UIcon name="i-heroicons-map-pin" class="mr-2 flex-shrink-0" />
-              <span>123 Pet Lane, Dogtown, CT 06040</span>
-            </li>
-            <li class="flex items-center">
-              <UIcon name="i-heroicons-phone" class="mr-2 flex-shrink-0" />
-              <a href="tel:5551234567" class="hover:text-primary-300 transition-colors duration-200">(555) 123-4567</a>
-            </li>
-            <li class="flex items-center">
-              <UIcon name="i-heroicons-envelope" class="mr-2 flex-shrink-0" />
-              <a href="mailto:info@petsalon.example" class="hover:text-primary-300 transition-colors duration-200">info@petsalon.example</a>
-            </li>
-             <li class="flex items-center">
-              <UIcon name="i-heroicons-clock" class="mr-2 flex-shrink-0" />
-              <span>Mon-Fri: 9am-6pm, Sat: 10am-4pm</span>
-            </li>
-            <!-- Add Social Media Links if needed -->
-            <!-- <li class="flex items-center space-x-3 mt-3">
-              <a href="#" aria-label="Facebook" class="text-neutral-400 hover:text-white transition-colors duration-200"><UIcon name="i-simple-icons-facebook" class="w-5 h-5" /></a>
-              <a href="#" aria-label="Instagram" class="text-neutral-400 hover:text-white transition-colors duration-200"><UIcon name="i-simple-icons-instagram" class="w-5 h-5" /></a>
-            </li> -->
-          </ul>
+      <!-- Part 2: Links -->
+      <div class="flex md:flex-row flex-col justify-between items-center mb-10">
+        <!-- Navigation Links -->
+        <nav
+          class="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 mb-4 md:mb-0"
+        >
+          <UButton
+            v-for="link in links"
+            :key="link.to"
+            :to="link.to"
+            variant="link"
+            color="primary"
+            class="px-0 py-1 font-normal hover:text-primary-600 text-base transition-colors duration-200"
+          >
+            {{ link.label }}
+          </UButton>
+        </nav>
+        <!-- Social Media Links -->
+        <div class="flex items-center space-x-4">
+          <UButton
+            to="#"
+            aria-label="Facebook"
+            variant="link"
+            color="primary"
+            icon="i-simple-icons-facebook"
+            class="p-1"
+          />
+          <UButton
+            to="#"
+            aria-label="Instagram"
+            variant="link"
+            color="primary"
+            icon="i-simple-icons-instagram"
+            class="p-1"
+          />
+          <!-- Add more social icons as needed -->
         </div>
       </div>
 
-      <hr class="border-neutral-700 my-6" />
-
-      <div class="text-center text-sm text-neutral-400">
-        &copy; {{ currentYear }} PetSalon. All rights reserved.
-        <!-- Optional: Add links to Privacy Policy / Terms of Service -->
-        <!-- <span class="mx-2">|</span>
-        <NuxtLink to="/privacy" class="hover:text-white">Privacy Policy</NuxtLink> -->
+      <!-- Part 3: Bottom Bar -->
+      <div
+        class="flex md:flex-row flex-col justify-between items-center pt-10 border-neutral-200 border-t text-neutral-500 text-sm"
+      >
+        <p class="mb-2 md:mb-0">
+          &copy; {{ currentYear }} PetSalon. All rights reserved.
+        </p>
+        <NuxtLink
+          to="/"
+          class="mb-2 md:mb-0 font-bold text-primary-500 text-lg"
+        >
+          PetSalon
+        </NuxtLink>
+        <div class="flex gap-4">
+          <NuxtLink to="/privacy" class="hover:text-primary-500">
+            Privacy Policy
+          </NuxtLink>
+          <NuxtLink to="/terms" class="hover:text-primary-500">
+            Terms of Service
+          </NuxtLink>
+        </div>
       </div>
     </UContainer>
   </footer>
