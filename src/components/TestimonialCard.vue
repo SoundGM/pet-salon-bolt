@@ -4,7 +4,7 @@
     rating: number // Expecting a number from 1 to 5
     comment: string
     rotationClass: string // Class for rotation (e.g., 'rotate-1', '-rotate-2')
-    colorClass: string // Class for border color (e.g., 'border-primary-500', 'border-secondary-500')
+    // colorClass removed as border is no longer applied on hover
   }>()
 
   const maxRating = 5
@@ -13,9 +13,8 @@
 <template>
   <div
     :class="[
-      'bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 hover:border-2 transition-all duration-300 transform',
+      'bg-white p-6 rounded-lg shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 transform', // Removed border classes, increased hover shadow
       rotationClass,
-      `hover:${colorClass}`,
     ]"
   >
     <div class="flex items-center mb-2">

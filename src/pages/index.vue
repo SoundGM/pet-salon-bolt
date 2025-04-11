@@ -1,52 +1,66 @@
 <script setup lang="ts">
-  import ServiceCard from '~/components/ServiceCard.vue'
   import InquiryForm from '~/components/InquiryForm.vue'
-  import TestimonialCard from '~/components/TestimonialCard.vue' // Import the new component
+  import TestimonialCard from '~/components/TestimonialCard.vue'
 
-  // Example data - replace with actual content
+  // Data for the NEW Services Section (based on old Why Choose Us)
   const services = [
     {
       title: 'Full Grooming',
       description:
         'Complete pampering including bath, haircut, nail trim, and ear cleaning.',
-      imageUrl: 'https://picsum.photos/seed/grooming/400/300', // Adjusted aspect ratio
+      icon: 'i-heroicons-sparkles', // Example icon
+      borderColor: 'border-primary-500', // Keep for hover/focus potentially, but base is primary now
     },
     {
       title: 'Bath & Brush',
       description:
         'A refreshing bath and thorough brushing to keep the coat healthy.',
-      imageUrl: 'https://picsum.photos/seed/bathbrush/400/300', // Adjusted aspect ratio
+      icon: 'i-heroicons-swatch', // Example icon
+      borderColor: 'border-primary-500', // Changed to primary
     },
     {
       title: 'Nail Trimming',
       description: 'Safe and gentle nail clipping for comfort and health.',
-      imageUrl: 'https://picsum.photos/seed/nailtrim/400/300', // Adjusted aspect ratio
+      icon: 'i-heroicons-scissors', // Example icon
+      borderColor: 'border-primary-500',
     },
     {
       title: 'Puppy Intro',
       description: 'Gentle introduction to grooming for young pups.',
-      imageUrl: 'https://picsum.photos/seed/puppyintro/400/300', // Adjusted aspect ratio
+      icon: 'i-heroicons-heart', // Example icon
+      borderColor: 'border-primary-500', // Changed to primary
+    },
+    {
+      title: 'De-shedding Treatment',
+      description: 'Reduce shedding and keep your home cleaner.',
+      icon: 'i-heroicons-adjustments-horizontal', // Example icon
+      borderColor: 'border-primary-500',
+    },
+    {
+      title: 'Teeth Brushing',
+      description: 'Promote dental hygiene for a healthier smile.',
+      icon: 'i-heroicons-shield-check', // Example icon
+      borderColor: 'border-primary-500', // Changed to primary
     },
   ]
 
+  // Data for the NEW Why Choose Us Section (based on old About Us)
   const whyUsPoints = [
     {
-      title: 'Experienced Groomers',
+      title: 'Experienced & Caring Staff',
       description:
-        'Our team has years of experience handling pets of all breeds and temperaments.',
-      icon: 'i-heroicons-user-group',
+        'Our team boasts certified groomers with years of experience handling pets of all breeds and temperaments with a gentle, loving touch.',
+      imageUrl: 'https://picsum.photos/seed/staff_care/500/500', // Reduced size
+      imageSide: 'left', // 'left' or 'right'
+      borderColor: 'border-primary-500',
     },
     {
-      title: 'Pet-Friendly Environment',
+      title: 'Stress-Free Environment',
       description:
-        "We maintain a calm, clean, and safe space for your pet's comfort.",
-      icon: 'i-heroicons-home-modern',
-    },
-    {
-      title: 'Quality Products',
-      description:
-        'We use only high-quality, pet-safe shampoos and grooming tools.',
-      icon: 'i-heroicons-check-badge',
+        "We've designed our salon to be a calm, clean, and safe haven. We use positive reinforcement techniques to ensure your pet feels comfortable and secure throughout their visit.",
+      imageUrl: 'https://picsum.photos/seed/calm_env/500/500', // Reduced size
+      imageSide: 'right', // 'left' or 'right'
+      borderColor: 'border-secondary-500',
     },
   ]
 
@@ -58,7 +72,7 @@
       comment:
         'Absolutely wonderful service! My poodle, Fifi, has never looked better. The staff was so gentle and caring.',
       rotation: 'rotate-1',
-      color: 'border-primary-500',
+      color: 'border-primary-500', // Kept for potential future use, but not applied on hover now
     },
     {
       name: 'Mike R.',
@@ -197,7 +211,7 @@
           </div>
           <div>
             <h2 class="mb-4 font-bold text-primary-800 text-4xl md:text-5xl">
-              Your Pet's Happy Place
+              Where Tails Wag &amp; Purrs Begin
             </h2>
             <h3 class="font-semibold text-neutral-800 text-xl mb-2">
               Our Story
@@ -230,7 +244,7 @@
       </UContainer>
     </section>
 
-    <!-- Services Section - Neutral Background -->
+    <!-- Services Section - NEW DESIGN (Based on old Why Choose Us) -->
     <section
       id="services"
       class="relative bg-neutral-50 py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
@@ -253,15 +267,23 @@
             your pet. From basic baths to full haircuts, we do it all with care.
           </p>
         </div>
-        <!-- Grid layout with 2 columns -->
-        <div class="gap-8 grid grid-cols-1 sm:grid-cols-2">
-          <ServiceCard
+        <div class="gap-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          <div
             v-for="(service, index) in services"
             :key="service.title"
-            :title="service.title"
-            :description="service.description"
-            :image-url="service.imageUrl"
-          />
+            class="bg-secondary-400 hover:shadow-xl p-6 border-2 border-primary-500 rounded-lg text-left transition-all hover:-translate-y-1 duration-300 transform"
+          >
+            <UIcon
+              :name="service.icon"
+              class="mb-4 text-primary-500 text-4xl"
+            />
+            <h3 class="mb-2 font-semibold text-primary-800 text-xl">
+              {{ service.title }}
+            </h3>
+            <p class="text-neutral-700 text-base">
+              {{ service.description }}
+            </p>
+          </div>
         </div>
       </UContainer>
     </section>
@@ -300,7 +322,7 @@
       </UContainer>
     </section>
 
-    <!-- Why Choose Us Section - White Background -->
+    <!-- Why Choose Us Section - NEW DESIGN (Based on old About Us) -->
     <section
       id="why-us"
       class="relative bg-white py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
@@ -323,22 +345,45 @@
             experience.
           </p>
         </div>
-        <div class="gap-8 grid md:grid-cols-3">
+
+        <!-- Alternating Grid -->
+        <div class="space-y-16">
           <div
-            v-for="point in whyUsPoints"
+            v-for="(point, index) in whyUsPoints"
             :key="point.title"
-            class="bg-white hover:shadow-xl p-6 border border-neutral-200 rounded-lg text-center transition-all hover:-translate-y-1 duration-300 transform"
+            class="items-center gap-16 grid md:grid-cols-2"
           >
-            <UIcon
-              :name="point.icon"
-              class="mb-4 text-secondary-500 text-4xl"
-            />
-            <h3 class="mb-2 font-semibold text-neutral-800 text-xl">
-              {{ point.title }}
-            </h3>
-            <p class="text-neutral-700 text-base">
-              {{ point.description }}
-            </p>
+            <!-- Image with Offset Border -->
+            <div
+              :class="[
+                'relative',
+                point.imageSide === 'right' ? 'md:order-last' : '',
+              ]"
+            >
+              <NuxtImg
+                :src="point.imageUrl"
+                class="relative z-10 shadow-lg rounded-lg w-full h-full object-cover aspect-square"
+                width="500"
+                height="500"
+                loading="lazy"
+              />
+              <div
+                :class="[
+                  'absolute inset-0 border-4 rounded-lg transform translate-x-4 translate-y-4',
+                  point.borderColor,
+                ]"
+                aria-hidden="true"
+              ></div>
+            </div>
+            <!-- Text Content -->
+            <div :class="point.imageSide === 'left' ? 'md:order-last' : ''">
+              <h3 class="mb-3 font-bold text-primary-800 text-3xl md:text-4xl">
+                {{ point.title }}
+              </h3>
+              <p class="text-neutral-700 text-lg">
+                {{ point.description }}
+              </p>
+            </div>
           </div>
         </div>
       </UContainer>
