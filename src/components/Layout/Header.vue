@@ -4,6 +4,7 @@
   const links = [
     { label: 'About Us', to: '#about' },
     { label: 'Services', to: '#services' },
+    { label: 'Testimonials', to: '#testimonials' }, // Added Testimonials link
     { label: 'Why Us', to: '#why-us' },
     { label: 'Contact', to: '#contact' },
   ]
@@ -32,7 +33,7 @@
     class="right-0 left-0 z-50 fixed transition-all duration-300 ease-in-out"
     :class="{
       'bg-white shadow-md top-0': isScrolled, // Becomes sticky at the top when scrolled
-      'bg-secondary-400 shadow-none top-10': !isScrolled, // Positioned below banner initially
+      'bg-transparent shadow-none top-10': !isScrolled, // Positioned below banner initially
     }"
   >
     <UContainer class="flex justify-between items-center h-16">

@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import ServiceCard from '~/components/ServiceCard.vue'
   import InquiryForm from '~/components/InquiryForm.vue'
+  import TestimonialCard from '~/components/TestimonialCard.vue' // Import the new component
 
   // Example data - replace with actual content
   const services = [
@@ -48,6 +49,42 @@
       icon: 'i-heroicons-check-badge',
     },
   ]
+
+  // Placeholder Testimonial Data
+  const testimonials = [
+    {
+      name: 'Sarah K.',
+      rating: 5,
+      comment:
+        'Absolutely wonderful service! My poodle, Fifi, has never looked better. The staff was so gentle and caring.',
+      rotation: 'rotate-1',
+      color: 'border-primary-500',
+    },
+    {
+      name: 'Mike R.',
+      rating: 4,
+      comment:
+        'Great experience overall. My golden retriever, Max, came back happy and clean. A bit pricey, but worth it.',
+      rotation: '-rotate-2',
+      color: 'border-secondary-500',
+    },
+    {
+      name: 'Jessica L.',
+      rating: 5,
+      comment:
+        "They handled my anxious cat, Luna, with such patience. Highly recommend for nervous pets!",
+      rotation: 'rotate-2',
+      color: 'border-primary-500',
+    },
+    {
+      name: 'David P.',
+      rating: 5,
+      comment:
+        "Fast, efficient, and friendly service. Buster always looks forward to his grooming day!",
+      rotation: '-rotate-1',
+      color: 'border-secondary-500',
+    },
+  ]
 </script>
 
 <template>
@@ -57,33 +94,33 @@
       id="home"
       class="relative flex items-center bg-secondary-400 px-4 py-20 pt-24 md:pt-32 min-h-screen overflow-hidden"
     >
-      <!-- Decorative Shapes -->
+      <!-- Decorative Shapes - Adjusted rounding -->
       <div
-        class="top-[7%] left-[40%] z-0 absolute bg-primary-500 opacity-90 rounded-2xl size-12 rotate-12 transform"
+        class="top-[7%] left-[40%] z-0 absolute bg-primary-500 opacity-90 rounded-xl size-12 rotate-12 transform"
       ></div>
       <div
         class="top-[12%] left-[44%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-16 rotate-45 transform"
       ></div>
       <div
-        class="top-[10%] left-[5%] z-0 absolute bg-primary-500 opacity-90 rounded-4xl size-[100px] rotate-40 transform"
+        class="top-[10%] left-[5%] z-0 absolute bg-primary-500 opacity-90 rounded-3xl size-[100px] rotate-40 transform"
       ></div>
       <div
-        class="top-[30%] right-[15%] z-0 absolute bg-secondary-500 opacity-90 rounded-4xl size-[120px] rotate-20 transform"
+        class="top-[30%] right-[15%] z-0 absolute bg-secondary-500 opacity-90 rounded-3xl size-[120px] rotate-20 transform"
       ></div>
       <div
-        class="bottom-[20%] left-[20%] z-0 absolute bg-secondary-500 opacity-90 rounded-4xl size-[80px] rotate-60 transform"
+        class="bottom-[20%] left-[20%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-[80px] rotate-60 transform"
       ></div>
       <div
-        class="right-[5%] bottom-[11%] z-0 absolute bg-secondary-500 rounded-2xl size-[50px] rotate-20 transform"
+        class="right-[5%] bottom-[11%] z-0 absolute bg-secondary-500 rounded-xl size-[50px] rotate-20 transform"
       ></div>
       <div
-        class="right-[5%] bottom-[10%] z-0 absolute bg-primary-500 rounded-2xl size-[40px] -rotate-40 transform"
+        class="right-[5%] bottom-[10%] z-0 absolute bg-primary-500 rounded-xl size-[40px] -rotate-40 transform"
       ></div>
       <div
         class="top-[38%] left-[22%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-24 -rotate-60 transform"
       ></div>
       <div
-        class="right-[-40%] bottom-[-40%] z-0 absolute bg-primary-500 opacity-90 rounded-2xl size-44 rotate-12 transform"
+        class="right-[-40%] bottom-[-40%] z-0 absolute bg-primary-500 opacity-90 rounded-3xl size-44 rotate-12 transform"
       ></div>
 
       <UContainer class="z-10 relative items-center gap-12 grid md:grid-cols-2">
@@ -134,12 +171,12 @@
       id="about"
       class="relative bg-white py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
     >
-      <!-- Decorative Shapes -->
+      <!-- Decorative Shapes - Adjusted rounding -->
       <div
-        class="top-[15%] left-[10%] z-0 absolute bg-primary-500/10 rounded-full size-24 -rotate-12 transform"
+        class="top-[15%] left-[10%] z-0 absolute bg-primary-500/10 rounded-3xl size-24 -rotate-12 transform"
       ></div>
       <div
-        class="right-[5%] bottom-[10%] z-0 absolute bg-secondary-500/15 rounded-full size-32 rotate-45 transform"
+        class="right-[5%] bottom-[10%] z-0 absolute bg-secondary-500/15 rounded-2xl size-32 rotate-45 transform"
       ></div>
 
       <UContainer class="z-10 relative">
@@ -198,12 +235,12 @@
       id="services"
       class="relative bg-neutral-50 py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
     >
-      <!-- Decorative Shapes -->
+      <!-- Decorative Shapes - Adjusted rounding -->
       <div
-        class="top-[5%] right-[10%] z-0 absolute bg-primary-500/10 rounded-full size-20 rotate-12 transform"
+        class="top-[5%] right-[10%] z-0 absolute bg-primary-500/10 rounded-2xl size-20 rotate-12 transform"
       ></div>
       <div
-        class="bottom-[15%] left-[5%] z-0 absolute bg-secondary-500/15 rounded-full size-28 -rotate-45 transform"
+        class="bottom-[15%] left-[5%] z-0 absolute bg-secondary-500/15 rounded-3xl size-28 -rotate-45 transform"
       ></div>
 
       <UContainer class="z-10 relative">
@@ -229,17 +266,51 @@
       </UContainer>
     </section>
 
+    <!-- Testimonials Section -->
+    <section
+      id="testimonials"
+      class="relative bg-secondary-400 py-16 md:py-24 overflow-hidden"
+    >
+      <UContainer class="z-10 relative">
+        <div class="mx-auto mb-12 max-w-2xl text-center">
+          <h2 class="mb-4 font-bold text-primary-800 text-4xl md:text-5xl">
+            Happy Paws, Happy Parents!
+          </h2>
+          <p class="text-neutral-800 text-xl">
+            See what our clients are saying about their PetSalon experience.
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-start"
+        >
+          <TestimonialCard
+            v-for="(testimonial, index) in testimonials"
+            :key="testimonial.name"
+            :name="testimonial.name"
+            :rating="testimonial.rating"
+            :comment="testimonial.comment"
+            :rotation-class="testimonial.rotation"
+            :color-class="testimonial.color"
+            class="transform"
+            :style="{
+              marginTop: `${index % 2 === 0 ? '0' : '2rem'}`, // Stagger cards
+            }"
+          />
+        </div>
+      </UContainer>
+    </section>
+
     <!-- Why Choose Us Section - White Background -->
     <section
       id="why-us"
       class="relative bg-white py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
     >
-      <!-- Decorative Shapes -->
+      <!-- Decorative Shapes - Adjusted rounding -->
       <div
-        class="top-[20%] right-[8%] z-0 absolute bg-secondary-500/10 rounded-2xl size-16 rotate-30 transform"
+        class="top-[20%] right-[8%] z-0 absolute bg-secondary-500/10 rounded-xl size-16 rotate-30 transform"
       ></div>
       <div
-        class="bottom-[25%] left-[12%] z-0 absolute bg-primary-500/15 rounded-3xl size-24 -rotate-20 transform"
+        class="bottom-[25%] left-[12%] z-0 absolute bg-primary-500/15 rounded-2xl size-24 -rotate-20 transform"
       ></div>
 
       <UContainer class="z-10 relative">
@@ -278,12 +349,12 @@
       id="contact"
       class="relative bg-neutral-50 py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
     >
-      <!-- Decorative Shapes -->
+      <!-- Decorative Shapes - Adjusted rounding -->
       <div
-        class="top-[10%] left-[15%] z-0 absolute bg-primary-500/5 rounded-full size-28 rotate-60 transform"
+        class="top-[10%] left-[15%] z-0 absolute bg-primary-500/5 rounded-2xl size-28 rotate-60 transform"
       ></div>
       <div
-        class="right-[20%] bottom-[5%] z-0 absolute bg-secondary-500/10 rounded-lg size-16 -rotate-30 transform"
+        class="right-[20%] bottom-[5%] z-0 absolute bg-secondary-500/10 rounded-xl size-16 -rotate-30 transform"
       ></div>
 
       <UContainer class="z-10 relative">
@@ -351,12 +422,12 @@
       id="booking"
       class="relative bg-white py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
     >
-      <!-- Decorative Shapes -->
+      <!-- Decorative Shapes - Adjusted rounding -->
       <div
-        class="top-[5%] left-[5%] z-0 absolute bg-secondary-500/10 rounded-xl size-12 rotate-10 transform"
+        class="top-[5%] left-[5%] z-0 absolute bg-secondary-500/10 rounded-lg size-12 rotate-10 transform"
       ></div>
       <div
-        class="right-[10%] bottom-[10%] z-0 absolute bg-primary-500/5 rounded-full size-36 rotate-50 transform"
+        class="right-[10%] bottom-[10%] z-0 absolute bg-primary-500/5 rounded-2xl size-36 rotate-50 transform"
       ></div>
 
       <UContainer class="z-10 relative max-w-2xl">
