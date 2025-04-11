@@ -8,21 +8,21 @@
 
 <template>
   <div
-    class="group relative shadow-md hover:shadow-xl rounded-[calc(var(--ui-radius)*2)] aspect-[4/3] overflow-hidden transition-all duration-300 ease-in-out cursor-pointer"
+    class="group relative shadow-lg hover:shadow-2xl rounded-[calc(var(--ui-radius)*2)] aspect-[4/3] overflow-hidden transition-all duration-300 ease-in-out cursor-pointer hover:-rotate-1 hover:scale-105"
   >
-    <!-- Image Background -->
+    <!-- Image Background - Removed blur -->
     <NuxtImg
       :src="imageUrl"
       :alt="title"
-      class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 ease-in-out"
+      class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out"
       width="400"
-      height="200"
+      height="300"
       loading="lazy"
     />
 
-    <!-- Overlay -->
+    <!-- Overlay - Updated gradient -->
     <div
-      class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"
+      class="absolute inset-0 bg-gradient-to-t from-primary-800/80 via-primary-800/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300"
     ></div>
 
     <!-- Text Content -->

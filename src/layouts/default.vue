@@ -2,9 +2,10 @@
 
 <template>
   <div class="flex flex-col min-h-screen">
+    <LayoutAnnouncementBanner />
     <LayoutHeader />
-    <!-- Removed pt-16 from main element -->
-    <main class="flex-grow">
+    <!-- Added padding-top to account for banner (h-10) and header (h-16) -->
+    <main class="flex-grow pt-26">
       <slot />
     </main>
     <LayoutFooter />

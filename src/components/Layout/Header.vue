@@ -12,7 +12,8 @@
 
   const handleScroll = () => {
     // Threshold slightly increased to avoid flickering on some browsers/devices
-    isScrolled.value = window.scrollY > 20
+    // Adjust threshold based on banner height (40px = 2.5rem)
+    isScrolled.value = window.scrollY > 40
   }
 
   onMounted(() => {
@@ -28,10 +29,10 @@
 
 <template>
   <header
-    class="top-0 right-0 left-0 z-50 fixed transition-all duration-300 ease-in-out"
+    class="right-0 left-0 z-50 fixed transition-all duration-300 ease-in-out"
     :class="{
-      'bg-white shadow-md': isScrolled,
-      'bg-transparent shadow-none': !isScrolled,
+      'bg-white shadow-md top-0': isScrolled, // Becomes sticky at the top when scrolled
+      'bg-transparent shadow-none top-10': !isScrolled, // Positioned below banner initially
     }"
   >
     <UContainer class="flex justify-between items-center h-16">
@@ -55,7 +56,7 @@
           class="font-semibold text-base transition-colors duration-300"
           :class="{
             'text-neutral-600 hover:text-primary-500': isScrolled,
-            'text-primary-800 hover:text-primary-600': !isScrolled, // Removed font-medium as font-semibold is added above
+            'text-primary-800 hover:text-primary-600': !isScrolled,
           }"
         >
           {{ link.label }}

@@ -8,23 +8,23 @@
       title: 'Full Grooming',
       description:
         'Complete pampering including bath, haircut, nail trim, and ear cleaning.',
-      imageUrl: 'https://picsum.photos/seed/grooming/400/533', // Adjusted image size
+      imageUrl: 'https://picsum.photos/seed/grooming/400/300', // Adjusted aspect ratio
     },
     {
       title: 'Bath & Brush',
       description:
         'A refreshing bath and thorough brushing to keep the coat healthy.',
-      imageUrl: 'https://picsum.photos/seed/bathbrush/400/533', // Adjusted image size
+      imageUrl: 'https://picsum.photos/seed/bathbrush/400/300', // Adjusted aspect ratio
     },
     {
       title: 'Nail Trimming',
       description: 'Safe and gentle nail clipping for comfort and health.',
-      imageUrl: 'https://picsum.photos/seed/nailtrim/400/533', // Adjusted image size
+      imageUrl: 'https://picsum.photos/seed/nailtrim/400/300', // Adjusted aspect ratio
     },
     {
       title: 'Puppy Intro',
       description: 'Gentle introduction to grooming for young pups.',
-      imageUrl: 'https://picsum.photos/seed/puppyintro/400/533', // Adjusted image size
+      imageUrl: 'https://picsum.photos/seed/puppyintro/400/300', // Adjusted aspect ratio
     },
   ]
 
@@ -89,16 +89,14 @@
       <UContainer class="z-10 relative items-center gap-12 grid md:grid-cols-2">
         <!-- Left Column: Text & Button -->
         <div class="relative text-left">
-          <!-- Decorative Shapes - Updated -->
-
           <!-- Content -->
           <div class="z-10 relative">
             <h1
-              class="mb-4 font-bold text-primary-800 text-4xl md:text-6xl leading-tight"
+              class="mb-4 font-bold text-primary-800 text-5xl md:text-7xl leading-tight"
             >
               Pamper Your Pet<br />Like Royalty
             </h1>
-            <p class="mb-8 max-w-md text-neutral-700 text-lg md:text-xl">
+            <p class="mb-8 max-w-md text-neutral-800 text-xl md:text-2xl">
               Expert grooming services with a gentle touch. We treat every pet
               like family.
             </p>
@@ -113,15 +111,16 @@
           </div>
         </div>
 
-        <!-- Right Column: Image -->
+        <!-- Right Column: Image - No 3D effect -->
         <div class="relative flex justify-center items-center">
           <!-- Decorative background shape -->
           <div
             class="absolute inset-0 bg-white opacity-50 blur-xl rounded-full scale-110 transform"
           ></div>
           <NuxtImg
+            src="/images/hero-dog.png"
             alt="Happy dog after grooming"
-            class="z-10 relative w-full max-w-md object-contain aspect-square"
+            class="z-10 relative w-full max-w-md object-contain aspect-square rounded-full"
             width="500"
             height="500"
             preload
@@ -144,27 +143,38 @@
       ></div>
 
       <UContainer class="z-10 relative">
-        <div class="items-center gap-12 grid md:grid-cols-2">
-          <div>
+        <div class="items-center gap-16 grid md:grid-cols-2">
+          <!-- Image with Offset Border - Increased offset -->
+          <div class="relative">
             <NuxtImg
               src="https://picsum.photos/seed/petsalon_about/600/600"
-              class="shadow-md rounded-lg w-full h-full object-cover aspect-square"
+              class="relative z-10 shadow-lg rounded-lg w-full h-full object-cover aspect-square"
               width="600"
               height="600"
               loading="lazy"
             />
+            <div
+              class="absolute inset-0 border-4 border-primary-500 rounded-lg transform translate-x-4 translate-y-4"
+              aria-hidden="true"
+            ></div>
           </div>
           <div>
-            <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
-              About PetSalon
+            <h2 class="mb-4 font-bold text-primary-800 text-4xl md:text-5xl">
+              Your Pet's Happy Place
             </h2>
-            <p class="mb-4 text-neutral-600">
+            <h3 class="font-semibold text-neutral-800 text-xl mb-2">
+              Our Story
+            </h3>
+            <p class="mb-4 text-neutral-700 text-lg">
               Welcome to PetSalon, where passion for pets meets professional
               grooming. Founded in [Year], our mission has always been to
               provide a safe, comfortable, and happy grooming experience for
               every pet that walks through our doors.
             </p>
-            <p class="mb-6 text-neutral-600">
+            <h3 class="font-semibold text-neutral-800 text-xl mb-2 mt-6">
+              Our Commitment
+            </h3>
+            <p class="mb-6 text-neutral-700 text-lg">
               Our certified groomers are not only skilled in various grooming
               techniques but are also genuine animal lovers dedicated to your
               pet's well-being. We believe regular grooming is essential for a
@@ -176,6 +186,7 @@
               variant="outline"
               color="primary"
               class="hover:scale-105 transition-transform duration-300 transform"
+              size="lg"
             />
           </div>
         </div>
@@ -197,16 +208,16 @@
 
       <UContainer class="z-10 relative">
         <div class="mx-auto mb-12 max-w-2xl text-center">
-          <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
+          <h2 class="mb-4 font-bold text-primary-800 text-4xl md:text-5xl">
             Our Grooming Services
           </h2>
-          <p class="text-neutral-600">
+          <p class="text-neutral-700 text-xl">
             We offer a range of services tailored to meet the unique needs of
             your pet. From basic baths to full haircuts, we do it all with care.
           </p>
         </div>
         <!-- Grid layout with 2 columns -->
-        <div class="gap-6 grid grid-cols-2">
+        <div class="gap-8 grid grid-cols-1 sm:grid-cols-2">
           <ServiceCard
             v-for="(service, index) in services"
             :key="service.title"
@@ -233,10 +244,10 @@
 
       <UContainer class="z-10 relative">
         <div class="mx-auto mb-12 max-w-2xl text-center">
-          <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
+          <h2 class="mb-4 font-bold text-primary-800 text-4xl md:text-5xl">
             Why Choose PetSalon?
           </h2>
-          <p class="text-neutral-600">
+          <p class="text-neutral-700 text-xl">
             We go the extra mile to ensure both you and your pet have a positive
             experience.
           </p>
@@ -254,7 +265,7 @@
             <h3 class="mb-2 font-semibold text-neutral-800 text-xl">
               {{ point.title }}
             </h3>
-            <p class="text-neutral-600 text-sm">
+            <p class="text-neutral-700 text-base">
               {{ point.description }}
             </p>
           </div>
@@ -276,38 +287,38 @@
       ></div>
 
       <UContainer class="z-10 relative">
-        <div class="items-center gap-12 grid md:grid-cols-2">
+        <div class="items-center gap-16 grid md:grid-cols-2">
           <div>
-            <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
+            <h2 class="mb-4 font-bold text-primary-800 text-4xl md:text-5xl">
               Get In Touch
             </h2>
-            <p class="mb-6 text-neutral-600">
+            <p class="mb-6 text-neutral-700 text-xl">
               Have questions or ready to book? Contact us today! We're happy to
               help.
             </p>
-            <div class="space-y-4">
-              <p class="flex items-center text-neutral-700">
+            <div class="space-y-4 text-lg text-neutral-800">
+              <p class="flex items-center">
                 <UIcon
                   name="i-heroicons-map-pin"
                   class="flex-shrink-0 mr-3 w-5 h-5 text-primary-600"
                 />
                 123 Pet Lane, Dogtown, CT 06040
               </p>
-              <p class="flex items-center text-neutral-700">
+              <p class="flex items-center">
                 <UIcon
                   name="i-heroicons-phone"
                   class="flex-shrink-0 mr-3 w-5 h-5 text-primary-600"
                 />
                 (555) 123-4567
               </p>
-              <p class="flex items-center text-neutral-700">
+              <p class="flex items-center">
                 <UIcon
                   name="i-heroicons-envelope"
                   class="flex-shrink-0 mr-3 w-5 h-5 text-primary-600"
                 />
                 info@petsalon.example
               </p>
-              <p class="flex items-center text-neutral-700">
+              <p class="flex items-center">
                 <UIcon
                   name="i-heroicons-clock"
                   class="flex-shrink-0 mr-3 w-5 h-5 text-primary-600"
@@ -316,15 +327,20 @@
               </p>
             </div>
           </div>
-          <div>
+          <!-- Image with Offset Border - Increased offset, removed 3D effect -->
+          <div class="relative">
             <NuxtImg
               src="https://picsum.photos/seed/petsalon_map/800/450"
               alt="Map showing PetSalon location"
-              class="shadow-md rounded-lg w-full h-full object-cover aspect-video"
+              class="relative z-10 shadow-lg rounded-lg w-full h-full object-cover aspect-video"
               width="800"
               height="450"
               loading="lazy"
             />
+            <div
+              class="absolute inset-0 border-4 border-secondary-500 rounded-lg transform translate-x-4 translate-y-4"
+              aria-hidden="true"
+            ></div>
           </div>
         </div>
       </UContainer>
@@ -344,9 +360,8 @@
       ></div>
 
       <UContainer class="z-10 relative max-w-2xl">
-        <!-- Removed the inner wrapping div -->
         <h2
-          class="mb-8 font-bold text-primary-800 text-3xl md:text-4xl text-center"
+          class="mb-8 font-bold text-primary-800 text-4xl md:text-5xl text-center"
         >
           Book an Appointment or Send an Inquiry
         </h2>
