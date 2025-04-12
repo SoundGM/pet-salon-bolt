@@ -97,7 +97,7 @@
     <!-- Hero Section - Redesigned -->
     <section
       id="home"
-      class="relative flex items-center bg-secondary-400 px-4 py-20 pt-24 md:pt-32 min-h-screen overflow-hidden"
+      class="relative flex items-center bg-secondary-400 px-4 py-20 pt-24 md:pt-32 min-h-[calc(100vh-100px)] overflow-hidden"
     >
       <!-- Decorative Shapes - Adjusted rounding -->
       <div
@@ -128,9 +128,9 @@
         class="right-[-40%] bottom-[-40%] z-0 absolute bg-primary-500 opacity-90 rounded-3xl size-44 rotate-12 transform"
       ></div>
 
-      <UContainer class="z-10 relative items-center gap-12 grid md:grid-cols-2">
+      <UContainer class="z-10 relative">
         <!-- Left Column: Text & Button -->
-        <div class="relative text-left">
+        <div class="relative max-w-2xl text-left">
           <!-- Content -->
           <div class="z-10 relative">
             <h1
@@ -153,22 +153,18 @@
           </div>
         </div>
 
-        <!-- Right Column: Image - No 3D effect -->
-        <div class="relative flex justify-center items-center">
-          <!-- Decorative background shape -->
-          <div
-            class="absolute inset-0 bg-white opacity-50 blur-xl rounded-full scale-110 transform"
-          ></div>
-          <NuxtImg
-            src="/images/hero-dog.png"
-            alt="Happy dog after grooming"
-            class="z-10 relative rounded-full w-full max-w-md object-contain aspect-square"
-            width="500"
-            height="500"
-            preload
-          />
-        </div>
+        <!-- Right Column: Image - Absolute positioned -->
       </UContainer>
+      <div class="right-0 bottom-0 absolute w-[60vw] h-[70%] overflow-hidden">
+        <NuxtImg
+          src="/img/happydogo.png"
+          alt="Happy dog after grooming"
+          class="right-0 bottom-0 absolute w-full h-full object-bottom object-contain"
+          width="800"
+          height="800"
+          preload
+        />
+      </div>
     </section>
 
     <!-- About Us Section - White Background -->
