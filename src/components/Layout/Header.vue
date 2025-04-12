@@ -1,31 +1,40 @@
 <script setup lang="ts">
   import { ref, onMounted, onUnmounted } from 'vue'
+  import NavigationMenu from '~/components/NavigationMenu.vue'
 
   const links = [
     { label: 'About Us', to: '#about' },
     { label: 'Services', to: '#services' },
-    { label: 'Testimonials', to: '#testimonials' }, // Added Testimonials link
+    { label: 'Testimonials', to: '#testimonials' },
     { label: 'Why Us', to: '#why-us' },
-    { label: 'Contact', to: '#contact' },
+    // Removed 'Contact' link as requested
   ]
 
   const isScrolled = ref(false)
+  const overlay = useOverlay() // Initialize useOverlay
 
   const handleScroll = () => {
-    // Threshold slightly increased to avoid flickering on some browsers/devices
-    // Adjust threshold based on banner height (40px = 2.5rem)
     isScrolled.value = window.scrollY > 40
   }
 
   onMounted(() => {
     window.addEventListener('scroll', handleScroll)
-    // Initial check in case the page loads already scrolled
     handleScroll()
   })
 
   onUnmounted(() => {
     window.removeEventListener('scroll', handleScroll)
   })
+
+  const slideover = overlay.create(NavigationMenu, {
+    props: {
+      links: links,
+    },
+  })
+
+  async function openMobileMenu() {
+    slideover.open()
+  }
 </script>
 
 <template>
@@ -73,10 +82,14 @@
         />
       </nav>
 
-      <!-- Mobile Menu Button (Placeholder) -->
+      <!-- Mobile Menu Button -->
       <div class="md:hidden">
-        <!-- Add your mobile menu button/icon here -->
-        <UButton icon="i-heroicons-bars-3" color="primary" variant="ghost" />
+        <UButton
+          icon="i-heroicons-bars-3"
+          :color="isScrolled ? 'neutral' : 'primary'"
+          variant="ghost"
+          @click="openMobileMenu"
+        />
       </div>
     </UContainer>
   </header>
