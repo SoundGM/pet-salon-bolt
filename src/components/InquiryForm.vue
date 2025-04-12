@@ -1,18 +1,18 @@
 <script setup lang="ts">
   import { ref } from 'vue'
-  // import { z } from 'zod' // Zod validation commented out as per user update
+  // import { z } from 'zod' // Zod validacija zakomentirana po posodobitvi uporabnika
   import type { FormSubmitEvent } from '#ui/types'
 
   // const schema = z.object({
-  //   name: z.string().min(1, 'Name is required'),
-  //   email: z.string().email('Invalid email address'),
+  //   name: z.string().min(1, 'Ime je obvezno'),
+  //   email: z.string().email('Neveljaven e-poštni naslov'),
   //   phone: z.string().optional(),
   //   petName: z.string().optional(),
-  //   service: z.string().min(1, 'Please select a service'),
-  //   message: z.string().min(10, 'Message must be at least 10 characters'),
+  //   service: z.string().min(1, 'Prosimo, izberite storitev'),
+  //   message: z.string().min(10, 'Sporočilo mora vsebovati vsaj 10 znakov'),
   // })
 
-  // type Schema = z.output<typeof schema> // Type derived from Zod schema also commented out
+  // type Schema = z.output<typeof schema> // Tip, izpeljan iz Zod sheme, prav tako zakomentiran
 
   const state = ref({
     name: undefined,
@@ -24,82 +24,82 @@
   })
 
   const services = [
-    'Full Grooming',
-    'Bath & Brush',
-    'Nail Trim',
-    'General Inquiry',
-    'Other',
-  ] // Added General Inquiry
+    'Popolna Nega',
+    'Kopel in Krtačenje',
+    'Krajšanje Krempljev',
+    'Splošno Povpraševanje', // Dodano Splošno Povpraševanje
+    'Drugo',
+  ]
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   async function handleSubmit(event: FormSubmitEvent<typeof state.value>) {
-    // Use typeof state.value for event type
-    // TODO: Implement form submission logic (e.g., send to an API endpoint)
-    console.log('Form submitted:', event.data)
-    // Add logic here: e.g., show a success toast, clear the form
-    // Example:
+    // Uporabi typeof state.value za tip dogodka
+    // TODO: Implementiraj logiko oddaje obrazca (npr. pošiljanje na API končno točko)
+    console.log('Obrazec oddan:', event.data)
+    // Dodaj logiko tukaj: npr. prikaži obvestilo o uspehu, počisti obrazec
+    // Primer:
     // const toast = useToast()
-    // toast.add({ title: 'Message Sent!', description: 'We will get back to you soon.' })
+    // toast.add({ title: 'Sporočilo Poslano!', description: 'Kmalu vam bomo odgovorili.' })
     // state.value = { name: undefined, email: undefined, phone: undefined, petName: undefined, service: undefined, message: undefined }
   }
 </script>
 
 <template>
-  <!-- Removed :schema="schema" prop as Zod is commented out -->
+  <!-- Odstranjen :schema="schema" prop, ker je Zod zakomentiran -->
   <UForm :state="state" class="flex flex-col space-y-4" @submit="handleSubmit">
-    <UFormField label="Your Name" name="name" required>
+    <UFormField label="Vaše Ime" name="name" required>
       <UInput
         v-model="state.name"
-        placeholder="Jane Doe"
+        placeholder="Ana Novak"
         class="w-full"
         size="xl"
       />
     </UFormField>
 
-    <UFormField label="Email" name="email" required>
+    <UFormField label="E-pošta" name="email" required>
       <UInput
         v-model="state.email"
         type="email"
-        placeholder="you@example.com"
+        placeholder="vi@primer.com"
         class="w-full"
         size="xl"
       />
     </UFormField>
 
-    <UFormField label="Phone (Optional)" name="phone">
+    <UFormField label="Telefon (Neobvezno)" name="phone">
       <UInput
         v-model="state.phone"
         type="tel"
-        placeholder="(555) 123-4567"
+        placeholder="(01) 123-4567"
         class="w-full"
         size="xl"
       />
     </UFormField>
 
-    <UFormField label="Pet's Name (Optional)" name="petName">
+    <UFormField label="Ime Ljubljenčka (Neobvezno)" name="petName">
       <UInput
         v-model="state.petName"
-        placeholder="Buddy"
+        placeholder="Piki"
         class="w-full"
         size="xl"
       />
     </UFormField>
 
-    <UFormField label="Regarding Service (Optional)" name="service">
-      <!-- Changed label and made optional -->
+    <UFormField label="Zadeva Storitve (Neobvezno)" name="service">
+      <!-- Spremenjena oznaka in narejeno neobvezno -->
       <USelect
         v-model="state.service"
         :options="services"
-        placeholder="Select a service or inquiry type"
+        placeholder="Izberite storitev ali vrsto povpraševanja"
         class="w-full"
         size="xl"
       />
     </UFormField>
 
-    <UFormField label="Your Message" name="message" required>
+    <UFormField label="Vaše Sporočilo" name="message" required>
       <UTextarea
         v-model="state.message"
-        placeholder="How can we help you today?"
+        placeholder="Kako vam lahko danes pomagamo?"
         class="w-full"
         size="xl"
       />
@@ -107,7 +107,7 @@
 
     <UButton
       type="submit"
-      label="Send Message"
+      label="Pošlji Sporočilo"
       color="primary"
       size="xl"
       block

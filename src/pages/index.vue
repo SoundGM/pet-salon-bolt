@@ -1,75 +1,75 @@
 <script setup lang="ts">
-  // Data for the NEW Services Section (based on old Why Choose Us)
+  // Data for the NEW Services Section (based on the old Why Choose Us)
   const services = [
     {
-      title: 'Full Grooming',
+      title: 'Popolna Nega',
       description:
-        'Complete pampering including bath, haircut, nail trim, and ear cleaning.',
+        'Celovito razvajanje, vključno s kopeljo, striženjem, krajšanjem krempljev in čiščenjem ušes.',
       icon: 'i-heroicons-sparkles', // Example icon
     },
     {
-      title: 'Bath & Brush',
+      title: 'Kopel in Krtačenje',
       description:
-        'A refreshing bath and thorough brushing to keep the coat healthy.',
+        'Osvežilna kopel in temeljito krtačenje za ohranjanje zdrave dlake.',
       icon: 'i-heroicons-swatch', // Example icon
     },
     {
-      title: 'Nail Trimming',
-      description: 'Safe and gentle nail clipping for comfort and health.',
+      title: 'Krajšanje Krempljev',
+      description: 'Varno in nežno krajšanje krempljev za udobje in zdravje.',
       icon: 'i-heroicons-scissors', // Example icon
     },
     {
-      title: 'Puppy Intro',
-      description: 'Gentle introduction to grooming for young pups.',
+      title: 'Uvajanje Mladičkov',
+      description: 'Nežno uvajanje v nego za mlade kužke.',
       icon: 'i-heroicons-heart', // Example icon
     },
     {
-      title: 'De-shedding Treatment',
-      description: 'Reduce shedding and keep your home cleaner.',
+      title: 'Tretma Proti Izpadanju Dlake',
+      description: 'Zmanjšajte izpadanje dlake in ohranite svoj dom čistejši.',
       icon: 'i-heroicons-adjustments-horizontal', // Example icon
     },
     {
-      title: 'Teeth Brushing',
-      description: 'Promote dental hygiene for a healthier smile.',
+      title: 'Ščetkanje Zob',
+      description: 'Spodbujajte zobno higieno za bolj zdrav nasmeh.',
       icon: 'i-heroicons-shield-check', // Example icon
     },
   ]
 
-  // Data for the NEW Why Choose Us Section (based on old About Us)
+  // Data for the NEW Why Choose Us Section (based on the old About Us)
   const whyUsPoints = [
     {
-      title: 'Experienced & Caring Staff',
+      title: 'Izkušeno in Skrbno Osebje',
       description:
-        'Our team boasts certified groomers with years of experience handling pets of all breeds and temperaments with a gentle, loving touch.',
-      imageUrl: 'https://picsum.photos/seed/staff_care/450/250', // Adjusted size
+        'Naša ekipa se ponaša s certificiranimi negovalci z dolgoletnimi izkušnjami pri ravnanju z ljubljenčki vseh pasem in temperamentov z nežnim, ljubečim dotikom.',
+      imageUrl: 'https://picsum.photos/seed/staff/450/253', // Updated placeholder
       imageSide: 'left', // 'left' or 'right'
       borderColor: 'border-primary-500',
     },
     {
-      title: 'Stress-Free Environment',
+      title: 'Okolje Brez Stresa',
       description:
-        "We've designed our salon to be a calm, clean, and safe haven. We use positive reinforcement techniques to ensure your pet feels comfortable and secure throughout their visit.",
-      imageUrl: 'https://picsum.photos/seed/calm_env/450/250', // Adjusted size
+        'Naš salon smo zasnovali kot mirno, čisto in varno zatočišče. Uporabljamo tehnike pozitivne spodbude, da se vaš ljubljenček med obiskom počuti udobno in varno.',
+      imageUrl: 'https://picsum.photos/seed/calm/450/253', // Updated placeholder (different seed)
       imageSide: 'right', // 'left' or 'right'
       borderColor: 'border-secondary-500',
     },
   ]
 
-  // Placeholder Testimonial Data
+  // Data for Customer Testimonials (Placeholder)
   const testimonials = [
     {
-      name: 'Sarah K.',
+      name: 'Sara K.',
       rating: 5,
       comment:
-        'Absolutely wonderful service! My poodle, Fifi, has never looked better. The staff was so gentle and caring.',
+        'Absolutno čudovita storitev! Moj pudelj Fifi še nikoli ni izgledal bolje. Osebje je bilo tako nežno in skrbno.',
       rotation: 'rotate-1',
-      color: 'border-primary-500', // Kept for potential future use, but not applied on hover now
+      color: 'border-primary-500',
     },
     {
-      name: 'Mike R.',
+      name: 'Miha R.',
       rating: 4,
       comment:
-        'Great experience overall. My golden retriever, Max, came back happy and clean. A bit pricey, but worth it.',
+        'Odlična izkušnja na splošno. Moj zlati prinašalec Max se je vrnil srečen in čist. Malo drago, a vredno.',
       rotation: '-rotate-2',
       color: 'border-secondary-500',
     },
@@ -77,7 +77,7 @@
       name: 'Jessica L.',
       rating: 5,
       comment:
-        'They handled my anxious cat, Luna, with such patience. Highly recommend for nervous pets!',
+        'Z mojo tesnobno mačko Luno so ravnali s tako potrpežljivostjo. Zelo priporočam za nervozne ljubljenčke!',
       rotation: 'rotate-2',
       color: 'border-primary-500',
     },
@@ -85,7 +85,7 @@
       name: 'David P.',
       rating: 5,
       comment:
-        'Fast, efficient, and friendly service. Buster always looks forward to his grooming day!',
+        'Hitra, učinkovita in prijazna storitev. Buster se vedno veseli svojega dneva za nego!',
       rotation: '-rotate-1',
       color: 'border-secondary-500',
     },
@@ -97,9 +97,9 @@
     <!-- Hero Section - Redesigned -->
     <section
       id="home"
-      class="relative flex items-center bg-secondary-400 px-4 py-20 pt-24 md:pt-32 min-h-[calc(100vh-400px)] overflow-hidden"
+      class="relative flex items-center bg-secondary-400 px-4 py-20 pt-24 md:pt-32 min-h-[calc(100vh-500px)] overflow-hidden"
     >
-      <!-- Decorative Shapes - Adjusted rounding -->
+      <!-- Decorative Shapes - Adjusted roundness & mobile visibility -->
       <div
         class="top-[7%] left-[40%] z-0 absolute bg-primary-500 opacity-90 rounded-xl size-12 rotate-12 transform"
       ></div>
@@ -107,14 +107,17 @@
         class="top-[12%] left-[44%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-16 rotate-45 transform"
       ></div>
       <div
-        class="top-[10%] left-[5%] z-0 absolute bg-primary-500 opacity-90 rounded-3xl size-[100px] rotate-40 transform"
+        class="hidden md:block top-[10%] left-[5%] z-0 absolute bg-primary-500 opacity-90 rounded-3xl size-[100px] rotate-40 transform"
       ></div>
+      <!-- Hidden on mobile -->
       <div
-        class="top-[30%] right-[15%] z-0 absolute bg-secondary-500 opacity-90 rounded-3xl size-[120px] rotate-20 transform"
+        class="hidden md:block top-[30%] right-[15%] z-0 absolute bg-secondary-500 opacity-90 rounded-3xl size-[120px] rotate-20 transform"
       ></div>
+      <!-- Hidden on mobile -->
       <div
-        class="bottom-[25%] left-[30%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-[60px] rotate-60 transform"
+        class="hidden md:block bottom-[20%] left-[20%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-[80px] rotate-60 transform"
       ></div>
+      <!-- Hidden on mobile -->
       <div
         class="right-[5%] bottom-[11%] z-0 absolute bg-secondary-500 rounded-xl size-[50px] rotate-20 transform"
       ></div>
@@ -122,29 +125,31 @@
         class="right-[5%] bottom-[10%] z-0 absolute bg-primary-500 rounded-xl size-[40px] -rotate-40 transform"
       ></div>
       <div
-        class="top-[38%] left-[22%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-24 -rotate-60 transform"
+        class="hidden md:block top-[38%] left-[22%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-24 -rotate-60 transform"
       ></div>
+      <!-- Hidden on mobile -->
       <div
-        class="right-[-40%] bottom-[-40%] z-0 absolute bg-primary-500 opacity-90 rounded-3xl size-44 rotate-12 transform"
+        class="hidden md:block right-[-40%] bottom-[-40%] z-0 absolute bg-primary-500 opacity-90 rounded-3xl size-44 rotate-12 transform"
       ></div>
+      <!-- Hidden on mobile -->
 
-      <UContainer class="z-10 relative">
+      <UContainer class="z-10 relative gap-8 grid grid-cols-1 md:grid-cols-2">
         <!-- Left Column: Text & Button -->
-        <div class="relative max-w-2xl text-left">
+        <div class="relative flex flex-col justify-center text-left">
           <!-- Content -->
           <div class="z-10 relative">
             <h1
               class="mb-4 font-bold text-primary-800 text-5xl md:text-7xl leading-tight"
             >
-              Pamper Your Pet<br />Like Royalty
+              Razvajajte Svojega<br />Ljubljenčka Kot Kralja
             </h1>
             <p class="mb-8 max-w-md text-neutral-800 text-xl md:text-2xl">
-              Expert grooming services with a gentle touch. We treat every pet
-              like family.
+              Strokovne storitve nege z nežnim dotikom. Vsakega ljubljenčka
+              obravnavamo kot družinskega člana.
             </p>
             <UButton
               to="#contact"
-              label="Contact Us"
+              label="Kontaktirajte Nas"
               size="xl"
               color="primary"
               variant="solid"
@@ -174,7 +179,7 @@
       id="about"
       class="relative bg-white py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
     >
-      <!-- Decorative Shapes - Adjusted rounding -->
+      <!-- Decorative Shapes - Adjusted roundness -->
       <div
         class="top-[15%] left-[10%] z-0 absolute bg-primary-500/10 rounded-3xl size-24 -rotate-12 transform"
       ></div>
@@ -187,7 +192,8 @@
           <!-- Image with Offset Border - Increased offset -->
           <div class="relative">
             <NuxtImg
-              src="https://picsum.photos/seed/petsalon_about/600/600"
+              src="https://picsum.photos/seed/salon/600/600"
+              alt="Notranjost salona za nego ljubljenčkov"
               class="z-10 relative shadow-lg rounded-lg w-full h-full object-cover aspect-square"
               width="600"
               height="600"
@@ -200,25 +206,25 @@
           </div>
           <div>
             <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
-              Where Tails Wag &amp; Purrs Begin
+              Kjer Repki Mahajo &amp; Mucke Predejo
             </h2>
             <h3 class="mb-2 font-semibold text-neutral-800 text-lg">
-              Our Story
+              Naša Zgodba
             </h3>
             <p class="mb-4 text-neutral-700 text-lg">
-              Welcome to PetSalon, where passion for pets meets professional
-              grooming. Founded in [Year], our mission has always been to
-              provide a safe, comfortable, and happy grooming experience for
-              every pet that walks through our doors.
+              Dobrodošli v PetSalon, kjer se strast do ljubljenčkov sreča s
+              profesionalno nego. Ustanovljeni leta 2015, je naše poslanstvo
+              vedno bilo zagotoviti varno, udobno in veselo izkušnjo nege za
+              vsakega ljubljenčka, ki prestopi naša vrata.
             </p>
             <h3 class="mt-6 mb-2 font-semibold text-neutral-800 text-lg">
-              Our Commitment
+              Naša Zaveza
             </h3>
             <p class="mb-6 text-neutral-700 text-lg">
-              Our certified groomers are not only skilled in various grooming
-              techniques but are also genuine animal lovers dedicated to your
-              pet's well-being. We believe regular grooming is essential for a
-              pet's health and happiness.
+              Naši certificirani negovalci niso le vešči različnih tehnik nege,
+              ampak so tudi iskreni ljubitelji živali, predani dobremu počutju
+              vašega ljubljenčka. Verjamemo, da je redna nega ključna za zdravje
+              in srečo hišnega ljubljenčka.
             </p>
           </div>
         </div>
@@ -230,7 +236,7 @@
       id="services"
       class="relative bg-neutral-50 py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
     >
-      <!-- Decorative Shapes - Adjusted rounding -->
+      <!-- Decorative Shapes - Adjusted roundness -->
       <div
         class="top-[5%] right-[10%] z-0 absolute bg-primary-500/10 rounded-2xl size-20 rotate-12 transform"
       ></div>
@@ -241,11 +247,12 @@
       <UContainer class="z-10 relative">
         <div class="mx-auto mb-12 max-w-2xl text-center">
           <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
-            Our Grooming Services
+            Naše Storitve Nege
           </h2>
           <p class="text-neutral-700 text-lg">
-            We offer a range of services tailored to meet the unique needs of
-            your pet. From basic baths to full haircuts, we do it all with care.
+            Nudimo vrsto storitev, prilagojenih edinstvenim potrebam vašega
+            ljubljenčka. Od osnovnih kopeli do popolnih striženj, vse opravimo
+            skrbno.
           </p>
         </div>
         <div class="gap-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -277,10 +284,10 @@
       <UContainer class="z-10 relative">
         <div class="mx-auto mb-12 max-w-2xl text-center">
           <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
-            Happy Paws, Happy Parents!
+            Vesele Tačke, Srečni Starši!
           </h2>
           <p class="text-neutral-800 text-xl">
-            See what our clients are saying about their PetSalon experience.
+            Poglejte, kaj naše stranke pravijo o svoji izkušnji v PetSalonu.
           </p>
         </div>
         <div
@@ -308,7 +315,7 @@
       id="why-us"
       class="relative bg-white py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
     >
-      <!-- Decorative Shapes - Adjusted rounding -->
+      <!-- Decorative Shapes - Adjusted roundness -->
       <div
         class="top-[20%] right-[8%] z-0 absolute bg-secondary-500/10 rounded-xl size-16 rotate-30 transform"
       ></div>
@@ -319,11 +326,11 @@
       <UContainer class="z-10 relative">
         <div class="mx-auto mb-12 max-w-2xl text-center">
           <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
-            Why Choose PetSalon?
+            Zakaj Izbrati PetSalon?
           </h2>
           <p class="text-neutral-700 text-lg">
-            We go the extra mile to ensure both you and your pet have a positive
-            experience.
+            Potrudimo se dodatno, da zagotovimo pozitivno izkušnjo tako vam kot
+            vašemu ljubljenčku.
           </p>
         </div>
 
@@ -343,9 +350,10 @@
             >
               <NuxtImg
                 :src="point.imageUrl"
-                class="z-10 relative shadow-lg rounded-lg w-full h-auto object-cover aspect-[18/10]"
+                :alt="`Slika za ${point.title}`"
+                class="z-10 relative shadow-lg rounded-lg w-full h-auto object-cover aspect-video"
                 width="450"
-                height="250"
+                height="253"
                 loading="lazy"
               />
               <div
@@ -376,7 +384,7 @@
       id="contact"
       class="relative bg-neutral-50 py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
     >
-      <!-- Decorative Shapes - Adjusted rounding -->
+      <!-- Decorative Shapes - Adjusted roundness -->
       <div
         class="top-[10%] left-[15%] z-0 absolute bg-primary-500/5 rounded-2xl size-28 rotate-60 transform"
       ></div>
@@ -385,14 +393,16 @@
       ></div>
 
       <UContainer class="z-10 relative">
-        <div class="items-center gap-16 grid md:grid-cols-2">
+        <!-- Grid for Contact Info and Form -->
+        <div class="items-start gap-16 grid grid-cols-1 md:grid-cols-2">
+          <!-- Left Column: Contact Info -->
           <div>
             <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
-              Get In Touch
+              Stopite v Stik
             </h2>
             <p class="mb-6 text-neutral-700 text-lg">
-              Have questions or ready to book? Contact us today! We're happy to
-              help.
+              Imate vprašanja ali ste pripravljeni na rezervacijo? Kontaktirajte
+              nas danes! Z veseljem vam bomo pomagali.
             </p>
             <div class="space-y-4 text-md text-neutral-800">
               <p class="flex items-center">
@@ -400,74 +410,49 @@
                   name="i-heroicons-map-pin"
                   class="flex-shrink-0 mr-3 w-5 h-5 text-primary-600"
                 />
-                123 Pet Lane, Dogtown, CT 06040
+                Ljubljenčkova ulica 123, Pasje mesto, 1000 Ljubljana
               </p>
               <p class="flex items-center">
                 <UIcon
                   name="i-heroicons-phone"
                   class="flex-shrink-0 mr-3 w-5 h-5 text-primary-600"
                 />
-                (555) 123-4567
+                (01) 123-4567
               </p>
               <p class="flex items-center">
                 <UIcon
                   name="i-heroicons-envelope"
                   class="flex-shrink-0 mr-3 w-5 h-5 text-primary-600"
                 />
-                info@petsalon.example
+                info@petsalon.primer
               </p>
               <p class="flex items-center">
                 <UIcon
                   name="i-heroicons-clock"
                   class="flex-shrink-0 mr-3 w-5 h-5 text-primary-600"
                 />
-                Mon - Fri: 9:00 AM - 6:00 PM, Sat: 10:00 AM - 4:00 PM
+                Pon - Pet: 9:00 - 18:00, Sob: 10:00 - 16:00
               </p>
             </div>
           </div>
-          <!-- Image - Removed offset border -->
+
+          <!-- Right Column: Inquiry Form -->
           <div class="relative">
-            <NuxtImg
-              src="https://picsum.photos/seed/petsalon_map/800/450"
-              alt="Map showing PetSalon location"
-              class="z-10 relative shadow-lg rounded-lg w-full h-full object-cover aspect-video"
-              width="800"
-              height="450"
-              loading="lazy"
-            />
-            <!-- Removed the offset border div -->
+            <h3
+              class="mb-4 font-bold text-primary-800 text-2xl md:text-3xl text-center md:text-left"
+            >
+              Pošljite Povpraševanje
+            </h3>
+            <p class="mb-6 text-neutral-700 text-lg text-center md:text-left">
+              Izpolnite spodnji obrazec, da nam pošljete sporočilo ali zastavite
+              vprašanja. Odgovorili vam bomo v kratkem!
+            </p>
+            <InquiryForm />
           </div>
         </div>
       </UContainer>
     </section>
 
-    <!-- Contact Form Section - White Background -->
-    <section
-      id="booking"
-      class="relative bg-white py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
-    >
-      <!-- Decorative Shapes - Adjusted rounding -->
-      <div
-        class="top-[5%] left-[5%] z-0 absolute bg-secondary-500/10 rounded-lg size-12 rotate-10 transform"
-      ></div>
-      <div
-        class="right-[10%] bottom-[10%] z-0 absolute bg-primary-500/5 rounded-2xl size-36 rotate-50 transform"
-      ></div>
-
-      <UContainer class="z-10 relative max-w-2xl">
-        <h2
-          class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl text-center"
-        >
-          Contact Us
-          <!-- Updated Title -->
-        </h2>
-        <p class="mb-8 text-neutral-700 text-lg text-center">
-          Fill out the form below to send us a message or ask any questions.
-          We'll get back to you shortly!
-          <!-- Updated Description -->
-        </p>
-        <InquiryForm />
-      </UContainer>
-    </section>
+    <!-- Removed separate Contact Form Section -->
   </div>
 </template>
