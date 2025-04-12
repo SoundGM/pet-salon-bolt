@@ -8,7 +8,13 @@ export default defineNuxtConfig({
   // target: 'static',
   ssr: false,
   css: ['~/assets/css/ui.css'],
-  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxtjs/i18n', '@nuxt/ui'],
+   modules: [
+    '@nuxt/eslint',
+    '@nuxt/image',
+    '@nuxtjs/i18n',
+    '@nuxt/ui',
+    '@vueuse/motion/nuxt',
+  ],
   colorMode: {
     preference: 'light',
   },

@@ -99,43 +99,128 @@
       id="home"
       class="relative flex items-center bg-secondary-400 px-4 py-20 pt-24 md:pt-32 min-h-[calc(100vh-500px)] overflow-hidden"
     >
-      <!-- Decorative Shapes - Adjusted roundness & mobile visibility -->
+      <!-- Decorative Shapes - Animated -->
       <div
-        class="top-[7%] left-[40%] z-0 absolute bg-primary-500 opacity-90 rounded-xl size-12 rotate-12 transform"
+        v-motion
+        :initial="{ opacity: 0, y: -20, scale: 0.8, rotate: -45 }"
+        :enter="{
+          opacity: 0.9,
+          y: 0,
+          scale: 1,
+          rotate: 12,
+          transition: { delay: 300, duration: 500, ease: 'easeOut' },
+        }"
+        class="top-[7%] left-[40%] z-0 absolute bg-primary-500 opacity-90 rounded-xl size-12 transform"
       ></div>
       <div
-        class="top-[12%] left-[44%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-16 rotate-45 transform"
+        v-motion
+        :initial="{ opacity: 0, x: 20, scale: 0.7, rotate: 90 }"
+        :enter="{
+          opacity: 0.9,
+          x: 0,
+          scale: 1,
+          rotate: 45,
+          transition: { delay: 400, duration: 500, ease: 'easeOut' },
+        }"
+        class="top-[12%] left-[44%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-16 transform"
       ></div>
       <div
-        class="hidden md:block top-[10%] left-[5%] z-0 absolute bg-primary-500 opacity-90 rounded-3xl size-[100px] rotate-40 transform"
-      ></div>
-      <!-- Hidden on mobile -->
-      <div
-        class="hidden md:block top-[30%] right-[15%] z-0 absolute bg-secondary-500 opacity-90 rounded-3xl size-[120px] rotate-20 transform"
-      ></div>
-      <!-- Hidden on mobile -->
-      <div
-        class="hidden md:block bottom-[20%] left-[20%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-[80px] rotate-60 transform"
-      ></div>
-      <!-- Hidden on mobile -->
-      <div
-        class="right-[5%] bottom-[11%] z-0 absolute bg-secondary-500 rounded-xl size-[50px] rotate-20 transform"
+        v-motion
+        :initial="{ opacity: 0, y: 30, scale: 0.9, rotate: 0 }"
+        :enter="{
+          opacity: 0.9,
+          y: 0,
+          scale: 1,
+          rotate: 40,
+          transition: { delay: 500, duration: 500, ease: 'easeOut' },
+        }"
+        class="hidden md:block top-[10%] left-[5%] z-0 absolute bg-primary-500 opacity-90 rounded-3xl size-[100px] transform"
       ></div>
       <div
-        class="right-[5%] bottom-[10%] z-0 absolute bg-primary-500 rounded-xl size-[40px] -rotate-40 transform"
+        v-motion
+        :initial="{ opacity: 0, x: -25, scale: 0.85, rotate: -30 }"
+        :enter="{
+          opacity: 0.9,
+          x: 0,
+          scale: 1,
+          rotate: 20,
+          transition: { delay: 600, duration: 500, ease: 'easeOut' },
+        }"
+        class="hidden md:block top-[30%] right-[15%] z-0 absolute bg-secondary-500 opacity-90 rounded-3xl size-[120px] transform"
       ></div>
       <div
-        class="hidden md:block top-[38%] left-[22%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-24 -rotate-60 transform"
+        v-motion
+        :initial="{ opacity: 0, y: 40, scale: 0.75, rotate: 120 }"
+        :enter="{
+          opacity: 0.9,
+          y: 0,
+          scale: 1,
+          rotate: 60,
+          transition: { delay: 700, duration: 500, ease: 'easeOut' },
+        }"
+        class="hidden md:block bottom-[20%] left-[20%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-[80px] transform"
       ></div>
-      <!-- Hidden on mobile -->
       <div
-        class="hidden md:block right-[-40%] bottom-[-40%] z-0 absolute bg-primary-500 opacity-90 rounded-3xl size-44 rotate-12 transform"
+        v-motion
+        :initial="{ opacity: 0, x: 15, scale: 0.95, rotate: 0 }"
+        :enter="{
+          opacity: 1,
+          x: 0,
+          scale: 1,
+          rotate: 20,
+          transition: { delay: 800, duration: 500, ease: 'easeOut' },
+        }"
+        class="right-[5%] bottom-[11%] z-0 absolute bg-secondary-500 rounded-xl size-[50px] transform"
       ></div>
-      <!-- Hidden on mobile -->
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: -10, scale: 0.8, rotate: -90 }"
+        :enter="{
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          rotate: -40,
+          transition: { delay: 900, duration: 500, ease: 'easeOut' },
+        }"
+        class="right-[5%] bottom-[10%] z-0 absolute bg-primary-500 rounded-xl size-[40px] transform"
+      ></div>
+      <div
+        v-motion
+        :initial="{ opacity: 0, x: -30, scale: 0.7, rotate: 0 }"
+        :enter="{
+          opacity: 0.9,
+          x: 0,
+          scale: 1,
+          rotate: -60,
+          transition: { delay: 1000, duration: 500, ease: 'easeOut' },
+        }"
+        class="hidden md:block top-[38%] left-[22%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-24 transform"
+      ></div>
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: 50, scale: 0.6, rotate: 60 }"
+        :enter="{
+          opacity: 0.9,
+          y: 0,
+          scale: 1,
+          rotate: 12,
+          transition: { delay: 1100, duration: 500, ease: 'easeOut' },
+        }"
+        class="hidden md:block right-[-40%] bottom-[-40%] z-0 absolute bg-primary-500 opacity-90 rounded-3xl size-44 transform"
+      ></div>
 
       <UContainer class="z-10 relative gap-8 grid grid-cols-1 md:grid-cols-2">
         <!-- Left Column: Text & Button -->
-        <div class="relative flex flex-col justify-center text-left">
+        <div
+          class="relative flex flex-col justify-center text-left"
+          v-motion
+          :initial="{ opacity: 0, x: -50 }"
+          :enter="{
+            opacity: 1,
+            x: 0,
+            transition: { delay: 100, duration: 500, ease: 'easeOut' },
+          }"
+        >
           <!-- Content -->
           <div class="z-10 relative">
             <h1
@@ -162,6 +247,13 @@
       </UContainer>
       <div
         class="right-0 -bottom-10 absolute w-[60vw] h-[120%] overflow-hidden"
+        v-motion
+        :initial="{ opacity: 0, x: 50 }"
+        :enter="{
+          opacity: 1,
+          x: 0,
+          transition: { delay: 200, duration: 600, ease: 'easeOut' },
+        }"
       >
         <NuxtImg
           src="/dogo2.png"
@@ -177,20 +269,43 @@
     <!-- About Us Section - White Background -->
     <section
       id="about"
-      class="relative bg-white py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
+      class="relative bg-white py-16 md:py-24 overflow-hidden"
     >
       <!-- Decorative Shapes - Adjusted roundness -->
       <div
         class="top-[15%] left-[10%] z-0 absolute bg-primary-500/10 rounded-3xl size-24 -rotate-12 transform"
+        v-motion
+        :initial="{ opacity: 0, scale: 0.5 }"
+        :visibleOnce="{
+          opacity: 1,
+          scale: 1,
+          transition: { delay: 300, duration: 400 },
+        }"
       ></div>
       <div
         class="right-[5%] bottom-[10%] z-0 absolute bg-secondary-500/15 rounded-2xl size-32 rotate-45 transform"
+        v-motion
+        :initial="{ opacity: 0, scale: 0.5 }"
+        :visibleOnce="{
+          opacity: 1,
+          scale: 1,
+          transition: { delay: 400, duration: 400 },
+        }"
       ></div>
 
       <UContainer class="z-10 relative">
         <div class="items-center gap-16 grid md:grid-cols-2">
           <!-- Image with Offset Border - Increased offset -->
-          <div class="relative">
+          <div
+            class="relative"
+            v-motion
+            :initial="{ opacity: 0, x: -50 }"
+            :visibleOnce="{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 100, duration: 500, ease: 'easeOut' },
+            }"
+          >
             <NuxtImg
               src="https://picsum.photos/seed/salon/600/600"
               alt="Notranjost salona za nego ljubljenčkov"
@@ -204,7 +319,15 @@
               aria-hidden="true"
             ></div>
           </div>
-          <div>
+          <div
+            v-motion
+            :initial="{ opacity: 0, x: 50 }"
+            :visibleOnce="{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 200, duration: 500, ease: 'easeOut' },
+            }"
+          >
             <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
               Kjer Repki Mahajo &amp; Mucke Predejo
             </h2>
@@ -234,18 +357,41 @@
     <!-- Services Section - NEW DESIGN (Based on old Why Choose Us) -->
     <section
       id="services"
-      class="relative bg-neutral-50 py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
+      class="relative bg-neutral-50 py-16 md:py-24 overflow-hidden"
     >
       <!-- Decorative Shapes - Adjusted roundness -->
       <div
         class="top-[5%] right-[10%] z-0 absolute bg-primary-500/10 rounded-2xl size-20 rotate-12 transform"
+        v-motion
+        :initial="{ opacity: 0, scale: 0.5 }"
+        :visibleOnce="{
+          opacity: 1,
+          scale: 1,
+          transition: { delay: 300, duration: 400 },
+        }"
       ></div>
       <div
         class="bottom-[15%] left-[5%] z-0 absolute bg-secondary-500/15 rounded-3xl size-28 -rotate-45 transform"
+        v-motion
+        :initial="{ opacity: 0, scale: 0.5 }"
+        :visibleOnce="{
+          opacity: 1,
+          scale: 1,
+          transition: { delay: 400, duration: 400 },
+        }"
       ></div>
 
       <UContainer class="z-10 relative">
-        <div class="mx-auto mb-12 max-w-2xl text-center">
+        <div
+          class="mx-auto mb-12 max-w-2xl text-center"
+          v-motion
+          :initial="{ opacity: 0, y: 30 }"
+          :visibleOnce="{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 100, duration: 500, ease: 'easeOut' },
+          }"
+        >
           <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
             Naše Storitve Nege
           </h2>
@@ -260,6 +406,13 @@
             v-for="(service, index) in services"
             :key="service.title"
             class="group bg-white shadow-md hover:shadow-2xl p-6 rounded-lg text-left transition-all hover:-translate-y-1 duration-300 transform"
+            v-motion
+            :initial="{ opacity: 0, y: 20 }"
+            :visibleOnce="{
+              opacity: 1,
+              y: 0,
+              transition: { delay: 200 + index * 100, duration: 400, ease: 'easeOut' },
+            }"
           >
             <UIcon
               :name="service.icon"
@@ -282,7 +435,16 @@
       class="relative bg-secondary-400 py-16 md:py-24 overflow-hidden"
     >
       <UContainer class="z-10 relative">
-        <div class="mx-auto mb-12 max-w-2xl text-center">
+        <div
+          class="mx-auto mb-12 max-w-2xl text-center"
+          v-motion
+          :initial="{ opacity: 0, y: 30 }"
+          :visibleOnce="{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 100, duration: 500, ease: 'easeOut' },
+          }"
+        >
           <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
             Vesele Tačke, Srečni Starši!
           </h2>
@@ -305,6 +467,13 @@
             :style="{
               marginTop: `${index % 2 === 0 ? '0' : '2rem'}`,
             }"
+            v-motion
+            :initial="{ opacity: 0, y: 20 }"
+            :visibleOnce="{
+              opacity: 1,
+              y: 0,
+              transition: { delay: 200 + index * 100, duration: 400, ease: 'easeOut' },
+            }"
           />
         </div>
       </UContainer>
@@ -313,18 +482,41 @@
     <!-- Why Choose Us Section -->
     <section
       id="why-us"
-      class="relative bg-white py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
+      class="relative bg-white py-16 md:py-24 overflow-hidden"
     >
       <!-- Decorative Shapes - Adjusted roundness -->
       <div
         class="top-[20%] right-[8%] z-0 absolute bg-secondary-500/10 rounded-xl size-16 rotate-30 transform"
+        v-motion
+        :initial="{ opacity: 0, scale: 0.5 }"
+        :visibleOnce="{
+          opacity: 1,
+          scale: 1,
+          transition: { delay: 300, duration: 400 },
+        }"
       ></div>
       <div
         class="bottom-[25%] left-[12%] z-0 absolute bg-primary-500/15 rounded-2xl size-24 -rotate-20 transform"
+        v-motion
+        :initial="{ opacity: 0, scale: 0.5 }"
+        :visibleOnce="{
+          opacity: 1,
+          scale: 1,
+          transition: { delay: 400, duration: 400 },
+        }"
       ></div>
 
       <UContainer class="z-10 relative">
-        <div class="mx-auto mb-12 max-w-2xl text-center">
+        <div
+          class="mx-auto mb-12 max-w-2xl text-center"
+          v-motion
+          :initial="{ opacity: 0, y: 30 }"
+          :visibleOnce="{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 100, duration: 500, ease: 'easeOut' },
+          }"
+        >
           <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
             Zakaj Izbrati PetSalon?
           </h2>
@@ -340,6 +532,13 @@
             v-for="(point, index) in whyUsPoints"
             :key="point.title"
             class="items-center gap-16 grid md:grid-cols-2"
+            v-motion
+            :initial="{ opacity: 0, x: point.imageSide === 'left' ? -50 : 50 }"
+            :visibleOnce="{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 200 + index * 150, duration: 500, ease: 'easeOut' },
+            }"
           >
             <!-- Image with Offset Border -->
             <div
@@ -382,21 +581,43 @@
     <!-- Contact Section - Neutral Background -->
     <section
       id="contact"
-      class="relative bg-neutral-50 py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
+      class="relative bg-neutral-50 py-16 md:py-24 overflow-hidden"
     >
       <!-- Decorative Shapes - Adjusted roundness -->
       <div
         class="top-[10%] left-[15%] z-0 absolute bg-primary-500/5 rounded-2xl size-28 rotate-60 transform"
+        v-motion
+        :initial="{ opacity: 0, scale: 0.5 }"
+        :visibleOnce="{
+          opacity: 1,
+          scale: 1,
+          transition: { delay: 300, duration: 400 },
+        }"
       ></div>
       <div
         class="right-[20%] bottom-[5%] z-0 absolute bg-secondary-500/10 rounded-xl size-16 -rotate-30 transform"
+        v-motion
+        :initial="{ opacity: 0, scale: 0.5 }"
+        :visibleOnce="{
+          opacity: 1,
+          scale: 1,
+          transition: { delay: 400, duration: 400 },
+        }"
       ></div>
 
       <UContainer class="z-10 relative">
         <!-- Grid for Contact Info and Form -->
         <div class="items-start gap-16 grid grid-cols-1 md:grid-cols-2">
           <!-- Left Column: Contact Info -->
-          <div>
+          <div
+            v-motion
+            :initial="{ opacity: 0, x: -50 }"
+            :visibleOnce="{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 100, duration: 500, ease: 'easeOut' },
+            }"
+          >
             <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
               Stopite v Stik
             </h2>
@@ -437,7 +658,16 @@
           </div>
 
           <!-- Right Column: Inquiry Form -->
-          <div class="relative">
+          <div
+            class="relative"
+            v-motion
+            :initial="{ opacity: 0, x: 50 }"
+            :visibleOnce="{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 200, duration: 500, ease: 'easeOut' },
+            }"
+          >
             <h3
               class="mb-4 font-bold text-primary-800 text-2xl md:text-3xl text-center md:text-left"
             >
