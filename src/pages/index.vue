@@ -41,7 +41,7 @@
       title: 'Izkušeno in Skrbno Osebje',
       description:
         'Naša ekipa se ponaša s certificiranimi negovalci z dolgoletnimi izkušnjami pri ravnanju z ljubljenčki vseh pasem in temperamentov z nežnim, ljubečim dotikom.',
-      imageUrl: 'https://picsum.photos/seed/staff/450/253', // Updated placeholder
+      imageUrl: '/staff.jpg', // Updated placeholder
       imageSide: 'left', // 'left' or 'right'
       borderColor: 'border-primary-500',
     },
@@ -49,7 +49,7 @@
       title: 'Okolje Brez Stresa',
       description:
         'Naš salon smo zasnovali kot mirno, čisto in varno zatočišče. Uporabljamo tehnike pozitivne spodbude, da se vaš ljubljenček med obiskom počuti udobno in varno.',
-      imageUrl: 'https://picsum.photos/seed/calm/450/253', // Updated placeholder (different seed)
+      imageUrl: '/salon2.jpg', // Updated placeholder (different seed)
       imageSide: 'right', // 'left' or 'right'
       borderColor: 'border-secondary-500',
     },
@@ -306,8 +306,8 @@
             }"
           >
             <NuxtImg
-              src="https://picsum.photos/seed/salon/600/600"
-              alt="Notranjost salona za nego ljubljenčkov"
+              src="/bananadog.jpg"
+              alt="Pomergrom"
               class="z-10 relative shadow-lg rounded-lg w-full h-full object-cover aspect-square"
               width="600"
               height="600"
