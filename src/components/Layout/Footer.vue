@@ -5,8 +5,9 @@
     { label: 'Home', to: '#home' },
     { label: 'About Us', to: '#about' },
     { label: 'Services', to: '#services' },
-    { label: 'Contact', to: '#contact' },
-    { label: 'Book Now', to: '#booking' },
+    { label: 'Testimonials', to: '#testimonials' },
+    { label: 'Why Us', to: '#why-us' },
+    { label: 'Contact', to: '#contact' }, // Changed 'Book Now' to 'Contact' and updated link
   ]
 
   const newsletterEmail = ref('')

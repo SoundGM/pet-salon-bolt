@@ -1,7 +1,4 @@
 <script setup lang="ts">
-  import InquiryForm from '~/components/InquiryForm.vue'
-  import TestimonialCard from '~/components/TestimonialCard.vue'
-
   // Data for the NEW Services Section (based on old Why Choose Us)
   const services = [
     {
@@ -9,38 +6,32 @@
       description:
         'Complete pampering including bath, haircut, nail trim, and ear cleaning.',
       icon: 'i-heroicons-sparkles', // Example icon
-      borderColor: 'border-primary-500', // Keep for hover/focus potentially, but base is primary now
     },
     {
       title: 'Bath & Brush',
       description:
         'A refreshing bath and thorough brushing to keep the coat healthy.',
       icon: 'i-heroicons-swatch', // Example icon
-      borderColor: 'border-primary-500', // Changed to primary
     },
     {
       title: 'Nail Trimming',
       description: 'Safe and gentle nail clipping for comfort and health.',
       icon: 'i-heroicons-scissors', // Example icon
-      borderColor: 'border-primary-500',
     },
     {
       title: 'Puppy Intro',
       description: 'Gentle introduction to grooming for young pups.',
       icon: 'i-heroicons-heart', // Example icon
-      borderColor: 'border-primary-500', // Changed to primary
     },
     {
       title: 'De-shedding Treatment',
       description: 'Reduce shedding and keep your home cleaner.',
       icon: 'i-heroicons-adjustments-horizontal', // Example icon
-      borderColor: 'border-primary-500',
     },
     {
       title: 'Teeth Brushing',
       description: 'Promote dental hygiene for a healthier smile.',
       icon: 'i-heroicons-shield-check', // Example icon
-      borderColor: 'border-primary-500', // Changed to primary
     },
   ]
 
@@ -50,7 +41,7 @@
       title: 'Experienced & Caring Staff',
       description:
         'Our team boasts certified groomers with years of experience handling pets of all breeds and temperaments with a gentle, loving touch.',
-      imageUrl: 'https://picsum.photos/seed/staff_care/500/500', // Reduced size
+      imageUrl: 'https://picsum.photos/seed/staff_care/450/250', // Adjusted size
       imageSide: 'left', // 'left' or 'right'
       borderColor: 'border-primary-500',
     },
@@ -58,7 +49,7 @@
       title: 'Stress-Free Environment',
       description:
         "We've designed our salon to be a calm, clean, and safe haven. We use positive reinforcement techniques to ensure your pet feels comfortable and secure throughout their visit.",
-      imageUrl: 'https://picsum.photos/seed/calm_env/500/500', // Reduced size
+      imageUrl: 'https://picsum.photos/seed/calm_env/450/250', // Adjusted size
       imageSide: 'right', // 'left' or 'right'
       borderColor: 'border-secondary-500',
     },
@@ -86,7 +77,7 @@
       name: 'Jessica L.',
       rating: 5,
       comment:
-        "They handled my anxious cat, Luna, with such patience. Highly recommend for nervous pets!",
+        'They handled my anxious cat, Luna, with such patience. Highly recommend for nervous pets!',
       rotation: 'rotate-2',
       color: 'border-primary-500',
     },
@@ -94,7 +85,7 @@
       name: 'David P.',
       rating: 5,
       comment:
-        "Fast, efficient, and friendly service. Buster always looks forward to his grooming day!",
+        'Fast, efficient, and friendly service. Buster always looks forward to his grooming day!',
       rotation: '-rotate-1',
       color: 'border-secondary-500',
     },
@@ -152,8 +143,8 @@
               like family.
             </p>
             <UButton
-              to="#booking"
-              label="Book an Appointment"
+              to="#contact"
+              label="Contact Us"
               size="xl"
               color="primary"
               variant="solid"
@@ -171,7 +162,7 @@
           <NuxtImg
             src="/images/hero-dog.png"
             alt="Happy dog after grooming"
-            class="z-10 relative w-full max-w-md object-contain aspect-square rounded-full"
+            class="z-10 relative rounded-full w-full max-w-md object-contain aspect-square"
             width="500"
             height="500"
             preload
@@ -199,13 +190,13 @@
           <div class="relative">
             <NuxtImg
               src="https://picsum.photos/seed/petsalon_about/600/600"
-              class="relative z-10 shadow-lg rounded-lg w-full h-full object-cover aspect-square"
+              class="z-10 relative shadow-lg rounded-lg w-full h-full object-cover aspect-square"
               width="600"
               height="600"
               loading="lazy"
             />
             <div
-              class="absolute inset-0 border-4 border-primary-500 rounded-lg transform translate-x-4 translate-y-4"
+              class="absolute inset-0 border-4 border-primary-500 rounded-lg translate-x-4 translate-y-4 transform"
               aria-hidden="true"
             ></div>
           </div>
@@ -213,7 +204,7 @@
             <h2 class="mb-4 font-bold text-primary-800 text-4xl md:text-5xl">
               Where Tails Wag &amp; Purrs Begin
             </h2>
-            <h3 class="font-semibold text-neutral-800 text-xl mb-2">
+            <h3 class="mb-2 font-semibold text-neutral-800 text-xl">
               Our Story
             </h3>
             <p class="mb-4 text-neutral-700 text-lg">
@@ -222,7 +213,7 @@
               provide a safe, comfortable, and happy grooming experience for
               every pet that walks through our doors.
             </p>
-            <h3 class="font-semibold text-neutral-800 text-xl mb-2 mt-6">
+            <h3 class="mt-6 mb-2 font-semibold text-neutral-800 text-xl">
               Our Commitment
             </h3>
             <p class="mb-6 text-neutral-700 text-lg">
@@ -271,11 +262,11 @@
           <div
             v-for="(service, index) in services"
             :key="service.title"
-            class="bg-secondary-400 hover:shadow-xl p-6 border-2 border-primary-500 rounded-lg text-left transition-all hover:-translate-y-1 duration-300 transform"
+            class="group bg-white shadow-md hover:shadow-2xl p-6 rounded-lg text-left transition-all hover:-translate-y-1 duration-300 transform"
           >
             <UIcon
               :name="service.icon"
-              class="mb-4 text-primary-500 text-4xl"
+              class="mb-4 text-primary-500 text-4xl group-hover:rotate-6 transition-transform duration-300"
             />
             <h3 class="mb-2 font-semibold text-primary-800 text-xl">
               {{ service.title }}
@@ -303,7 +294,7 @@
           </p>
         </div>
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-start"
+          class="items-start gap-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
         >
           <TestimonialCard
             v-for="(testimonial, index) in testimonials"
@@ -315,7 +306,7 @@
             :color-class="testimonial.color"
             class="transform"
             :style="{
-              marginTop: `${index % 2 === 0 ? '0' : '2rem'}`, // Stagger cards
+              marginTop: `${index % 2 === 0 ? '0' : '2rem'}`,
             }"
           />
         </div>
@@ -362,9 +353,9 @@
             >
               <NuxtImg
                 :src="point.imageUrl"
-                class="relative z-10 shadow-lg rounded-lg w-full h-full object-cover aspect-square"
-                width="500"
-                height="500"
+                class="z-10 relative shadow-lg rounded-lg w-full h-auto object-cover aspect-[18/10]"
+                width="450"
+                height="250"
                 loading="lazy"
               />
               <div
@@ -377,7 +368,8 @@
             </div>
             <!-- Text Content -->
             <div :class="point.imageSide === 'left' ? 'md:order-last' : ''">
-              <h3 class="mb-3 font-bold text-primary-800 text-3xl md:text-4xl">
+              <h3 class="mb-3 font-bold text-primary-800 text-2xl md:text-3xl">
+                <!-- Reduced font size -->
                 {{ point.title }}
               </h3>
               <p class="text-neutral-700 text-lg">
@@ -412,7 +404,7 @@
               Have questions or ready to book? Contact us today! We're happy to
               help.
             </p>
-            <div class="space-y-4 text-lg text-neutral-800">
+            <div class="space-y-4 text-neutral-800 text-lg">
               <p class="flex items-center">
                 <UIcon
                   name="i-heroicons-map-pin"
@@ -443,26 +435,23 @@
               </p>
             </div>
           </div>
-          <!-- Image with Offset Border - Increased offset, removed 3D effect -->
+          <!-- Image - Removed offset border -->
           <div class="relative">
             <NuxtImg
               src="https://picsum.photos/seed/petsalon_map/800/450"
               alt="Map showing PetSalon location"
-              class="relative z-10 shadow-lg rounded-lg w-full h-full object-cover aspect-video"
+              class="z-10 relative shadow-lg rounded-lg w-full h-full object-cover aspect-video"
               width="800"
               height="450"
               loading="lazy"
             />
-            <div
-              class="absolute inset-0 border-4 border-secondary-500 rounded-lg transform translate-x-4 translate-y-4"
-              aria-hidden="true"
-            ></div>
+            <!-- Removed the offset border div -->
           </div>
         </div>
       </UContainer>
     </section>
 
-    <!-- Booking/Inquiry Form Section - White Background -->
+    <!-- Contact Form Section - White Background -->
     <section
       id="booking"
       class="relative bg-white py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
@@ -477,10 +466,16 @@
 
       <UContainer class="z-10 relative max-w-2xl">
         <h2
-          class="mb-8 font-bold text-primary-800 text-4xl md:text-5xl text-center"
+          class="mb-4 font-bold text-primary-800 text-4xl md:text-5xl text-center"
         >
-          Book an Appointment or Send an Inquiry
+          Contact Us
+          <!-- Updated Title -->
         </h2>
+        <p class="mb-8 text-neutral-700 text-xl text-center">
+          Fill out the form below to send us a message or ask any questions.
+          We'll get back to you shortly!
+          <!-- Updated Description -->
+        </p>
         <InquiryForm />
       </UContainer>
     </section>

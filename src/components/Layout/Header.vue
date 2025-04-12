@@ -47,7 +47,8 @@
       </NuxtLink>
 
       <!-- Navigation Links (Desktop) -->
-      <nav class="flex items-center space-x-4">
+      <nav class="hidden md:flex items-center space-x-4">
+        <!-- Hide on small screens -->
         <UButton
           v-for="link in links"
           :key="link.to"
@@ -63,14 +64,20 @@
           {{ link.label }}
         </UButton>
         <UButton
-          to="#booking"
-          label="Book Now"
+          to="#contact"
+          label="Contact Us"
           color="primary"
           variant="solid"
           :class="{ 'shadow-sm': !isScrolled }"
           class="transition-shadow duration-300"
         />
       </nav>
+
+      <!-- Mobile Menu Button (Placeholder) -->
+      <div class="md:hidden">
+        <!-- Add your mobile menu button/icon here -->
+        <UButton icon="i-heroicons-bars-3" color="primary" variant="ghost" />
+      </div>
     </UContainer>
   </header>
 </template>

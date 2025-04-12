@@ -23,7 +23,13 @@
     message: undefined,
   })
 
-  const services = ['Full Grooming', 'Bath & Brush', 'Nail Trim', 'Other'] // Example services
+  const services = [
+    'Full Grooming',
+    'Bath & Brush',
+    'Nail Trim',
+    'General Inquiry',
+    'Other',
+  ] // Added General Inquiry
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   async function handleSubmit(event: FormSubmitEvent<typeof state.value>) {
@@ -33,7 +39,7 @@
     // Add logic here: e.g., show a success toast, clear the form
     // Example:
     // const toast = useToast()
-    // toast.add({ title: 'Inquiry Sent!', description: 'We will get back to you soon.' })
+    // toast.add({ title: 'Message Sent!', description: 'We will get back to you soon.' })
     // state.value = { name: undefined, email: undefined, phone: undefined, petName: undefined, service: undefined, message: undefined }
   }
 </script>
@@ -79,24 +85,21 @@
       />
     </UFormField>
 
-    <UFormField label="Service Needed" name="service" required>
+    <UFormField label="Regarding Service (Optional)" name="service">
+      <!-- Changed label and made optional -->
       <USelect
         v-model="state.service"
         :options="services"
-        placeholder="Select a service"
+        placeholder="Select a service or inquiry type"
         class="w-full"
         size="xl"
       />
     </UFormField>
 
-    <UFormField
-      label="Your Message / Preferred Date & Time"
-      name="message"
-      required
-    >
+    <UFormField label="Your Message" name="message" required>
       <UTextarea
         v-model="state.message"
-        placeholder="Tell us about your pet's needs or preferred appointment time..."
+        placeholder="How can we help you today?"
         class="w-full"
         size="xl"
       />
@@ -104,11 +107,11 @@
 
     <UButton
       type="submit"
-      label="Send Inquiry"
+      label="Send Message"
       color="primary"
       size="xl"
       block
-      class="flex-1 hover:scale-105 transition-transform duration-300 transform"
+      class="flex-1 py-3 hover:scale-105 transition-transform duration-300 transform"
     />
   </UForm>
 </template>
