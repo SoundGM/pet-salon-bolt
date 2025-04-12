@@ -157,7 +157,7 @@
       </UContainer>
       <div class="right-0 bottom-0 absolute w-[60vw] h-[70%] overflow-hidden">
         <NuxtImg
-          src="/dogo.png"
+          src="/dogo2.png"
           alt="Happy dog after grooming"
           class="right-0 bottom-0 absolute w-full h-full object-bottom object-contain"
           width="800"
