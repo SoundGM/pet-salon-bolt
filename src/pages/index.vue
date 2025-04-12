@@ -197,10 +197,10 @@
             ></div>
           </div>
           <div>
-            <h2 class="mb-4 font-bold text-primary-800 text-4xl md:text-5xl">
+            <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
               Where Tails Wag &amp; Purrs Begin
             </h2>
-            <h3 class="mb-2 font-semibold text-neutral-800 text-xl">
+            <h3 class="mb-2 font-semibold text-neutral-800 text-lg">
               Our Story
             </h3>
             <p class="mb-4 text-neutral-700 text-lg">
@@ -209,7 +209,7 @@
               provide a safe, comfortable, and happy grooming experience for
               every pet that walks through our doors.
             </p>
-            <h3 class="mt-6 mb-2 font-semibold text-neutral-800 text-xl">
+            <h3 class="mt-6 mb-2 font-semibold text-neutral-800 text-lg">
               Our Commitment
             </h3>
             <p class="mb-6 text-neutral-700 text-lg">
@@ -218,14 +218,6 @@
               pet's well-being. We believe regular grooming is essential for a
               pet's health and happiness.
             </p>
-            <UButton
-              to="#services"
-              label="Explore Our Services"
-              variant="outline"
-              color="primary"
-              class="hover:scale-105 transition-transform duration-300 transform"
-              size="lg"
-            />
           </div>
         </div>
       </UContainer>
@@ -246,10 +238,10 @@
 
       <UContainer class="z-10 relative">
         <div class="mx-auto mb-12 max-w-2xl text-center">
-          <h2 class="mb-4 font-bold text-primary-800 text-4xl md:text-5xl">
+          <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
             Our Grooming Services
           </h2>
-          <p class="text-neutral-700 text-xl">
+          <p class="text-neutral-700 text-lg">
             We offer a range of services tailored to meet the unique needs of
             your pet. From basic baths to full haircuts, we do it all with care.
           </p>
@@ -282,7 +274,7 @@
     >
       <UContainer class="z-10 relative">
         <div class="mx-auto mb-12 max-w-2xl text-center">
-          <h2 class="mb-4 font-bold text-primary-800 text-4xl md:text-5xl">
+          <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
             Happy Paws, Happy Parents!
           </h2>
           <p class="text-neutral-800 text-xl">
@@ -309,7 +301,7 @@
       </UContainer>
     </section>
 
-    <!-- Why Choose Us Section - NEW DESIGN (Based on old About Us) -->
+    <!-- Why Choose Us Section -->
     <section
       id="why-us"
       class="relative bg-white py-16 md:py-24 overflow-hidden transition-opacity duration-500 ease-in"
@@ -324,10 +316,10 @@
 
       <UContainer class="z-10 relative">
         <div class="mx-auto mb-12 max-w-2xl text-center">
-          <h2 class="mb-4 font-bold text-primary-800 text-4xl md:text-5xl">
+          <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
             Why Choose PetSalon?
           </h2>
-          <p class="text-neutral-700 text-xl">
+          <p class="text-neutral-700 text-lg">
             We go the extra mile to ensure both you and your pet have a positive
             experience.
           </p>
@@ -364,7 +356,7 @@
             </div>
             <!-- Text Content -->
             <div :class="point.imageSide === 'left' ? 'md:order-last' : ''">
-              <h3 class="mb-3 font-bold text-primary-800 text-2xl md:text-3xl">
+              <h3 class="mb-3 font-bold text-1xl text-primary-800 md:text-2xl">
                 <!-- Reduced font size -->
                 {{ point.title }}
               </h3>
@@ -393,14 +385,14 @@
       <UContainer class="z-10 relative">
         <div class="items-center gap-16 grid md:grid-cols-2">
           <div>
-            <h2 class="mb-4 font-bold text-primary-800 text-4xl md:text-5xl">
+            <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
               Get In Touch
             </h2>
-            <p class="mb-6 text-neutral-700 text-xl">
+            <p class="mb-6 text-neutral-700 text-lg">
               Have questions or ready to book? Contact us today! We're happy to
               help.
             </p>
-            <div class="space-y-4 text-neutral-800 text-lg">
+            <div class="space-y-4 text-md text-neutral-800">
               <p class="flex items-center">
                 <UIcon
                   name="i-heroicons-map-pin"
@@ -462,12 +454,12 @@
 
       <UContainer class="z-10 relative max-w-2xl">
         <h2
-          class="mb-4 font-bold text-primary-800 text-4xl md:text-5xl text-center"
+          class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl text-center"
         >
           Contact Us
           <!-- Updated Title -->
         </h2>
-        <p class="mb-8 text-neutral-700 text-xl text-center">
+        <p class="mb-8 text-neutral-700 text-lg text-center">
           Fill out the form below to send us a message or ask any questions.
           We'll get back to you shortly!
           <!-- Updated Description -->

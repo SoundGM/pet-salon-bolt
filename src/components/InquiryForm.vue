@@ -111,7 +111,7 @@
       color="primary"
       size="xl"
       block
-      class="flex-1 py-3 hover:scale-105 transition-transform duration-300 transform"
+      class="flex-1 py-3 font-semibold hover:scale-105 transition-transform duration-300 transform"
     />
   </UForm>
 </template>

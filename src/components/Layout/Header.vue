@@ -78,7 +78,7 @@
           color="primary"
           variant="solid"
           :class="{ 'shadow-sm': !isScrolled }"
-          class="transition-shadow duration-300"
+          class="font-semibold transition-shadow duration-300"
         />
       </nav>
 

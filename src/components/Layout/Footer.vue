@@ -29,7 +29,7 @@
       <UCard class="bg-primary-500 mb-10 rounded-2xl">
         <div class="flex md:flex-row flex-col justify-between items-center">
           <p
-            class="md:mr-6 mb-6 md:mb-0 font-semibold text-white text-xl md:text-2xl md:text-left text-center"
+            class="md:mr-6 mb-6 md:mb-0 font-semibold text-white text-lg md:text-xl md:text-left text-center"
           >
             Register now so you don't miss our programs
           </p>
