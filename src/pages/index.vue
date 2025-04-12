@@ -134,7 +134,7 @@
           rotate: 40,
           transition: { delay: 500, duration: 500, ease: 'easeOut' },
         }"
-        class="hidden md:block top-[10%] left-[5%] z-0 absolute bg-primary-500 opacity-90 rounded-3xl size-[100px] transform"
+        class="hidden md:block top-[60%] left-[45%] z-0 absolute bg-primary-500 opacity-90 rounded-3xl size-[80px] transform"
       ></div>
       <div
         v-motion
@@ -194,7 +194,7 @@
           rotate: -60,
           transition: { delay: 1000, duration: 500, ease: 'easeOut' },
         }"
-        class="hidden md:block top-[38%] left-[22%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-24 transform"
+        class="hidden md:block top-[18%] left-[11%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-16 transform"
       ></div>
       <div
         v-motion
@@ -226,11 +226,10 @@
             <h1
               class="mb-4 font-bold text-primary-800 text-5xl md:text-7xl leading-tight"
             >
-              Razvajajte Svojega<br />Ljubljenčka Kot Kralja
+              Pasje Kraljestvo
             </h1>
             <p class="mb-8 max-w-md text-neutral-800 text-xl md:text-2xl">
-              Strokovne storitve nege z nežnim dotikom. Vsakega ljubljenčka
-              obravnavamo kot družinskega člana.
+              Strokovne storitve nege z nežnim dotikom.
             </p>
             <UButton
               to="#contact"
@@ -269,11 +268,11 @@
     <!-- About Us Section - White Background -->
     <section
       id="about"
-      class="relative bg-white py-16 md:py-24 overflow-hidden"
+      class="relative bg-white py-20 md:pt-28 md:pb-36 overflow-hidden"
     >
       <!-- Decorative Shapes - Adjusted roundness -->
       <div
-        class="top-[15%] left-[10%] z-0 absolute bg-primary-500/10 rounded-3xl size-24 -rotate-12 transform"
+        class="top-[15%] left-[10%] z-0 absolute bg-primary-500 rounded-3xl size-24 -rotate-12 transform"
         v-motion
         :initial="{ opacity: 0, scale: 0.5 }"
         :visibleOnce="{
@@ -283,7 +282,7 @@
         }"
       ></div>
       <div
-        class="right-[5%] bottom-[10%] z-0 absolute bg-secondary-500/15 rounded-2xl size-32 rotate-45 transform"
+        class="right-[5%] bottom-[10%] z-0 absolute bg-secondary-500 rounded-2xl size-32 rotate-45 transform"
         v-motion
         :initial="{ opacity: 0, scale: 0.5 }"
         :visibleOnce="{
@@ -328,7 +327,7 @@
               transition: { delay: 200, duration: 500, ease: 'easeOut' },
             }"
           >
-            <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
+            <h2 class="mb-8 font-bold text-primary-800 text-3xl md:text-4xl">
               Kjer Repki Mahajo &amp; Mucke Predejo
             </h2>
             <h3 class="mb-2 font-semibold text-neutral-800 text-lg">
@@ -357,11 +356,11 @@
     <!-- Services Section - NEW DESIGN (Based on old Why Choose Us) -->
     <section
       id="services"
-      class="relative bg-neutral-50 py-16 md:py-24 overflow-hidden"
+      class="relative bg-neutral-50 px-8 py-20 md:pt-28 md:pb-36 overflow-hidden"
     >
       <!-- Decorative Shapes - Adjusted roundness -->
       <div
-        class="top-[5%] right-[10%] z-0 absolute bg-primary-500/10 rounded-2xl size-20 rotate-12 transform"
+        class="top-[5%] right-[10%] z-0 absolute bg-primary-500 rounded-2xl size-20 rotate-12 transform"
         v-motion
         :initial="{ opacity: 0, scale: 0.5 }"
         :visibleOnce="{
@@ -371,7 +370,7 @@
         }"
       ></div>
       <div
-        class="bottom-[15%] left-[5%] z-0 absolute bg-secondary-500/15 rounded-3xl size-28 -rotate-45 transform"
+        class="bottom-[15%] left-[5%] z-0 absolute bg-secondary-500 rounded-3xl size-28 -rotate-45 transform"
         v-motion
         :initial="{ opacity: 0, scale: 0.5 }"
         :visibleOnce="{
@@ -383,7 +382,7 @@
 
       <UContainer class="z-10 relative">
         <div
-          class="mx-auto mb-12 max-w-2xl text-center"
+          class="mx-auto mb-20 max-w-2xl text-center"
           v-motion
           :initial="{ opacity: 0, y: 30 }"
           :visibleOnce="{
@@ -401,7 +400,9 @@
             skrbno.
           </p>
         </div>
-        <div class="gap-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div
+          class="gap-8 md:gap-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+        >
           <div
             v-for="(service, index) in services"
             :key="service.title"
@@ -411,7 +412,11 @@
             :visibleOnce="{
               opacity: 1,
               y: 0,
-              transition: { delay: 200 + index * 100, duration: 400, ease: 'easeOut' },
+              transition: {
+                delay: 200 + index * 100,
+                duration: 400,
+                ease: 'easeOut',
+              },
             }"
           >
             <UIcon
@@ -432,11 +437,11 @@
     <!-- Testimonials Section -->
     <section
       id="testimonials"
-      class="relative bg-secondary-400 py-16 md:py-24 overflow-hidden"
+      class="relative bg-secondary-400 py-20 md:pt-28 md:pb-36 overflow-hidden"
     >
       <UContainer class="z-10 relative">
         <div
-          class="mx-auto mb-12 max-w-2xl text-center"
+          class="mx-auto mb-20 max-w-2xl text-center"
           v-motion
           :initial="{ opacity: 0, y: 30 }"
           :visibleOnce="{
@@ -472,7 +477,11 @@
             :visibleOnce="{
               opacity: 1,
               y: 0,
-              transition: { delay: 200 + index * 100, duration: 400, ease: 'easeOut' },
+              transition: {
+                delay: 200 + index * 100,
+                duration: 400,
+                ease: 'easeOut',
+              },
             }"
           />
         </div>
@@ -482,11 +491,11 @@
     <!-- Why Choose Us Section -->
     <section
       id="why-us"
-      class="relative bg-white py-16 md:py-24 overflow-hidden"
+      class="relative bg-white py-16 md:pt-28 md:pb-36 overflow-hidden"
     >
       <!-- Decorative Shapes - Adjusted roundness -->
       <div
-        class="top-[20%] right-[8%] z-0 absolute bg-secondary-500/10 rounded-xl size-16 rotate-30 transform"
+        class="top-[20%] right-[8%] z-0 absolute bg-primary-500 rounded-xl size-16 rotate-30 transform"
         v-motion
         :initial="{ opacity: 0, scale: 0.5 }"
         :visibleOnce="{
@@ -496,7 +505,7 @@
         }"
       ></div>
       <div
-        class="bottom-[25%] left-[12%] z-0 absolute bg-primary-500/15 rounded-2xl size-24 -rotate-20 transform"
+        class="bottom-[25%] left-[12%] z-0 absolute bg-secondary-500 rounded-2xl size-12 -rotate-20 transform"
         v-motion
         :initial="{ opacity: 0, scale: 0.5 }"
         :visibleOnce="{
@@ -508,7 +517,7 @@
 
       <UContainer class="z-10 relative">
         <div
-          class="mx-auto mb-12 max-w-2xl text-center"
+          class="mx-auto mb-20 max-w-2xl text-center"
           v-motion
           :initial="{ opacity: 0, y: 30 }"
           :visibleOnce="{
@@ -537,7 +546,11 @@
             :visibleOnce="{
               opacity: 1,
               x: 0,
-              transition: { delay: 200 + index * 150, duration: 500, ease: 'easeOut' },
+              transition: {
+                delay: 200 + index * 150,
+                duration: 500,
+                ease: 'easeOut',
+              },
             }"
           >
             <!-- Image with Offset Border -->
@@ -581,11 +594,11 @@
     <!-- Contact Section - Neutral Background -->
     <section
       id="contact"
-      class="relative bg-neutral-50 py-16 md:py-24 overflow-hidden"
+      class="relative bg-neutral-50 py-16 md:pt-28 md:pb-36 overflow-hidden"
     >
       <!-- Decorative Shapes - Adjusted roundness -->
       <div
-        class="top-[10%] left-[15%] z-0 absolute bg-primary-500/5 rounded-2xl size-28 rotate-60 transform"
+        class="top-[10%] left-[15%] z-0 absolute bg-secondary-500 rounded-2xl size-14 rotate-60 transform"
         v-motion
         :initial="{ opacity: 0, scale: 0.5 }"
         :visibleOnce="{
@@ -595,7 +608,7 @@
         }"
       ></div>
       <div
-        class="right-[20%] bottom-[5%] z-0 absolute bg-secondary-500/10 rounded-xl size-16 -rotate-30 transform"
+        class="right-[20%] bottom-[5%] z-0 absolute bg-primary-500 rounded-xl size-28 -rotate-30 transform"
         v-motion
         :initial="{ opacity: 0, scale: 0.5 }"
         :visibleOnce="{
@@ -608,14 +621,37 @@
       <UContainer class="z-10 relative">
         <!-- Grid for Contact Info and Form -->
         <div class="items-start gap-16 grid grid-cols-1 md:grid-cols-2">
-          <!-- Left Column: Contact Info -->
+          <!-- Left Column: Inquiry Form -->
           <div
+            class="relative"
             v-motion
             :initial="{ opacity: 0, x: -50 }"
             :visibleOnce="{
               opacity: 1,
               x: 0,
               transition: { delay: 100, duration: 500, ease: 'easeOut' },
+            }"
+          >
+            <h3
+              class="mb-4 font-bold text-primary-800 text-2xl md:text-3xl md:text-left text-center"
+            >
+              Pošljite Povpraševanje
+            </h3>
+            <p class="mb-6 text-neutral-700 text-lg md:text-left text-center">
+              Izpolnite spodnji obrazec, da nam pošljete sporočilo ali zastavite
+              vprašanja. Odgovorili vam bomo v kratkem!
+            </p>
+            <InquiryForm />
+          </div>
+
+          <!-- Right Column: Contact Info -->
+          <div
+            v-motion
+            :initial="{ opacity: 0, x: 50 }"
+            :visibleOnce="{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 200, duration: 500, ease: 'easeOut' },
             }"
           >
             <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
@@ -655,29 +691,6 @@
                 Pon - Pet: 9:00 - 18:00, Sob: 10:00 - 16:00
               </p>
             </div>
-          </div>
-
-          <!-- Right Column: Inquiry Form -->
-          <div
-            class="relative"
-            v-motion
-            :initial="{ opacity: 0, x: 50 }"
-            :visibleOnce="{
-              opacity: 1,
-              x: 0,
-              transition: { delay: 200, duration: 500, ease: 'easeOut' },
-            }"
-          >
-            <h3
-              class="mb-4 font-bold text-primary-800 text-2xl md:text-3xl text-center md:text-left"
-            >
-              Pošljite Povpraševanje
-            </h3>
-            <p class="mb-6 text-neutral-700 text-lg text-center md:text-left">
-              Izpolnite spodnji obrazec, da nam pošljete sporočilo ali zastavite
-              vprašanja. Odgovorili vam bomo v kratkem!
-            </p>
-            <InquiryForm />
           </div>
         </div>
       </UContainer>
