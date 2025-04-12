@@ -97,7 +97,7 @@
     <!-- Hero Section - Redesigned -->
     <section
       id="home"
-      class="relative flex items-center bg-secondary-400 px-4 py-20 pt-24 md:pt-32 min-h-[calc(100vh-100px)] overflow-hidden"
+      class="relative flex items-center bg-secondary-400 px-4 py-20 pt-24 md:pt-32 min-h-[calc(100vh-400px)] overflow-hidden"
     >
       <!-- Decorative Shapes - Adjusted rounding -->
       <div
@@ -113,7 +113,7 @@
         class="top-[30%] right-[15%] z-0 absolute bg-secondary-500 opacity-90 rounded-3xl size-[120px] rotate-20 transform"
       ></div>
       <div
-        class="bottom-[20%] left-[20%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-[80px] rotate-60 transform"
+        class="bottom-[25%] left-[30%] z-0 absolute bg-secondary-500 opacity-90 rounded-2xl size-[60px] rotate-60 transform"
       ></div>
       <div
         class="right-[5%] bottom-[11%] z-0 absolute bg-secondary-500 rounded-xl size-[50px] rotate-20 transform"
@@ -155,11 +155,13 @@
 
         <!-- Right Column: Image - Absolute positioned -->
       </UContainer>
-      <div class="right-0 bottom-0 absolute w-[60vw] h-[70%] overflow-hidden">
+      <div
+        class="right-0 -bottom-10 absolute w-[60vw] h-[120%] overflow-hidden"
+      >
         <NuxtImg
           src="/dogo2.png"
           alt="Happy dog after grooming"
-          class="right-0 bottom-0 absolute w-full h-full object-bottom object-contain"
+          class="right-0 bottom-0 absolute brightness-110 w-full h-full object-bottom object-contain mix-blend-multiply filter contrast-90"
           width="800"
           height="800"
           preload
