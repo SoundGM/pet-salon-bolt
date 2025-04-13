@@ -373,7 +373,7 @@
     <!-- Services Section - NEW DESIGN (Based on old Why Choose Us) -->
     <section
       id="services"
-      class="relative bg-neutral-50 px-8 py-20 md:pt-28 md:pb-36 overflow-hidden"
+      class="relative bg-neutral-50 px-4 py-20 md:pt-28 md:pb-36 overflow-hidden"
     >
       <!-- Decorative Shapes - Adjusted roundness -->
       <div
@@ -397,7 +397,7 @@
         }"
       ></div>
 
-      <UContainer class="z-10 relative">
+      <UContainer class="z-10 relative px-0">
         <div
           class="mx-auto mb-20 max-w-2xl text-center"
           v-motion
