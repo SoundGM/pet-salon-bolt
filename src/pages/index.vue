@@ -49,7 +49,7 @@
       title: 'Okolje Brez Stresa',
       description:
         'Naš salon smo zasnovali kot mirno, čisto in varno zatočišče. Uporabljamo tehnike pozitivne spodbude, da se vaš ljubljenček med obiskom počuti udobno in varno.',
-      imageUrl: '/salon2.jpg', // Updated placeholder (different seed)
+      imageUrl: '/staff2.jpg', // Updated placeholder (different seed)
       imageSide: 'right', // 'left' or 'right'
       borderColor: 'border-secondary-500',
     },
@@ -255,7 +255,7 @@
         }"
       >
         <NuxtImg
-          src="/dogo2.png"
+          src="/hero-dog.png"
           alt="Happy dog after grooming"
           class="right-0 bottom-0 absolute brightness-110 w-full h-full object-bottom object-contain mix-blend-multiply filter contrast-90"
           width="800"
@@ -306,7 +306,7 @@
             }"
           >
             <NuxtImg
-              src="/bananadog.jpg"
+              src="/about-dog.jpg"
               alt="Pomergrom"
               class="z-10 relative shadow-lg rounded-lg w-full h-full object-cover aspect-square"
               width="600"
@@ -413,7 +413,7 @@
               opacity: 1,
               y: 0,
               transition: {
-                delay: 200 + index * 100,
+                delay: index * 100 + index * 3.14,
                 duration: 400,
                 ease: 'easeOut',
               },
@@ -478,7 +478,7 @@
               opacity: 1,
               y: 0,
               transition: {
-                delay: 200 + index * 100,
+                delay: index * 100,
                 duration: 400,
                 ease: 'easeOut',
               },
@@ -635,11 +635,11 @@
             <h3
               class="mb-4 font-bold text-primary-800 text-2xl md:text-3xl md:text-left text-center"
             >
-              Pošljite Povpraševanje
+              Stopite v Stik
             </h3>
             <p class="mb-6 text-neutral-700 text-lg md:text-left text-center">
-              Izpolnite spodnji obrazec, da nam pošljete sporočilo ali zastavite
-              vprašanja. Odgovorili vam bomo v kratkem!
+              Imate vprašanja ali ste pripravljeni na rezervacijo? Kontaktirajte
+              nas danes! Z veseljem vam bomo pomagali.
             </p>
             <InquiryForm />
           </div>
@@ -654,7 +654,7 @@
               transition: { delay: 200, duration: 500, ease: 'easeOut' },
             }"
           >
-            <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
+            <h2 class="mb-4 font-bold text-primary-800 text-2xl md:text-3xl">
               Stopite v Stik
             </h2>
             <p class="mb-6 text-neutral-700 text-lg">
