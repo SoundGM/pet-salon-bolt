@@ -4,7 +4,7 @@
     {
       title: 'Osnovno kopanje in sušenje',
       description:
-        'Temeljito kopanje z uporabo kvalitetnih šamponov, prilagojenih tipu dlake vašega ljubljenčka, ter nežno sušenje.',
+        'Temeljito kopanje z uporabo kvalitetnih šamponov, prilagojenih tipu dlake, ter nežno sušenje.',
       icon: 'i-mingcute-shower-line',
     },
     {
@@ -26,9 +26,9 @@
       icon: 'i-mingcute-ear-line',
     },
     {
-      title: 'Razčesavanje in odstranjevanje vozlov',
+      title: 'Razčesavanje vozlov',
       description:
-        'Potrpežljivo razčesavanje in odstranjevanje vozlov, da bo dlaka vašega ljubljenčka spet gladka in sijoča.',
+        'Potrpežljivo razčesavanje in odstranjevanje vozlov, da bo dlaka ostane gladka in sijoča.',
       icon: 'i-mingcute-chines-knot-line',
     },
     {
@@ -53,7 +53,7 @@
     {
       title: 'Okolje Brez Stresa',
       description:
-        'Naš salon smo zasnovali kot mirno, čisto in varno zatočišče. Uporabljamo tehnike pozitivne spodbude, da se vaš ljubljenček med obiskom počuti udobno in varno.',
+        'Naš salon smo zasnovali kot mirno, čisto in varno zatočišče. Uporabljamo tehnike pozitivne spodbude, da se vaš ljubljenček med obiskom počuti udobno - predvsem pa varno.',
       imageUrl: '/staff2.jpg', // Updated placeholder (different seed)
       imageSide: 'right', // 'left' or 'right'
       borderColor: 'border-secondary-500',
@@ -67,23 +67,22 @@
       name: 'Sara K.',
       rating: 5,
       comment:
-        'Absolutno čudovita storitev! Moj pudelj Fifi še nikoli ni izgledal bolje. Osebje je bilo tako nežno in skrbno.',
+        'Absolutno čudovita storitev! Moj pudelj še nikoli ni izgledal bolje. Osebje je bilo tako nežno in skrbno.',
       rotation: 'rotate-1',
       color: 'border-primary-500',
     },
     {
       name: 'Miha R.',
-      rating: 4,
-      comment:
-        'Odlična izkušnja na splošno. Moj zlati prinašalec Max se je vrnil srečen in čist. Malo drago, a vredno.',
+      rating: 5,
+      comment: 'Odlična izkušnja na splošno. Malo drago, a zelo, zelo vredno.',
       rotation: '-rotate-2',
       color: 'border-secondary-500',
     },
     {
-      name: 'Jessica L.',
-      rating: 5,
+      name: 'Monika L.',
+      rating: 4,
       comment:
-        'Z mojo tesnobno mačko Luno so ravnali s tako potrpežljivostjo. Zelo priporočam za nervozne ljubljenčke!',
+        'Z mojo tesnobno mačko Luno so ravnali s tako potrpežljivostjo. Res, zelo priporočam za nervozne ljubljenčke',
       rotation: 'rotate-2',
       color: 'border-primary-500',
     },
@@ -106,18 +105,7 @@
       class="relative flex items-center bg-secondary-400 px-4 py-20 pt-24 md:pt-32 min-h-[calc(100vh-500px)] overflow-hidden"
     >
       <!-- Decorative Shapes - Animated -->
-      <div
-        v-motion
-        :initial="{ opacity: 0, y: -20, scale: 0.8, rotate: -45 }"
-        :enter="{
-          opacity: 0.9,
-          y: 0,
-          scale: 1,
-          rotate: 12,
-          transition: { delay: 300, duration: 500, ease: 'easeOut' },
-        }"
-        class="top-[7%] left-[40%] z-0 absolute bg-primary-500 opacity-90 rounded-xl size-12 transform"
-      ></div>
+
       <div
         v-motion
         :initial="{ opacity: 0, x: 20, scale: 0.7, rotate: 90 }"
@@ -132,6 +120,18 @@
       ></div>
       <div
         v-motion
+        :initial="{ opacity: 0, y: -20, scale: 0.8, rotate: -45 }"
+        :enter="{
+          opacity: 0.9,
+          y: 0,
+          scale: 1,
+          rotate: 12,
+          transition: { delay: 300, duration: 500, ease: 'easeOut' },
+        }"
+        class="top-[7%] left-[40%] z-0 absolute bg-primary-500 opacity-90 rounded-xl size-12 transform"
+      ></div>
+      <div
+        v-motion
         :initial="{ opacity: 0, y: 30, scale: 0.9, rotate: 0 }"
         :enter="{
           opacity: 0.9,
@@ -140,7 +140,20 @@
           rotate: 40,
           transition: { delay: 500, duration: 500, ease: 'easeOut' },
         }"
-        class="hidden md:block top-[60%] left-[45%] z-0 absolute bg-primary-500 opacity-90 rounded-3xl size-[80px] transform"
+        class="hidden lg:block top-[60%] left-[45%] z-0 absolute bg-primary-500 opacity-90 rounded-3xl size-[80px] transform"
+      ></div>
+      <!-- Only on mobile -->
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: 30, scale: 0.9, rotate: 0 }"
+        :enter="{
+          opacity: 0.9,
+          y: 0,
+          scale: 1,
+          rotate: 40,
+          transition: { delay: 500, duration: 500, ease: 'easeOut' },
+        }"
+        class="md:hidden block top-[80%] left-[20%] z-0 absolute bg-primary-500 opacity-90 rounded-2xl size-[60px] transform"
       ></div>
       <div
         v-motion
@@ -228,13 +241,15 @@
           }"
         >
           <!-- Content -->
-          <div class="z-10 relative">
+          <div class="z-10 relative flex flex-col items-center md:items-start">
             <h1
               class="mb-4 font-bold text-primary-800 text-5xl md:text-7xl leading-tight"
             >
               PetSalon
             </h1>
-            <p class="mb-8 max-w-md text-neutral-800 text-xl md:text-2xl">
+            <p
+              class="mb-8 max-w-md text-neutral-800 text-xl md:text-2xl md:text-left text-center"
+            >
               Izkušnje in ljubezen v vsaki negi
             </p>
             <UButton
@@ -252,14 +267,7 @@
         <!-- Right Column: Image - Absolute positioned -->
       </UContainer>
       <div
-        class="right-0 -bottom-10 absolute w-[60vw] h-[120%] overflow-hidden"
-        v-motion
-        :initial="{ opacity: 0, x: 50 }"
-        :enter="{
-          opacity: 1,
-          x: 0,
-          transition: { delay: 200, duration: 600, ease: 'easeOut' },
-        }"
+        class="hidden md:block right-0 -bottom-10 absolute w-[60vw] h-[120%] overflow-hidden"
       >
         <NuxtImg
           src="/hero-dog.png"
@@ -321,7 +329,7 @@
               loading="lazy"
             />
             <div
-              class="absolute inset-0 border-4 border-primary-500 rounded-lg translate-x-4 translate-y-4 transform"
+              class="absolute inset-0 border-4 border-primary-500 rounded-lg translate-x-2 translate-y-2 transform"
               aria-hidden="true"
             ></div>
           </div>
@@ -369,7 +377,7 @@
     >
       <!-- Decorative Shapes - Adjusted roundness -->
       <div
-        class="top-[5%] right-[10%] z-0 absolute bg-primary-500 rounded-2xl size-20 rotate-12 transform"
+        class="hidden md:block top-[5%] right-[10%] z-0 absolute bg-primary-500 rounded-2xl size-20 rotate-12 transform"
         v-motion
         :initial="{ opacity: 0, scale: 0.5 }"
         :visibleOnce="{
@@ -536,11 +544,11 @@
           }"
         >
           <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
-            Zakaj Izbrati PetSalon?
+            Zakaj Izbrati Nas?
           </h2>
           <p class="text-neutral-700 text-lg">
-            Potrudimo se dodatno, da zagotovimo pozitivno izkušnjo tako vam kot
-            vašemu ljubljenčku.
+            Pri nas se zavedamo, da je vaš ljubljenček del vaše družine. Zato mu
+            nudimo le najboljšo nego v prijaznem in sproščenem okolju.
           </p>
         </div>
 
@@ -625,7 +633,7 @@
         }"
       ></div>
       <div
-        class="right-[20%] bottom-[5%] z-0 absolute bg-primary-500 rounded-xl size-28 -rotate-30 transform"
+        class="right-[20%] bottom-[5%] z-0 absolute bg-primary-500 rounded-xl size-18 -rotate-30 transform"
         v-motion
         :initial="{ opacity: 0, scale: 0.5 }"
         :visibleOnce="{
@@ -637,7 +645,7 @@
 
       <UContainer class="z-10 relative">
         <!-- Grid for Contact Info and Form -->
-        <div class="items-start gap-16 grid grid-cols-1 md:grid-cols-2">
+        <div class="items-start gap-16 grid grid-cols-1 lg:grid-cols-2">
           <!-- Left Column: Inquiry Form -->
           <div
             class="relative"
@@ -655,8 +663,9 @@
               Stopite v Stik
             </h3>
             <p class="mb-6 text-neutral-700 text-lg md:text-left text-center">
-              Imate vprašanja ali ste pripravljeni na rezervacijo? Kontaktirajte
-              nas danes! Z veseljem vam bomo pomagali.
+              Ste pripravljeni svojemu ljubljenčku privoščiti vrhunsko nego?
+              Izpolnite spodnji obrazec ali nas pokličite. Z veseljem vam bomo
+              svetovali!
             </p>
             <InquiryForm />
           </div>
@@ -670,6 +679,7 @@
               x: 0,
               transition: { delay: 200, duration: 500, ease: 'easeOut' },
             }"
+            class="flex flex-col"
           >
             <!-- <h2 class="mb-4 font-bold text-primary-800 text-2xl md:text-3xl">
               Stopite v Stik
@@ -678,7 +688,22 @@
               Imate vprašanja ali ste pripravljeni na rezervacijo? Kontaktirajte
               nas danes! Z veseljem vam bomo pomagali.
             </p> -->
-            <div class="space-y-4 text-md text-neutral-800">
+            <div
+              class="order-2 lg:order-1 mt-8 mb-4 rounded-lg h-full overflow-hidden"
+            >
+              <iframe
+                width="100%"
+                height="700"
+                loading="lazy"
+                class="w-full h-[530px]"
+                style="border: 0"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=15.5600%2C46.3800%2C15.5850%2C46.4000&layer=mapnik&marker=46.3919813%2C15.5727868"
+              ></iframe>
+            </div>
+            <div class="space-y-4 order-1 lg:order-2 text-md text-neutral-800">
               <p class="flex items-center">
                 <UIcon
                   name="i-heroicons-map-pin"
@@ -707,15 +732,6 @@
                 />
                 Pon - Pet: 9:00 - 18:00, Sob: 10:00 - 16:00
               </p>
-            </div>
-            <div class="mt-8 rounded-lg h-full overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2768.805201201318!2d14.5051233155858!3d46.05638237911236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765328c1b1a1a1f%3A0x1c3b1b1b1b1b1b1b!2sLjubljen%C4%8Dkova%20ulica%20123%2C%201000%20Ljubljana!5e0!3m2!1ssl!2ssi!4v1629999999999!5m2!1ssl!2ssi&markers=color:red%7Clabel:P%7C46.056382,14.505123"
-                width="100%"
-                height="700"
-                loading="lazy"
-                class="w-full h-[530px]"
-              ></iframe>
             </div>
           </div>
         </div>
