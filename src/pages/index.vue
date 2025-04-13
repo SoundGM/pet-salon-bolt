@@ -2,36 +2,40 @@
   // Data for the NEW Services Section (based on the old Why Choose Us)
   const services = [
     {
-      title: 'Popolna Nega',
+      title: 'Osnovno kopanje in sušenje',
       description:
-        'Celovito razvajanje, vključno s kopeljo, striženjem, krajšanjem krempljev in čiščenjem ušes.',
-      icon: 'i-heroicons-sparkles', // Example icon
+        'Temeljito kopanje z uporabo kvalitetnih šamponov, prilagojenih tipu dlake vašega ljubljenčka, ter nežno sušenje.',
+      icon: 'i-mingcute-shower-line',
     },
     {
-      title: 'Kopel in Krtačenje',
+      title: 'Striženje in oblikovanje dlake',
       description:
-        'Osvežilna kopel in temeljito krtačenje za ohranjanje zdrave dlake.',
-      icon: 'i-heroicons-swatch', // Example icon
+        'Profesionalno striženje in oblikovanje dlake glede na pasmo in vaše želje.',
+      icon: 'i-mingcute-scissors-line',
     },
     {
-      title: 'Krajšanje Krempljev',
-      description: 'Varno in nežno krajšanje krempljev za udobje in zdravje.',
-      icon: 'i-heroicons-scissors', // Example icon
+      title: 'Nega krempljev',
+      description:
+        'Varno in natančno krajšanje krempljev, da preprečimo nelagodje in morebitne poškodbe.',
+      icon: 'i-mingcute-paw-line',
     },
     {
-      title: 'Uvajanje Mladičkov',
-      description: 'Nežno uvajanje v nego za mlade kužke.',
-      icon: 'i-heroicons-heart', // Example icon
+      title: 'Čiščenje ušes',
+      description:
+        'Nežno čiščenje ušesnih kanalov za preprečevanje infekcij in ohranjanje zdravja ušes.',
+      icon: 'i-mingcute-ear-line',
     },
     {
-      title: 'Tretma Proti Izpadanju Dlake',
-      description: 'Zmanjšajte izpadanje dlake in ohranite svoj dom čistejši.',
-      icon: 'i-heroicons-adjustments-horizontal', // Example icon
+      title: 'Razčesavanje in odstranjevanje vozlov',
+      description:
+        'Potrpežljivo razčesavanje in odstranjevanje vozlov, da bo dlaka vašega ljubljenčka spet gladka in sijoča.',
+      icon: 'i-mingcute-chines-knot-line',
     },
     {
-      title: 'Ščetkanje Zob',
-      description: 'Spodbujajte zobno higieno za bolj zdrav nasmeh.',
-      icon: 'i-heroicons-shield-check', // Example icon
+      title: 'Posebne nege (po dogovoru)',
+      description:
+        'Nudimo tudi posebne nege, kot so nega zob, odstranjevanje poddlake in druge storitve po individualnem dogovoru.',
+      icon: 'i-mingcute-sparkles-2-line',
     },
   ]
 
@@ -44,6 +48,7 @@
       imageUrl: '/staff.jpg', // Updated placeholder
       imageSide: 'left', // 'left' or 'right'
       borderColor: 'border-primary-500',
+      icon: 'i-mingcute-group-3-line',
     },
     {
       title: 'Okolje Brez Stresa',
@@ -52,6 +57,7 @@
       imageUrl: '/staff2.jpg', // Updated placeholder (different seed)
       imageSide: 'right', // 'left' or 'right'
       borderColor: 'border-secondary-500',
+      icon: 'i-mingcute-leaf-line',
     },
   ]
 
@@ -226,16 +232,17 @@
             <h1
               class="mb-4 font-bold text-primary-800 text-5xl md:text-7xl leading-tight"
             >
-              Pasje Kraljestvo
+              PetSalon
             </h1>
             <p class="mb-8 max-w-md text-neutral-800 text-xl md:text-2xl">
-              Strokovne storitve nege z nežnim dotikom.
+              Izkušnje in ljubezen v vsaki negi
             </p>
             <UButton
               to="#contact"
               label="Kontaktirajte Nas"
               size="xl"
               color="primary"
+              trailing-icon="i-mingcute-arrow-right-circle-line"
               variant="solid"
               class="px-8 py-3 font-semibold hover:scale-105 transition-transform duration-300 transform"
             />
@@ -328,25 +335,27 @@
             }"
           >
             <h2 class="mb-8 font-bold text-primary-800 text-3xl md:text-4xl">
-              Kjer Repki Mahajo &amp; Mucke Predejo
+              Oaza miru in nege za vašega kosmatinca
             </h2>
             <h3 class="mb-2 font-semibold text-neutral-800 text-lg">
               Naša Zgodba
             </h3>
             <p class="mb-4 text-neutral-700 text-lg">
-              Dobrodošli v PetSalon, kjer se strast do ljubljenčkov sreča s
-              profesionalno nego. Ustanovljeni leta 2015, je naše poslanstvo
-              vedno bilo zagotoviti varno, udobno in veselo izkušnjo nege za
-              vsakega ljubljenčka, ki prestopi naša vrata.
+              Naša pot se je začela iz čiste ljubezni do živali in želje, da bi
+              jim ponudili najboljšo možno nego. Opazili smo, da je lahko obisk
+              salona za nekatere ljubljenčke stresen, zato smo ustvarili
+              prostor, kjer se počutijo sproščeno in varno. Vsak kosmatinec je
+              pri nas obravnavan kot družinski član z veliko mero
+              potrpežljivosti in nežnosti.
             </p>
             <h3 class="mt-6 mb-2 font-semibold text-neutral-800 text-lg">
               Naša Zaveza
             </h3>
             <p class="mb-6 text-neutral-700 text-lg">
-              Naši certificirani negovalci niso le vešči različnih tehnik nege,
-              ampak so tudi iskreni ljubitelji živali, predani dobremu počutju
-              vašega ljubljenčka. Verjamemo, da je redna nega ključna za zdravje
-              in srečo hišnega ljubljenčka.
+              aše poslanstvo je preprosto: zagotoviti vrhunsko nego, ki prispeva
+              k zdravju, dobremu počutju in sreči vašega ljubljenčka. Verjamemo,
+              da je nega več kot le striženje – je priložnost, da vašemu
+              kosmatincu namenimo posebno pozornost in ga razvajamo.
             </p>
           </div>
         </div>
@@ -395,9 +404,9 @@
             Naše Storitve Nege
           </h2>
           <p class="text-neutral-700 text-lg">
-            Nudimo vrsto storitev, prilagojenih edinstvenim potrebam vašega
-            ljubljenčka. Od osnovnih kopeli do popolnih striženj, vse opravimo
-            skrbno.
+            Ne glede na to, ali vaš kuža potrebuje osvežujoče kopanje, vaš mucek
+            elegantno frizuro ali pa vaš mali glodalec nežno nego krempljev, pri
+            nas boste našli vse, kar vaš ljubljenček potrebuje
           </p>
         </div>
         <div
@@ -570,7 +579,7 @@
               />
               <div
                 :class="[
-                  'absolute inset-0 border-4 rounded-lg transform translate-x-4 translate-y-4',
+                  'absolute inset-0 border-4 rounded-lg transform translate-x-2 translate-y-2',
                   point.borderColor,
                 ]"
                 aria-hidden="true"
@@ -578,10 +587,18 @@
             </div>
             <!-- Text Content -->
             <div :class="point.imageSide === 'left' ? 'md:order-last' : ''">
-              <h3 class="mb-3 font-bold text-1xl text-primary-800 md:text-2xl">
-                <!-- Reduced font size -->
-                {{ point.title }}
-              </h3>
+              <div class="flex items-center gap-2">
+                <UIcon
+                  :name="point.icon"
+                  class="mb-4 text-primary-500 text-4xl group-hover:rotate-6 transition-transform duration-300"
+                />
+                <h3
+                  class="mb-3 font-bold text-1xl text-primary-800 md:text-2xl"
+                >
+                  <!-- Reduced font size -->
+                  {{ point.title }}
+                </h3>
+              </div>
               <p class="text-neutral-700 text-lg">
                 {{ point.description }}
               </p>
@@ -654,13 +671,13 @@
               transition: { delay: 200, duration: 500, ease: 'easeOut' },
             }"
           >
-            <h2 class="mb-4 font-bold text-primary-800 text-2xl md:text-3xl">
+            <!-- <h2 class="mb-4 font-bold text-primary-800 text-2xl md:text-3xl">
               Stopite v Stik
             </h2>
             <p class="mb-6 text-neutral-700 text-lg">
               Imate vprašanja ali ste pripravljeni na rezervacijo? Kontaktirajte
               nas danes! Z veseljem vam bomo pomagali.
-            </p>
+            </p> -->
             <div class="space-y-4 text-md text-neutral-800">
               <p class="flex items-center">
                 <UIcon
@@ -690,6 +707,15 @@
                 />
                 Pon - Pet: 9:00 - 18:00, Sob: 10:00 - 16:00
               </p>
+            </div>
+            <div class="mt-8 rounded-lg h-full overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2768.805201201318!2d14.5051233155858!3d46.05638237911236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765328c1b1a1a1f%3A0x1c3b1b1b1b1b1b1b!2sLjubljen%C4%8Dkova%20ulica%20123%2C%201000%20Ljubljana!5e0!3m2!1ssl!2ssi!4v1629999999999!5m2!1ssl!2ssi&markers=color:red%7Clabel:P%7C46.056382,14.505123"
+                width="100%"
+                height="700"
+                loading="lazy"
+                class="w-full h-[530px]"
+              ></iframe>
             </div>
           </div>
         </div>
