@@ -32,11 +32,11 @@
 
 <template>
   <div
-    class="top-0 right-0 left-0 z-40 fixed bg-primary-500 text-white h-10 flex items-center"
+    class="top-0 right-0 left-0 z-40 fixed flex items-center bg-primary-500 h-10 text-white"
   >
     <UContainer class="flex justify-between items-center w-full">
       <!-- Vrteče se Besedilo Obvestila -->
-      <div class="flex-1 text-center md:text-left overflow-hidden h-6">
+      <div class="flex-1 h-6 overflow-hidden md:text-left text-center">
         <Transition name="fade" mode="out-in">
           <span :key="currentAnnouncementIndex" class="block text-sm">
             {{ currentAnnouncement }}
@@ -51,11 +51,11 @@
           (01) 123-4567
         </a>
         <a
-          href="mailto:info@petsalon.primer"
+          href="mailto:info@pasji-salon.primer"
           class="flex items-center hover:underline"
         >
           <UIcon name="i-heroicons-envelope" class="mr-1 size-4" />
-          info@petsalon.primer
+          info@pasji-salon.primer
         </a>
       </div>
     </UContainer>

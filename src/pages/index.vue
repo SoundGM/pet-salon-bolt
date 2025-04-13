@@ -245,7 +245,7 @@
             <h1
               class="mb-4 font-bold text-primary-800 text-5xl md:text-7xl leading-tight"
             >
-              PetSalon
+              Pasji Salon
             </h1>
             <p
               class="mb-8 max-w-md text-neutral-800 text-xl md:text-2xl md:text-left text-center"
@@ -471,7 +471,7 @@
             Vesele Tačke, Srečni Starši!
           </h2>
           <p class="text-neutral-800 text-xl">
-            Poglejte, kaj naše stranke pravijo o svoji izkušnji v PetSalonu.
+            Poglejte, kaj naše stranke pravijo o svoji izkušnji v Pasjem salonu.
           </p>
         </div>
         <div
@@ -723,7 +723,7 @@
                   name="i-heroicons-envelope"
                   class="flex-shrink-0 mr-3 w-5 h-5 text-primary-600"
                 />
-                info@petsalon.primer
+                info@pasji-salon.primer
               </p>
               <p class="flex items-center">
                 <UIcon
