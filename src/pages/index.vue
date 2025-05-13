@@ -44,7 +44,7 @@
     {
       title: 'Izkušeno in Skrbno Osebje',
       description:
-        'Naša ekipa se ponaša s certificiranimi negovalci z dolgoletnimi izkušnjami pri ravnanju z ljubljenčki vseh pasem in temperamentov z nežnim, ljubečim dotikom.',
+        'Pri Veselih Repkih naša ekipa združuje strokovnost z ljubeznijo do živali. Vsak kosmatinec je deležen individualne pozornosti in nege, prilagojene njegovim potrebam in značaju.',
       imageUrl: '/staff.jpg', // Updated placeholder
       imageSide: 'left', // 'left' or 'right'
       borderColor: 'border-primary-500',
@@ -53,7 +53,7 @@
     {
       title: 'Okolje Brez Stresa',
       description:
-        'Naš salon smo zasnovali kot mirno, čisto in varno zatočišče. Uporabljamo tehnike pozitivne spodbude, da se vaš ljubljenček med obiskom počuti udobno - predvsem pa varno.',
+        'Naš salon Veseli Repki je zasnovan tako, da se vaš ljubljenček počuti varno in sproščeno. Uporabljamo naravne tehnike pomirjanja in pozitivne motivacije za prijeten obisk brez stresa.',
       imageUrl: '/staff2.jpg', // Updated placeholder (different seed)
       imageSide: 'right', // 'left' or 'right'
       borderColor: 'border-secondary-500',
@@ -67,14 +67,15 @@
       name: 'Sara K.',
       rating: 5,
       comment:
-        'Absolutno čudovita storitev! Moj pudelj še nikoli ni izgledal bolje. Osebje je bilo tako nežno in skrbno.',
+        'Veseli Repki so naša prva izbira za nego naše Lune! Vedno je vesela, ko pridemo v salon, kar dokazuje kako prijazno in prijetno je okolje.',
       rotation: 'rotate-1',
       color: 'border-primary-500',
     },
     {
       name: 'Miha R.',
       rating: 5,
-      comment: 'Odlična izkušnja na splošno. Malo drago, a zelo, zelo vredno.',
+      comment:
+        'Teji v Veselih Repkih popolnoma zaupam svojega psa. Vedno profesionalna storitev z veliko ljubezni.',
       rotation: '-rotate-2',
       color: 'border-secondary-500',
     },
@@ -82,7 +83,7 @@
       name: 'Monika L.',
       rating: 4,
       comment:
-        'Z mojo tesnobno mačko Luno so ravnali s tako potrpežljivostjo. Res, zelo priporočam za nervozne ljubljenčke',
+        'Moja tesnobna mačka se je v salonu počutila odlično. Teja ima res posebno sposobnost za pomiritev tudi najbolj plašnih živali.',
       rotation: 'rotate-2',
       color: 'border-primary-500',
     },
@@ -90,7 +91,7 @@
       name: 'David P.',
       rating: 5,
       comment:
-        'Hitra, učinkovita in prijazna storitev. Buster se vedno veseli svojega dneva za nego!',
+        'Po obisku je Buster vedno sijoč in dišeč. Res cenimo njihovo natančnost in prijaznost!',
       rotation: '-rotate-1',
       color: 'border-secondary-500',
     },
@@ -245,12 +246,12 @@
             <h1
               class="mb-4 font-bold text-primary-800 text-5xl md:text-7xl leading-tight"
             >
-              Pasji Salon
+              Veseli repki
             </h1>
             <p
               class="mb-8 max-w-md text-neutral-800 text-xl md:text-2xl md:text-left text-center"
             >
-              Izkušnje in ljubezen v vsaki negi
+              Salon, kjer se vaš ljubljenček počuti kot doma
             </p>
             <UButton
               to="#contact"
@@ -322,7 +323,7 @@
           >
             <NuxtImg
               src="/about-dog.jpg"
-              alt="Pomergrom"
+              alt="Veseli repki - Pasji salon"
               class="z-10 relative shadow-lg rounded-lg w-full h-full object-cover aspect-square"
               width="600"
               height="600"
@@ -343,27 +344,27 @@
             }"
           >
             <h2 class="mb-8 font-bold text-primary-800 text-3xl md:text-4xl">
-              Oaza miru in nege za vašega kosmatinca
+              Dobrodošli v salonu Veseli repki
             </h2>
             <h3 class="mb-2 font-semibold text-neutral-800 text-lg">
               Naša Zgodba
             </h3>
             <p class="mb-4 text-neutral-700 text-lg">
-              Naša pot se je začela iz čiste ljubezni do živali in želje, da bi
-              jim ponudili najboljšo možno nego. Opazili smo, da je lahko obisk
-              salona za nekatere ljubljenčke stresen, zato smo ustvarili
-              prostor, kjer se počutijo sproščeno in varno. Vsak kosmatinec je
-              pri nas obravnavan kot družinski član z veliko mero
-              potrpežljivosti in nežnosti.
+              Veseli repki so nastali iz velike ljubezni do živali in želje, da
+              bi jim ponudili vrhunsko nego v mirnem, domačem okolju. Naša
+              ustanoviteljica Teja je z leti izkušenj razvila poseben pristop,
+              ki vsaki živali omogoča sproščeno in prijetno izkušnjo. V našem
+              salonu vsak kosmatinec prejme individualno pozornost in nego,
+              prilagojeno njegovim potrebam.
             </p>
             <h3 class="mt-6 mb-2 font-semibold text-neutral-800 text-lg">
               Naša Zaveza
             </h3>
             <p class="mb-6 text-neutral-700 text-lg">
-              Naše poslanstvo je preprosto: zagotoviti vrhunsko nego, ki
-              prispeva k zdravju, dobremu počutju in sreči vašega ljubljenčka.
-              Verjamemo, da je nega več kot le striženje – je priložnost, da
-              vašemu kosmatincu namenimo posebno pozornost in ga razvajamo.
+              Pri nas verjamemo, da je nega hišnih ljubljenčkov več kot le
+              storitev – je odnos, poln razumevanja in spoštovanja. Naša zaveza
+              je zagotoviti vašemu ljubljenčku najboljšo možno nego v varnem in
+              prijateljskem okolju, kjer je vsak rep vedno vesel!
             </p>
           </div>
         </div>
@@ -409,12 +410,12 @@
           }"
         >
           <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
-            Naše Storitve Nege
+            Naše storitve
           </h2>
           <p class="text-neutral-700 text-lg">
-            Ne glede na to, ali vaš kuža potrebuje osvežujoče kopanje, vaš mucek
-            elegantno frizuro ali pa vaš mali glodalec nežno nego krempljev, pri
-            nas boste našli vse, kar vaš ljubljenček potrebuje
+            V salonu nudimo celostno nego za vašega ljubljenčka. Vsaka storitev
+            je izvedena z ljubeznijo in pozornostjo do najmanjše podrobnosti, za
+            zadovoljne in vesele repke vseh vrst.
           </p>
         </div>
         <div
@@ -471,7 +472,7 @@
             Vesele Tačke, Srečni Starši!
           </h2>
           <p class="text-neutral-800 text-xl">
-            Poglejte, kaj naše stranke pravijo o svoji izkušnji v Pasjem salonu.
+            Poglejte, kaj naše stranke pravijo o svoji izkušnji.
           </p>
         </div>
         <div
@@ -544,11 +545,12 @@
           }"
         >
           <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
-            Zakaj Izbrati Nas?
+            Zakaj Izbrati Vesele repke?
           </h2>
           <p class="text-neutral-700 text-lg">
-            Pri nas se zavedamo, da je vaš ljubljenček del vaše družine. Zato mu
-            nudimo le najboljšo nego v prijaznem in sproščenem okolju.
+            V našem salonu razumemo, da je vaš ljubljenček član vaše družine.
+            Zato mu nudimo posebno pozornost in skrb v prijetnem okolju, kjer se
+            počuti domače.
           </p>
         </div>
 
@@ -664,8 +666,8 @@
             </h3>
             <p class="mb-6 text-neutral-700 text-lg md:text-left text-center">
               Ste pripravljeni svojemu ljubljenčku privoščiti vrhunsko nego?
-              Izpolnite spodnji obrazec ali nas pokličite. Z veseljem vam bomo
-              svetovali!
+              Izpolnite spodnji obrazec ali nas pokličite. Teja vam bo z
+              veseljem pomagala!
             </p>
             <InquiryForm />
           </div>
@@ -697,10 +699,10 @@
                 loading="lazy"
                 class="w-full h-[530px]"
                 style="border: 0"
-                allowfullscreen=""
+                allowfullscreen="true"
                 aria-hidden="false"
                 tabindex="0"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=15.5600%2C46.3800%2C15.5850%2C46.4000&layer=mapnik&marker=46.3919813%2C15.5727868"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=15.6400%2C46.5500%2C15.6650%2C46.5700&layer=mapnik&marker=46.5600%2C15.6550"
               ></iframe>
             </div>
             <div class="space-y-4 order-1 lg:order-2 text-md text-neutral-800">
@@ -709,29 +711,50 @@
                   name="i-heroicons-map-pin"
                   class="flex-shrink-0 mr-3 w-5 h-5 text-primary-600"
                 />
-                Ljubljenčkova ulica 123, Pasje mesto, 1000 Ljubljana
+                Meljska c. 5, 2000 Maribor
               </p>
               <p class="flex items-center">
                 <UIcon
                   name="i-heroicons-phone"
                   class="flex-shrink-0 mr-3 w-5 h-5 text-primary-600"
                 />
-                (01) 123-4567
+                040 123 456
               </p>
               <p class="flex items-center">
                 <UIcon
                   name="i-heroicons-envelope"
                   class="flex-shrink-0 mr-3 w-5 h-5 text-primary-600"
                 />
-                info@pasji-salon.primer
+                teja.veselirepki@gmail.com
               </p>
               <p class="flex items-center">
                 <UIcon
                   name="i-heroicons-clock"
                   class="flex-shrink-0 mr-3 w-5 h-5 text-primary-600"
                 />
-                Pon - Pet: 9:00 - 18:00, Sob: 10:00 - 16:00
+                Pon - Pet: 9:00 - 18:00, Sob: po dogovoru
               </p>
+              <div class="flex items-center gap-4 pt-2">
+                <a
+                  href="https://www.instagram.com/pasjisalon_veselirepki"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-primary-600 hover:text-primary-800 transition-colors"
+                >
+                  <UIcon name="i-heroicons-camera" class="w-6 h-6" />
+                </a>
+                <a
+                  href="https://www.facebook.com/p/Veseli-repki-100092398015987"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-primary-600 hover:text-primary-800 transition-colors"
+                >
+                  <UIcon
+                    name="i-heroicons-chat-bubble-left-ellipsis"
+                    class="w-6 h-6"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
