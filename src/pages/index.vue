@@ -360,10 +360,10 @@
               Naša Zaveza
             </h3>
             <p class="mb-6 text-neutral-700 text-lg">
-              aše poslanstvo je preprosto: zagotoviti vrhunsko nego, ki prispeva
-              k zdravju, dobremu počutju in sreči vašega ljubljenčka. Verjamemo,
-              da je nega več kot le striženje – je priložnost, da vašemu
-              kosmatincu namenimo posebno pozornost in ga razvajamo.
+              Naše poslanstvo je preprosto: zagotoviti vrhunsko nego, ki
+              prispeva k zdravju, dobremu počutju in sreči vašega ljubljenčka.
+              Verjamemo, da je nega več kot le striženje – je priložnost, da
+              vašemu kosmatincu namenimo posebno pozornost in ga razvajamo.
             </p>
           </div>
         </div>
