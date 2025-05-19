@@ -20,7 +20,7 @@
   >
     <template #header>
       <div class="flex justify-end items-center w-full">
-        <h1 class="mr-auto font-bold text-primary-500 text-xl">Pasji Salon</h1>
+        <h1 class="mr-auto font-bold text-primary-500 text-xl">Veseli Repki</h1>
         <UButton
           color="neutral"
           variant="ghost"

@@ -23,16 +23,15 @@
 </script>
 
 <template>
-  <footer class="bg-mon-yellow-400 pt-20 pb-10 text-neutral-700">
+  <footer class="bg-mon-yellow-400 pt-10 pb-10 text-neutral-700">
     <UContainer class="flex flex-col">
-      <!-- Part 1: Newsletter Card -->
+      <!-- Part 1: Newsletter Card
       <UCard class="bg-primary-500 mb-10 rounded-2xl">
         <div class="flex md:flex-row flex-col justify-between items-center">
           <p
             class="md:mr-6 mb-6 md:mb-0 font-semibold text-white text-lg md:text-xl md:text-left text-center"
           >
             Ne zamudite najnovejših nasvetov za nego vašega ljubljenčka
-            <!-- Updated Text -->
           </p>
           <UCard class="w-full max-w-md">
             <form
@@ -57,8 +56,8 @@
             </form>
           </UCard>
         </div>
-      </UCard>
-
+      </UCard> 
+    -->
       <!-- Part 2: Links -->
       <div class="flex md:flex-row flex-col justify-between items-center mb-10">
         <!-- Navigation Links -->
@@ -103,14 +102,14 @@
         class="flex md:flex-row flex-col justify-between items-center pt-10 border-neutral-200 border-t text-neutral-500 text-sm"
       >
         <p class="mb-2 md:mb-0">
-          &copy; {{ currentYear }} Pasji Salon. Vse pravice pridržane.
+          &copy; {{ currentYear }} Veseli Repki. Vse pravice pridržane.
           <!-- Updated Text -->
         </p>
         <NuxtLink
           to="/"
           class="mb-2 md:mb-0 font-bold text-primary-500 text-lg"
         >
-          Pasji Salon
+          Veseli Repki
         </NuxtLink>
         <div class="flex gap-4">
           <NuxtLink to="/privacy" class="hover:text-primary-500">

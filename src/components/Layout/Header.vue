@@ -52,7 +52,7 @@
         class="font-bold text-xl transition-colors duration-300"
         :class="isScrolled ? 'text-primary-500' : 'text-primary-800'"
       >
-        Pasji Salon
+        Veseli Repki
       </NuxtLink>
 
       <!-- Navigacijske Povezave (Namizje) -->
