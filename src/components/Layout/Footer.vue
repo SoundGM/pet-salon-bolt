@@ -79,7 +79,8 @@
         <!-- Social Media Links -->
         <div class="flex items-center space-x-4">
           <UButton
-            to="#"
+            to="https://www.facebook.com/pasjisalonking"
+            target="_blank"
             aria-label="Facebook"
             variant="link"
             color="primary"
@@ -103,14 +104,14 @@
         class="flex md:flex-row flex-col justify-between items-center pt-10 border-neutral-200 border-t text-neutral-500 text-sm"
       >
         <p class="mb-2 md:mb-0">
-          &copy; {{ currentYear }} Pasji Salon. Vse pravice pridržane.
+          &copy; {{ currentYear }} Pasji Salon King. Vse pravice pridržane.
           <!-- Updated Text -->
         </p>
         <NuxtLink
           to="/"
           class="mb-2 md:mb-0 font-bold text-primary-500 text-lg"
         >
-          Pasji Salon
+          Pasji Salon King
         </NuxtLink>
         <div class="flex gap-4">
           <NuxtLink to="/privacy" class="hover:text-primary-500">

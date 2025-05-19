@@ -245,7 +245,7 @@
             <h1
               class="mb-4 font-bold text-primary-800 text-5xl md:text-7xl leading-tight"
             >
-              Pasji Salon
+              Pasji Salon King
             </h1>
             <p
               class="mb-8 max-w-md text-neutral-800 text-xl md:text-2xl md:text-left text-center"
@@ -343,27 +343,28 @@
             }"
           >
             <h2 class="mb-8 font-bold text-primary-800 text-3xl md:text-4xl">
-              Oaza miru in nege za vašega kosmatinca
+              Oaza miru in nege za vašega kosmatinca v Pasjem Salonu King
             </h2>
             <h3 class="mb-2 font-semibold text-neutral-800 text-lg">
               Naša Zgodba
             </h3>
             <p class="mb-4 text-neutral-700 text-lg">
-              Naša pot se je začela iz čiste ljubezni do živali in želje, da bi
-              jim ponudili najboljšo možno nego. Opazili smo, da je lahko obisk
-              salona za nekatere ljubljenčke stresen, zato smo ustvarili
-              prostor, kjer se počutijo sproščeno in varno. Vsak kosmatinec je
-              pri nas obravnavan kot družinski član z veliko mero
-              potrpežljivosti in nežnosti.
+              Naša pot v Pasjem Salonu King se je začela iz čiste ljubezni do
+              živali in želje, da bi jim ponudili najboljšo možno nego. Opazili
+              smo, da je lahko obisk salona za nekatere ljubljenčke stresen,
+              zato smo v našem salonu ustvarili prostor, kjer se počutijo
+              sproščeno in varno. Vsak kosmatinec je pri nas obravnavan kot
+              družinski član z veliko mero potrpežljivosti in nežnosti.
             </p>
             <h3 class="mt-6 mb-2 font-semibold text-neutral-800 text-lg">
               Naša Zaveza
             </h3>
             <p class="mb-6 text-neutral-700 text-lg">
-              Naše poslanstvo je preprosto: zagotoviti vrhunsko nego, ki
-              prispeva k zdravju, dobremu počutju in sreči vašega ljubljenčka.
-              Verjamemo, da je nega več kot le striženje – je priložnost, da
-              vašemu kosmatincu namenimo posebno pozornost in ga razvajamo.
+              Naše poslanstvo v Pasjem Salonu King je preprosto: zagotoviti
+              vrhunsko nego, ki prispeva k zdravju, dobremu počutju in sreči
+              vašega ljubljenčka. Verjamemo, da je nega več kot le striženje –
+              je priložnost, da vašemu kosmatincu namenimo posebno pozornost in
+              ga razvajamo.
             </p>
           </div>
         </div>
@@ -414,7 +415,8 @@
           <p class="text-neutral-700 text-lg">
             Ne glede na to, ali vaš kuža potrebuje osvežujoče kopanje, vaš mucek
             elegantno frizuro ali pa vaš mali glodalec nežno nego krempljev, pri
-            nas boste našli vse, kar vaš ljubljenček potrebuje
+            nas v Pasjem Salonu King boste našli vse, kar vaš ljubljenček
+            potrebuje
           </p>
         </div>
         <div
@@ -471,7 +473,8 @@
             Vesele Tačke, Srečni Starši!
           </h2>
           <p class="text-neutral-800 text-xl">
-            Poglejte, kaj naše stranke pravijo o svoji izkušnji v Pasjem salonu.
+            Poglejte, kaj naše stranke pravijo o svoji izkušnji v Pasjem Salonu
+            King.
           </p>
         </div>
         <div
@@ -547,8 +550,9 @@
             Zakaj Izbrati Nas?
           </h2>
           <p class="text-neutral-700 text-lg">
-            Pri nas se zavedamo, da je vaš ljubljenček del vaše družine. Zato mu
-            nudimo le najboljšo nego v prijaznem in sproščenem okolju.
+            V Pasjem Salonu King se zavedamo, da je vaš ljubljenček del vaše
+            družine. Zato mu nudimo le najboljšo nego v prijaznem in sproščenem
+            okolju.
           </p>
         </div>
 
@@ -663,9 +667,9 @@
               Stopite v Stik
             </h3>
             <p class="mb-6 text-neutral-700 text-lg md:text-left text-center">
-              Ste pripravljeni svojemu ljubljenčku privoščiti vrhunsko nego?
-              Izpolnite spodnji obrazec ali nas pokličite. Z veseljem vam bomo
-              svetovali!
+              Ste pripravljeni svojemu ljubljenčku privoščiti vrhunsko nego v
+              Pasjem Salonu King? Izpolnite spodnji obrazec ali nas pokličite. Z
+              veseljem vam bomo svetovali!
             </p>
             <InquiryForm />
           </div>
@@ -697,10 +701,10 @@
                 loading="lazy"
                 class="w-full h-[530px]"
                 style="border: 0"
-                allowfullscreen=""
+                allowfullscreen
                 aria-hidden="false"
                 tabindex="0"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=15.5600%2C46.3800%2C15.5850%2C46.4000&layer=mapnik&marker=46.3919813%2C15.5727868"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=15.4175%2C46.3332%2C15.4275%2C46.3382&layer=mapnik&marker=46.3357%2C15.4225"
               ></iframe>
             </div>
             <div class="space-y-4 order-1 lg:order-2 text-md text-neutral-800">
@@ -709,7 +713,7 @@
                   name="i-heroicons-map-pin"
                   class="flex-shrink-0 mr-3 w-5 h-5 text-primary-600"
                 />
-                Ljubljenčkova ulica 123, Pasje mesto, 1000 Ljubljana
+                Stari trg 28, Slovenske Konjice, Slovenia
               </p>
               <p class="flex items-center">
                 <UIcon
@@ -723,7 +727,7 @@
                   name="i-heroicons-envelope"
                   class="flex-shrink-0 mr-3 w-5 h-5 text-primary-600"
                 />
-                info@pasji-salon.primer
+                slavica.golez@gmail.com
               </p>
               <p class="flex items-center">
                 <UIcon
