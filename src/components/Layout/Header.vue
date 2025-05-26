@@ -3,15 +3,15 @@
   import NavigationMenu from '~/components/NavigationMenu.vue'
 
   const links = [
-    { label: 'O Nas', to: '#about' },
-    { label: 'Storitve', to: '#services' },
-    { label: 'Mnenja', to: '#testimonials' }, // Changed from Mnenja Strank
-    { label: 'Zakaj Mi', to: '#why-us' },
-    // Odstranjena povezava 'Kontakt', ker je gumb posebej
+    { label: 'About Us', to: '#about' },
+    { label: 'Services', to: '#services' },
+    { label: 'Reviews', to: '#testimonials' },
+    { label: 'Why Us', to: '#why-us' },
+    // Contact link removed as button is separate
   ]
 
   const isScrolled = ref(false)
-  const overlay = useOverlay() // Inicializiraj useOverlay
+  const overlay = useOverlay() // Initialize useOverlay
 
   const handleScroll = () => {
     isScrolled.value = window.scrollY > 40
@@ -41,23 +41,23 @@
   <header
     class="right-0 left-0 z-50 fixed transition-all duration-300 ease-in-out"
     :class="{
-      'bg-white shadow-md top-0': isScrolled, // Postane lepljiv na vrhu ob drsenju
-      'bg-transparent shadow-none top-10': !isScrolled, // Sprva postavljen pod pasico
+      'bg-white shadow-md top-0': isScrolled, // Becomes sticky at the top on scroll
+      'bg-transparent shadow-none top-10': !isScrolled, // Initially positioned below the banner
     }"
   >
     <UContainer class="flex justify-between items-center h-16">
-      <!-- Logotip -->
+      <!-- Logo -->
       <NuxtLink
         to="/"
         class="font-bold text-xl transition-colors duration-300"
         :class="isScrolled ? 'text-primary-500' : 'text-primary-800'"
       >
-        Pasji Salon
+        Your Pet Groomer
       </NuxtLink>
 
-      <!-- Navigacijske Povezave (Namizje) -->
+      <!-- Navigation Links (Desktop) -->
       <nav class="hidden md:flex items-center space-x-4">
-        <!-- Skrij na majhnih zaslonih -->
+        <!-- Hide on small screens -->
         <UButton
           v-for="link in links"
           :key="link.to"
@@ -74,7 +74,7 @@
         </UButton>
         <UButton
           to="#contact"
-          label="Kontakt"
+          label="Contact"
           color="primary"
           variant="solid"
           :class="{ 'shadow-sm': !isScrolled }"
@@ -82,7 +82,7 @@
         />
       </nav>
 
-      <!-- Gumb za Mobilni Meni -->
+      <!-- Mobile Menu Button -->
       <div class="md:hidden">
         <UButton
           icon="i-heroicons-bars-3"
