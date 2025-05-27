@@ -24,6 +24,29 @@ export default defineNuxtConfig({
     locales: [{ code: 'sl', name: 'Slovenian', file: 'sl.ts' }],
   },
 
+  app: {
+    head: {
+      script: [
+        {
+          type: 'text/javascript',
+          innerHTML: `
+            (function(d, t) {
+              var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+              v.onload = function() {
+                window.voiceflow.chat.load({
+                  verify: { projectID: '682c267b8dbed7819154fd9a' },
+                  url: 'https://general-runtime.voiceflow.com',
+                  versionID: 'production',
+                });
+              }
+              v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+            })(document, 'script');
+          `,
+        },
+      ],
+    },
+  },
+
   ui: {
     theme: {
       colors: [
