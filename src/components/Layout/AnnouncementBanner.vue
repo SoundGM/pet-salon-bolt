@@ -2,9 +2,9 @@
   import { ref, onMounted, onUnmounted } from 'vue'
 
   const announcements = [
-    '✨ Posebna Ponudba: 10% popusta na prvo nego! ✨',
-    '🐶 Rezervirajte svoj praznični termin še danes! 🎄',
-    '🐾 Nove spa nege so zdaj na voljo! 🛁',
+    '✨ Special Offer: 10% off your first groom! ✨',
+    '🐶 Book your holiday appointment today! 🎄',
+    '🐾 New spa treatments now available! 🛁',
   ]
 
   const currentAnnouncementIndex = ref(0)
@@ -20,7 +20,7 @@
   }
 
   onMounted(() => {
-    intervalId = setInterval(rotateAnnouncements, 5000) // Zamenjaj vsakih 5 sekund
+    intervalId = setInterval(rotateAnnouncements, 5000) // Change every 5 seconds
   })
 
   onUnmounted(() => {
@@ -35,7 +35,7 @@
     class="top-0 right-0 left-0 z-40 fixed flex items-center bg-primary-500 h-10 text-white"
   >
     <UContainer class="flex justify-between items-center w-full">
-      <!-- Vrteče se Besedilo Obvestila -->
+      <!-- Rotating Announcement Text -->
       <div class="flex-1 h-6 overflow-hidden md:text-left text-center">
         <Transition name="fade" mode="out-in">
           <span :key="currentAnnouncementIndex" class="block text-sm">
@@ -44,18 +44,18 @@
         </Transition>
       </div>
 
-      <!-- Kontaktne Informacije -->
+      <!-- Contact Information -->
       <div class="hidden md:flex items-center space-x-4 text-sm">
-        <a href="tel:01-123-4567" class="flex items-center hover:underline">
+        <a href="tel:02079460123" class="flex items-center hover:underline">
           <UIcon name="i-heroicons-phone" class="mr-1 size-4" />
-          (01) 123-4567
+          020 7946 0123
         </a>
         <a
-          href="mailto:info@pasji-salon.primer"
+          href="mailto:info@yourpetgroomer.com"
           class="flex items-center hover:underline"
         >
           <UIcon name="i-heroicons-envelope" class="mr-1 size-4" />
-          info@pasji-salon.primer
+          info@yourpetgroomer.com
         </a>
       </div>
     </UContainer>

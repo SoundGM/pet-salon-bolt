@@ -2,12 +2,12 @@
   const currentYear = new Date().getFullYear()
 
   const links = [
-    { label: 'Domov', to: '#home' }, // Changed to Slovenian
-    { label: 'O Nas', to: '#about' }, // Changed to Slovenian
-    { label: 'Storitve', to: '#services' }, // Changed to Slovenian
-    { label: 'Mnenja', to: '#testimonials' }, // Changed to Slovenian
-    { label: 'Zakaj Mi', to: '#why-us' }, // Changed to Slovenian
-    { label: 'Kontakt', to: '#contact' }, // Changed 'Contact' to 'Kontakt'
+    { label: 'Home', to: '#home' },
+    { label: 'About Us', to: '#about' },
+    { label: 'Services', to: '#services' },
+    { label: 'Reviews', to: '#testimonials' },
+    { label: 'Why Us', to: '#why-us' },
+    { label: 'Contact', to: '#contact' },
   ]
 
   const newsletterEmail = ref('')
@@ -31,8 +31,7 @@
           <p
             class="md:mr-6 mb-6 md:mb-0 font-semibold text-white text-lg md:text-xl md:text-left text-center"
           >
-            Ne zamudite najnovejših nasvetov za nego vašega ljubljenčka
-            <!-- Updated Text -->
+            Don't miss the latest tips for grooming your pet
           </p>
           <UCard class="w-full max-w-md">
             <form
@@ -42,14 +41,14 @@
               <UInput
                 v-model="newsletterEmail"
                 type="email"
-                placeholder="Vnesite vaš e-poštni naslov"
+                placeholder="Enter your email address"
                 required
                 class="flex-1"
                 size="xl"
               />
               <UButton
                 type="submit"
-                label="Naroči se"
+                label="Subscribe"
                 color="primary"
                 size="xl"
                 trailing-icon="i-mingcute-mail-line"
@@ -79,7 +78,8 @@
         <!-- Social Media Links -->
         <div class="flex items-center space-x-4">
           <UButton
-            to="#"
+            to="https://www.facebook.com/PasjisalonSpela"
+            target="_blank"
             aria-label="Facebook"
             variant="link"
             color="primary"
@@ -103,23 +103,20 @@
         class="flex md:flex-row flex-col justify-between items-center pt-10 border-neutral-200 border-t text-neutral-500 text-sm"
       >
         <p class="mb-2 md:mb-0">
-          &copy; {{ currentYear }} Pasji Salon. Vse pravice pridržane.
-          <!-- Updated Text -->
+          &copy; {{ currentYear }} Your Pet Groomer. All rights reserved.
         </p>
         <NuxtLink
           to="/"
           class="mb-2 md:mb-0 font-bold text-primary-500 text-lg"
         >
-          Pasji Salon
+          Your Pet Groomer
         </NuxtLink>
         <div class="flex gap-4">
           <NuxtLink to="/privacy" class="hover:text-primary-500">
-            Politika Zasebnosti
-            <!-- Updated Text -->
+            Privacy Policy
           </NuxtLink>
           <NuxtLink to="/terms" class="hover:text-primary-500">
-            Pogoji Uporabe
-            <!-- Updated Text -->
+            Terms of Use
           </NuxtLink>
         </div>
       </div>
