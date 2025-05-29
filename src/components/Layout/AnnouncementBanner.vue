@@ -2,9 +2,9 @@
   import { ref, onMounted, onUnmounted } from 'vue'
 
   const announcements = [
-    '✨ Special Offer: 10% off your first groom! ✨',
-    '🐶 Book your holiday appointment today! 🎄',
-    '🐾 New spa treatments now available! 🛁',
+    '✨ Posebna ponudba: 10% popusta na prvo nego! ✨',
+    '🐶 Rezervirajte termin za praznično nego še danes! 🎄',
+    '🐾 Na voljo so novi spa tretmaji! 🛁',
   ]
 
   const currentAnnouncementIndex = ref(0)
@@ -20,7 +20,7 @@
   }
 
   onMounted(() => {
-    intervalId = setInterval(rotateAnnouncements, 5000) // Change every 5 seconds
+    intervalId = setInterval(rotateAnnouncements, 5000) // Menjava vsakih 5 sekund
   })
 
   onUnmounted(() => {
@@ -46,16 +46,17 @@
 
       <!-- Contact Information -->
       <div class="hidden md:flex items-center space-x-4 text-sm">
-        <a href="tel:02079460123" class="flex items-center hover:underline">
+        <!-- Phone number removed -->
+        <!-- <a href="tel:02079460123" class="flex items-center hover:underline">
           <UIcon name="i-heroicons-phone" class="mr-1 size-4" />
           020 7946 0123
-        </a>
+        </a> -->
         <a
-          href="mailto:info@yourpetgroomer.com"
+          href="mailto:salon.pasjifrizeraj@gmail.com"
           class="flex items-center hover:underline"
         >
           <UIcon name="i-heroicons-envelope" class="mr-1 size-4" />
-          info@yourpetgroomer.com
+          salon.pasjifrizeraj@gmail.com
         </a>
       </div>
     </UContainer>

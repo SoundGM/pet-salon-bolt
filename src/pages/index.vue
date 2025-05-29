@@ -2,39 +2,39 @@
   // Data for the NEW Services Section (based on the old Why Choose Us)
   const services = [
     {
-      title: 'Basic Bathing and Drying',
+      title: 'Osnovno kopanje in sušenje',
       description:
-        'Thorough bathing using high-quality shampoos tailored to coat type, and gentle drying.',
+        'Temeljito kopanje z uporabo visokokakovostnih šamponov, prilagojenih vrsti dlake, in nežno sušenje.',
       icon: 'i-mingcute-shower-line',
     },
     {
-      title: 'Clipping and Coat Styling',
+      title: 'Striženje in oblikovanje dlake',
       description:
-        'Professional clipping and coat styling according to breed and your preferences.',
+        'Profesionalno striženje in oblikovanje dlake glede na pasmo in vaše želje.',
       icon: 'i-mingcute-scissors-line',
     },
     {
-      title: 'Nail Care',
+      title: 'Nega nohtov',
       description:
-        'Safe and precise nail trimming to prevent discomfort and potential injuries.',
+        'Varno in natančno krajšanje nohtov za preprečevanje nelagodja in morebitnih poškodb.',
       icon: 'i-mingcute-paw-line',
     },
     {
-      title: 'Ear Cleaning',
+      title: 'Čiščenje ušes',
       description:
-        'Gentle cleaning of ear canals to prevent infections and maintain ear health.',
+        'Nežno čiščenje ušesnih kanalov za preprečevanje okužb in ohranjanje zdravja ušes.',
       icon: 'i-mingcute-ear-line',
     },
     {
-      title: 'De-matting',
+      title: 'Razvozlavanje dlake',
       description:
-        'Patient de-matting and removal of knots to keep the coat smooth and shiny.',
+        'Potrpežljivo razvozlavanje in odstranjevanje vozlov za ohranjanje gladke in sijoče dlake.',
       icon: 'i-mingcute-chines-knot-line',
     },
     {
-      title: 'Special Treatments (by appointment)',
+      title: 'Posebni tretmaji (po dogovoru)',
       description:
-        'We also offer special treatments such as dental care, undercoat removal, and other services by individual appointment.',
+        'Po individualnem dogovoru nudimo tudi posebne tretmaje, kot so nega zob, odstranjevanje poddlake in druge storitve.',
       icon: 'i-mingcute-sparkles-2-line',
     },
   ]
@@ -42,48 +42,47 @@
   // Data for the NEW Why Choose Us Section (based on the old About Us)
   const whyUsPoints = [
     {
-      title: 'Experienced and Caring Staff',
+      title: 'Izkušeno in skrbno osebje',
       description:
-        'Our team boasts certified groomers with years of experience handling pets of all breeds and temperaments with a gentle, loving touch.',
-      imageUrl: '/staff.jpg', // Updated placeholder
+        'Naša ekipa se ponaša s certificiranimi frizerji z večletnimi izkušnjami pri delu z ljubljenčki vseh pasem in temperamentov, z nežnim in ljubečim pristopom.',
+      imageUrl: '/staff.jpg', // Placeholder - morda posodobite s slikami salona
       imageSide: 'left', // 'left' or 'right'
       borderColor: 'border-primary-500',
       icon: 'i-mingcute-group-3-line',
     },
     {
-      title: 'Stress-Free Environment',
+      title: 'Okolje brez stresa',
       description:
-        'We designed our salon to be a calm, clean, and safe haven. We use positive reinforcement techniques to ensure your pet feels comfortable and, above all, safe during their visit.',
-      imageUrl: '/staff2.jpg', // Updated placeholder (different seed)
+        'Naš salon smo zasnovali kot miren, čist in varen pristan. Uporabljamo tehnike pozitivne spodbude, da se vaš ljubljenček med obiskom počuti udobno in predvsem varno.',
+      imageUrl: '/staff2.jpg', // Placeholder - morda posodobite s slikami salona
       imageSide: 'right', // 'left' or 'right'
       borderColor: 'border-secondary-500',
       icon: 'i-mingcute-leaf-line',
     },
   ]
 
-  // Data for Customer Testimonials (Placeholder)
+  // Data for Customer Testimonials (Placeholder) - Prevedeno, imena in komentarje morda prilagodite
   const testimonials = [
     {
-      name: 'Sarah K.',
+      name: 'Sara K.',
       rating: 5,
       comment:
-        'Absolutely wonderful service! My poodle has never looked better. The staff was so gentle and caring.',
+        'Absolutno čudovita storitev! Moj pudelj še nikoli ni izgledal bolje. Osebje je bilo tako nežno in skrbno.',
       rotation: 'rotate-1',
       color: 'border-primary-500',
     },
     {
-      name: 'Michael R.',
+      name: 'Miha R.',
       rating: 5,
-      comment:
-        'Great experience overall. A bit pricey, but very, very worth it.',
+      comment: 'Odlična izkušnja. Malo dražje, ampak zelo, zelo vredno.',
       rotation: '-rotate-2',
       color: 'border-secondary-500',
     },
     {
-      name: 'Monica L.',
+      name: 'Monika L.',
       rating: 4,
       comment:
-        'They handled my anxious cat Luna with such patience. Truly, highly recommend for nervous pets.',
+        'Z mojo tesnobno mačko Luno so ravnali s tako potrpežljivostjo. Resnično priporočam za nervozne ljubljenčke.',
       rotation: 'rotate-2',
       color: 'border-primary-500',
     },
@@ -91,7 +90,7 @@
       name: 'David P.',
       rating: 5,
       comment:
-        'Quick, efficient, and friendly service. Buster always looks forward to his grooming day!',
+        'Hitra, učinkovita in prijazna storitev. Buster se vedno veseli svojega dneva za nego!',
       rotation: '-rotate-1',
       color: 'border-secondary-500',
     },
@@ -246,16 +245,16 @@
             <h1
               class="mb-4 font-bold text-primary-800 text-5xl md:text-7xl leading-tight"
             >
-              Your Pet Groomer
+              Pasji Frizeraj
             </h1>
             <p
               class="mb-8 max-w-md text-neutral-800 text-xl md:text-2xl md:text-left text-center"
             >
-              Experience and love in every groom
+              Izkušnje in ljubezen v vsaki negi
             </p>
             <UButton
               to="#contact"
-              label="Contact Us"
+              label="Kontaktirajte nas"
               size="xl"
               color="primary"
               trailing-icon="i-mingcute-arrow-right-circle-line"
@@ -272,7 +271,7 @@
       >
         <NuxtImg
           src="/hero-dog.png"
-          alt="Happy dog after grooming"
+          alt="Vesel pes po negi"
           class="right-0 bottom-0 absolute brightness-110 w-full h-full object-bottom object-contain mix-blend-multiply filter contrast-90"
           width="800"
           height="800"
@@ -323,7 +322,7 @@
           >
             <NuxtImg
               src="/about-dog.jpg"
-              alt="Pomeranian dog"
+              alt="Pomeranec"
               class="z-10 relative shadow-lg rounded-lg w-full h-full object-cover aspect-square"
               width="600"
               height="600"
@@ -344,27 +343,27 @@
             }"
           >
             <h2 class="mb-8 font-bold text-primary-800 text-3xl md:text-4xl">
-              An Oasis of Peace and Care for Your Furry Friend
+              Oaza miru in nege za vašega kosmatinca
             </h2>
             <h3 class="mb-2 font-semibold text-neutral-800 text-lg">
-              Our Story
+              Naša zgodba
             </h3>
             <p class="mb-4 text-neutral-700 text-lg">
-              Our journey began out of pure love for animals and a desire to
-              offer them the best possible care. We noticed that a visit to the
-              salon can be stressful for some pets, so we created a space where
-              they feel relaxed and safe. Every furry friend is treated like a
-              family member with a great deal of patience and gentleness here.
+              Naša pot se je začela iz čiste ljubezni do živali in želje, da jim
+              ponudimo najboljšo možno nego. Opazili smo, da je obisk salona za
+              nekatere ljubljenčke lahko stresen, zato smo ustvarili prostor,
+              kjer se počutijo sproščeno in varno. Vsak kosmatinec je pri nas
+              obravnavan kot družinski član, z veliko mero potrpežljivosti in
+              nežnosti.
             </p>
             <h3 class="mt-6 mb-2 font-semibold text-neutral-800 text-lg">
-              Our Commitment
+              Naša zaveza
             </h3>
             <p class="mb-6 text-neutral-700 text-lg">
-              Our mission is simple: to provide top-quality care that
-              contributes to the health, well-being, and happiness of your pet.
-              We believe that grooming is more than just a haircut – it's an
-              opportunity to give your furry friend special attention and pamper
-              them.
+              Naše poslanstvo je preprosto: zagotoviti vrhunsko nego, ki
+              prispeva k zdravju, dobremu počutju in sreči vašega ljubljenčka.
+              Verjamemo, da je nega več kot le striženje – je priložnost, da
+              vašemu kosmatincu namenimo posebno pozornost in ga razvajamo.
             </p>
           </div>
         </div>
@@ -410,12 +409,12 @@
           }"
         >
           <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
-            Our Grooming Services
+            Naše storitve nege
           </h2>
           <p class="text-neutral-700 text-lg">
-            Whether your dog needs a refreshing bath, your cat an elegant
-            hairstyle, or your small rodent gentle nail care, you'll find
-            everything your pet needs at our salon.
+            Ne glede na to, ali vaš pes potrebuje osvežilno kopel, vaša mačka
+            elegantno pričesko ali vaš mali glodalec nežno nego nohtov, boste v
+            našem salonu našli vse, kar vaš ljubljenček potrebuje.
           </p>
         </div>
         <div
@@ -469,10 +468,11 @@
           }"
         >
           <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
-            Reviews
+            Mnenja strank
           </h2>
           <p class="text-neutral-800 text-xl">
-            See what our clients say about their experience at Your Pet Groomer.
+            Poglejte, kaj naše stranke pravijo o svojih izkušnjah v Pasjem
+            Frizeraju.
           </p>
         </div>
         <div
@@ -545,12 +545,11 @@
           }"
         >
           <h2 class="mb-4 font-bold text-primary-800 text-3xl md:text-4xl">
-            Why Choose Us?
+            Zakaj izbrati nas?
           </h2>
           <p class="text-neutral-700 text-lg">
-            At our salon, we understand that your pet is part of your family.
-            That's why we provide only the best care in a friendly and relaxed
-            environment.
+            V našem salonu razumemo, da je vaš ljubljenček del vaše družine.
+            Zato nudimo le najboljšo nego v prijaznem in sproščenem okolju.
           </p>
         </div>
 
@@ -581,7 +580,7 @@
             >
               <NuxtImg
                 :src="point.imageUrl"
-                :alt="`Image for ${point.title}`"
+                :alt="`Slika za ${point.title}`"
                 class="z-10 relative shadow-lg rounded-lg w-full h-auto object-cover aspect-video"
                 width="450"
                 height="253"
@@ -662,11 +661,12 @@
             <h3
               class="mb-4 font-bold text-primary-800 text-2xl md:text-3xl md:text-left text-center"
             >
-              Get in Touch
+              Stopite v stik
             </h3>
             <p class="mb-6 text-neutral-700 text-lg md:text-left text-center">
-              Ready to treat your pet to top-notch grooming? Fill out the form
-              below or give us a call. We're happy to advise you!
+              Ste pripravljeni privoščiti svojemu ljubljenčku vrhunsko nego?
+              Izpolnite spodnji obrazec ali nas pokličite. Z veseljem vam bomo
+              svetovali!
             </p>
             <InquiryForm />
           </div>
@@ -683,10 +683,10 @@
             class="flex flex-col"
           >
             <!-- <h2 class="mb-4 font-bold text-primary-800 text-2xl md:text-3xl">
-              Get in Touch
+              Stopite v stik
             </h2>
             <p class="mb-6 text-neutral-700 text-lg">
-              Have questions or ready to book? Contact us today! We're happy to help.
+              Imate vprašanja ali ste pripravljeni na rezervacijo? Kontaktirajte nas še danes! Z veseljem vam bomo pomagali.
             </p> -->
             <div
               class="order-2 lg:order-1 mt-8 mb-4 rounded-lg h-full overflow-hidden"
@@ -700,7 +700,7 @@
                 allowfullscreen
                 aria-hidden="false"
                 tabindex="0"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=-0.0300%2C51.5000%2C-0.0100%2C51.5100&layer=mapnik&marker=51.5050%2C-0.0200"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=15.2227%2C46.1413%2C15.2427%2C46.1613&layer=mapnik&marker=46.1513%2C15.2327"
               ></iframe>
             </div>
             <div class="space-y-4 order-1 lg:order-2 text-md text-neutral-800">
@@ -709,28 +709,30 @@
                   name="i-heroicons-map-pin"
                   class="flex-shrink-0 mr-3 w-5 h-5 text-primary-600"
                 />
-                1 Canary Wharf, London E14 5AB, UK
+                Na Pristavi 32, 3270 Laško, Slovenija
               </p>
-              <p class="flex items-center">
+              <!-- Phone number removed as per user request/lack of Slovenian number -->
+              <!-- <p class="flex items-center">
                 <UIcon
                   name="i-heroicons-phone"
                   class="flex-shrink-0 mr-3 w-5 h-5 text-primary-600"
                 />
-                020 7946 0123
-              </p>
+                [Slovenska telefonska številka]
+              </p> -->
               <p class="flex items-center">
                 <UIcon
                   name="i-heroicons-envelope"
                   class="flex-shrink-0 mr-3 w-5 h-5 text-primary-600"
                 />
-                info@yourpetgroomer.com
+                salon.pasjifrizeraj@gmail.com
               </p>
               <p class="flex items-center">
                 <UIcon
                   name="i-heroicons-clock"
                   class="flex-shrink-0 mr-3 w-5 h-5 text-primary-600"
                 />
-                Mon - Fri: 9:00 AM - 6:00 PM, Sat: 10:00 AM - 4:00 PM
+                Pon - Pet: 9:00 - 18:00, Sob: 10:00 - 14:00 (prilagodite delovni
+                čas)
               </p>
             </div>
           </div>

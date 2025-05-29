@@ -2,22 +2,22 @@
   const currentYear = new Date().getFullYear()
 
   const links = [
-    { label: 'Home', to: '#home' },
-    { label: 'About Us', to: '#about' },
-    { label: 'Services', to: '#services' },
-    { label: 'Reviews', to: '#testimonials' },
-    { label: 'Why Us', to: '#why-us' },
-    { label: 'Contact', to: '#contact' },
+    { label: 'Domov', to: '#home' },
+    { label: 'O nas', to: '#about' },
+    { label: 'Storitve', to: '#services' },
+    { label: 'Mnenja', to: '#testimonials' },
+    { label: 'Zakaj mi', to: '#why-us' },
+    { label: 'Kontakt', to: '#contact' },
   ]
 
   const newsletterEmail = ref('')
 
   function subscribeNewsletter() {
-    console.log('Subscribing:', newsletterEmail.value)
+    console.log('Naročanje:', newsletterEmail.value)
     // TODO: Implement newsletter subscription logic
     // Example:
     // const toast = useToast()
-    // toast.add({ title: 'Subscribed!', description: 'Thank you for subscribing.' })
+    // toast.add({ title: 'Naročeni!', description: 'Hvala za naročilo.' })
     // newsletterEmail.value = ''
   }
 </script>
@@ -31,7 +31,7 @@
           <p
             class="md:mr-6 mb-6 md:mb-0 font-semibold text-white text-lg md:text-xl md:text-left text-center"
           >
-            Don't miss the latest tips for grooming your pet
+            Ne zamudite najnovejših nasvetov za nego vašega ljubljenčka
           </p>
           <UCard class="w-full max-w-md">
             <form
@@ -41,14 +41,14 @@
               <UInput
                 v-model="newsletterEmail"
                 type="email"
-                placeholder="Enter your email address"
+                placeholder="Vnesite svoj e-poštni naslov"
                 required
                 class="flex-1"
                 size="xl"
               />
               <UButton
                 type="submit"
-                label="Subscribe"
+                label="Naročite se"
                 color="primary"
                 size="xl"
                 trailing-icon="i-mingcute-mail-line"
@@ -78,7 +78,7 @@
         <!-- Social Media Links -->
         <div class="flex items-center space-x-4">
           <UButton
-            to="https://www.facebook.com/PasjisalonSpela"
+            to="https://www.facebook.com/people/Pasji-Frizeraj"
             target="_blank"
             aria-label="Facebook"
             variant="link"
@@ -87,7 +87,8 @@
             class="p-1"
           />
           <UButton
-            to="#"
+            to="https://www.instagram.com/pasjifrizeraj/"
+            target="_blank"
             aria-label="Instagram"
             variant="link"
             color="primary"
@@ -103,20 +104,20 @@
         class="flex md:flex-row flex-col justify-between items-center pt-10 border-neutral-200 border-t text-neutral-500 text-sm"
       >
         <p class="mb-2 md:mb-0">
-          &copy; {{ currentYear }} Your Pet Groomer. All rights reserved.
+          &copy; {{ currentYear }} Pasji Frizeraj. Vse pravice pridržane.
         </p>
         <NuxtLink
           to="/"
           class="mb-2 md:mb-0 font-bold text-primary-500 text-lg"
         >
-          Your Pet Groomer
+          Pasji Frizeraj
         </NuxtLink>
         <div class="flex gap-4">
           <NuxtLink to="/privacy" class="hover:text-primary-500">
-            Privacy Policy
+            Politika zasebnosti
           </NuxtLink>
           <NuxtLink to="/terms" class="hover:text-primary-500">
-            Terms of Use
+            Pogoji uporabe
           </NuxtLink>
         </div>
       </div>

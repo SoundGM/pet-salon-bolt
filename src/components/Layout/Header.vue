@@ -3,10 +3,10 @@
   import NavigationMenu from '~/components/NavigationMenu.vue'
 
   const links = [
-    { label: 'About Us', to: '#about' },
-    { label: 'Services', to: '#services' },
-    { label: 'Reviews', to: '#testimonials' },
-    { label: 'Why Us', to: '#why-us' },
+    { label: 'O nas', to: '#about' },
+    { label: 'Storitve', to: '#services' },
+    { label: 'Mnenja', to: '#testimonials' },
+    { label: 'Zakaj mi', to: '#why-us' },
     // Contact link removed as button is separate
   ]
 
@@ -52,7 +52,7 @@
         class="font-bold text-xl transition-colors duration-300"
         :class="isScrolled ? 'text-primary-500' : 'text-primary-800'"
       >
-        Your Pet Groomer
+        Pasji Frizeraj
       </NuxtLink>
 
       <!-- Navigation Links (Desktop) -->
@@ -74,7 +74,7 @@
         </UButton>
         <UButton
           to="#contact"
-          label="Contact"
+          label="Kontakt"
           color="primary"
           variant="solid"
           :class="{ 'shadow-sm': !isScrolled }"
